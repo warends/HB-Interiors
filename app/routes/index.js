@@ -1,11 +1,11 @@
 var express = require('express');
 var router = express.Router();
 var app = require('../../server.js');
+var home = require('./home');
 
-/* GET home page. */
-router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
-});
+router.use('/', home);
+
+
 
 // // catch 404 and forward to error handler
 // app.use(function(req, res, next) {
