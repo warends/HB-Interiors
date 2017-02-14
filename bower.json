@@ -1,0 +1,23 @@
+{
+  "name": "hb-interiors",
+  "description": "",
+  "main": "",
+  "authors": [
+    "Will Arends <willarends@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/vendor",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-ui-router": "^0.4.2",
+    "bootstrap": "^3.3.7",
+    "angular": "^1.6.2"
+  }
+}
