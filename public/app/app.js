@@ -6,10 +6,10 @@ angular.module('hb-interiors').config(['$locationProvider', '$stateProvider', '$
   $locationProvider.html5Mode(true);
 
   $stateProvider
-  .state('home', {
-      url: '/',
-      templateUrl: '/partials/home/home',
-      controller: 'homeCtrl'
+    .state('home', {
+        url: '/',
+        templateUrl: '/partials/home/home',
+        controller: 'homeCtrl'
     });
 
 }]);

@@ -3,7 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./bin/www"
+    "build": "webpack",
+    "start": "node server.js"
   },
   "dependencies": {
     "body-parser": "~1.16.0",
@@ -13,14 +14,20 @@
     "ejs": "~2.5.5",
     "ejs-locals": "^1.0.2",
     "express": "~4.14.1",
+    "install": "^0.8.7",
     "mongoose": "^4.8.2",
     "morgan": "~1.7.0",
     "nodemailer": "^3.1.0",
+    "npm": "^4.2.0",
     "passport": "^0.3.2",
     "passport-local": "^1.0.0",
-    "serve-favicon": "~2.3.2"
+    "serve-favicon": "~2.3.2",
+    "webpack": "^2.2.0"
   },
   "devDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-loader": "^6.3.0",
+    "babel-preset-env": "^1.1.8",
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
     "gulp-nodemon": "^2.2.1",
