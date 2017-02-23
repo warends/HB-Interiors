@@ -1,0 +1,27 @@
+
+#home-banner{
+  position: relative;
+  height: 700px;
+  background: url('../../img/cocktail-table.jpg') no-repeat center center;
+  background-size: cover;
+  h1{
+    padding: 10px 15px;
+    margin: 0 auto;
+    width: 50%;
+    color: white;
+    position: relative;
+    top: 400px;
+    border-top-left-radius: 40px;
+  }
+  .separator {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 200px;
+    background-image: linear-gradient(to bottom right, transparent, transparent 50%, white 50%, white);
+  }
+  .separator.reverse {
+    transform: rotateY(180deg);
+  }
+}

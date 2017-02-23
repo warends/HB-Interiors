@@ -1,36 +1,35 @@
 <% layout('layout') -%>
 
-<nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">HB Interiors</a>
+<nav>
+    <div id="navbar-contact" class="black-shadow">
+        <h6 class="phone"><span class="icon icon-Phone2"></span> 724.554.1455</h6>
+        <h6 class="email"><span class="icon icon-Plaine"></span>haybagwell@gmail.com</h6>
+        <div class="social">
+          <a href="#"><i class="fa fa-facebook"></i></a>
+          <a href="#"><i class="fa fa-pinterest"></i></a>
+          <a href="#"><i class="fa fa-twitter"></i></a>
+          <a href="#"><i class="fa fa-behance"></i></a>
         </div>
-        <div id="navbar" class="navbar-collapse collapse">
-          <form class="navbar-form navbar-right">
-            <div class="form-group">
-              <input type="text" placeholder="Email" class="form-control">
-            </div>
-            <div class="form-group">
-              <input type="password" placeholder="Password" class="form-control">
-            </div>
-            <button type="submit" class="btn btn-success">Sign in</button>
-          </form>
-        </div><!--/.navbar-collapse -->
+    </div>
+    <div id="navbar-menu" class="black-shadow">
+      <div id="logo">
+        <h2>HB</h2>
+        <h3>Hayley Bagwell<br />Interior Design</h3>
       </div>
+      <ul id="main-menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">E-Design</a></li>
+        <li><a href="#">More Services</a></li>
+        <li><a href="#">About Us</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
 </nav>
 
     <section id="content" ng-cloak>
       <div ui-view></div>
     </section>
 
-<footer>
-  <div class="container">
-      <p>&copy; 2016 Company, Inc.</p>
-  </div>
-</footer>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js" aysnc></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js" aysnc></script>
+<script type="text/javascript" src="/dist/js/app.min.js"></script>

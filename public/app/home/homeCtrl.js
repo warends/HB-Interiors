@@ -1,9 +1,9 @@
-// angular.module('hb-interiors').controller('homeCtrl', ['$scope', function($scope){
-//   console.log('Home Ctrl');
-// }]);
+app.controller('homeCtrl', ['$scope', function($scope){
+  console.log('working!');
 
-export default class homeCtrl {
-  constructor(){
-    console.log('Home Controller!!!!!');
-  }
-}
+  $scope.buttonClick = () => {
+    console.log('button cliked!');
+  };
+
+
+}]);
