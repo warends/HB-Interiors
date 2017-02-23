@@ -1,0 +1,70 @@
+nav {
+  position: relative;
+  top: 45px;
+  z-index: 9;
+}
+#navbar-contact{
+  position: absolute;
+  margin-left: 5%;
+  padding: 15px 0;
+  border-bottom-left-radius: 40px;
+  h6 {
+    padding: 10px 15px;
+    color: white;
+    .icon {
+      margin: 5px;
+      vertical-align: middle;
+      color: $forest;
+      font-size: 24px;
+    }
+  }
+  .social {
+    padding-left: 15px;
+    i{
+      padding: 0 5px;
+      color: $forest;
+      font-size: 20px;
+    }
+  }
+}
+#navbar-menu {
+  border-top-left-radius: 40px;
+  width: 75%;
+  position: absolute;
+  right: 0;
+  #logo {
+    float: left;
+    padding: 0 3% 0 5%;
+    height: 80px;
+    h2{
+      float: left;
+      margin: 0;
+      font-size: 64px;
+      padding-right: 15px;
+      color: $forest;
+      font-family: $logo-text;
+      @include vertical-align;
+    }
+    h3{
+      float: left;
+      margin: 3px 0 0 0;
+      color: white;
+      @include vertical-align;
+    }
+  }
+  #main-menu {
+    position: absolute;
+    height: 80px;
+    position: relative;
+    padding-left: 5%;
+    li {
+      @include vertical-align;
+      display: inline-block;
+      list-style: none;
+      padding: 15px;
+      a{
+        color: white;
+      }
+    }
+  }
+}

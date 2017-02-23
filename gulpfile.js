@@ -7,14 +7,17 @@ var gulp = require('gulp'),
     concat = require('gulp-concat'),
     sourcemaps = require('gulp-sourcemaps'),
     uglify = require('gulp-uglify'),
-    cleanCSS = require('gulp-clean-css');
+    cleanCSS = require('gulp-clean-css'),
+    babel = require('gulp-babel');
 
 
 gulp.task('js', function () {
   gulp.src(['public/app/app.js', 'public/app/**/*.js'])
     .pipe(sourcemaps.init())
+      .pipe(babel({
+        presets: ['es2015']
+      }))
       .pipe(concat('app.min.js'))
-      // .pipe(jshint())
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('public/dist/js'))
 });
@@ -28,7 +31,7 @@ gulp.task('js-prod', function () {
 gulp.task('sass', function () {
   return gulp.src('public/css/sass/**/*.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(cleanCSS({compatibility: 'ie8'}))
+    //.pipe(cleanCSS({compatibility: 'ie8'}))
     .pipe(gulp.dest('public/dist/styles'));
 });
 
