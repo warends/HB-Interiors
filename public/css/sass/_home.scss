@@ -4,11 +4,8 @@
   height: 700px;
   background: url('../../img/cocktail-table.jpg') no-repeat center center;
   background-size: cover;
-  h1{
-    padding: 10px 15px;
-    margin: 0 auto;
-    width: 50%;
-    color: white;
+  .banner-head{
+    padding: 10px 0;
     position: relative;
     top: 400px;
     border-top-left-radius: 40px;
@@ -23,5 +20,140 @@
   }
   .separator.reverse {
     transform: rotateY(180deg);
+  }
+}
+#welcome {
+  position: relative;
+  .hb-icon{
+    width: 100px;
+  }
+  .welcome-text{
+    p {
+      width: 50%;
+    }
+  }
+  .welcome-img{
+    top: -300px;
+  }
+}
+#e-design{
+  position: relative;
+  .hero-text{
+    bottom: 205px;
+  }
+  .col-sm-6, .box{
+    height: 350px;
+    overflow: hidden;
+    &.left{
+      padding-right: 0;
+    }
+    &.right {
+      padding-left: 0;
+    }
+    h3{
+      padding-top: 130px;
+    }
+  }
+  .dark-grey{
+    background-color: #303030;
+  }
+  .grey{
+    background-color: #4c4c4c;
+  }
+}
+.divider{
+  width: 100%;
+  margin-bottom: 2em;
+  background: $forest;
+  padding: 40px 0;
+}
+#services {
+  position: relative;
+  padding-bottom: 100px;
+  .hero-text{
+    left: 20px;
+  }
+  .row{
+    margin-top: 130px;
+    h3{
+      margin-top: -100px;
+    }
+  }
+  .service{
+    position: relative;
+    padding-top: 20px;
+  }
+  .hexagon-black {
+    top: -130px;
+    position: relative;
+    width: 150px;
+    height: 86.60px;
+    background-color: $light-black;
+    margin: 43.30px 0;
+    img{
+      margin: 0 auto;
+      width: 65px;
+      padding-top: 10px;
+      &.E-Design{
+        padding-top: 25px;
+      }
+      &.Branding{
+        width: 50px;
+        padding-top: 10px;
+      }
+      &.Space{
+        margin: 0 auto 0 25%;
+        width: 60px;
+      }
+    }
+    &:before, &:after{
+      content: "";
+      position: absolute;
+      width: 0;
+      border-left: 75px solid transparent;
+      border-right: 75px solid transparent;
+    }
+    &:before{
+      bottom: 100%;
+      border-bottom: 43.30px solid $light-black;
+    }
+    &:after{
+      top: 100%;
+      width: 0;
+      border-top: 43.30px solid $light-black;
+    }
+    &:hover{
+      background-color: $forest;
+      &:before{
+        border-bottom: 43.30px solid $forest;
+      }
+      &:after{
+        border-top: 43.30px solid $forest;
+      }
+    }
+  }
+  .hexagon-grey {
+    position: relative;
+    left: 20px;
+    width: 150px;
+    height: 86.60px;
+    background-color: #ddd;
+    margin: 43.30px 0;
+    &:before, &:after{
+      content: "";
+      position: absolute;
+      width: 0;
+      border-left: 75px solid transparent;
+      border-right: 75px solid transparent;
+    }
+    &:before{
+      bottom: 100%;
+      border-bottom: 43.30px solid #ddd;
+    }
+    &:after{
+      top: 100%;
+      width: 0;
+      border-top: 43.30px solid #ddd;
+    }
   }
 }

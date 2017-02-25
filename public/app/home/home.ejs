@@ -1,5 +1,103 @@
 <header id="home-banner">
-  <h1 class="black-shadow text-center">Hayley Bagwell <span class="forest">Interior Design</span></h1>
+  <div class="container">
+    <div class="row col-xs-8 col-xs-offset-2 text-center black-shadow banner-head">
+      <h1>Hayley Bagwell <span class="forest">Interior Design</span></h1>
+    </div>
+  </div>
   <div class="separator"></div>
   <div class="separator reverse"></div>
 </header>
+
+
+<section id="welcome">
+  <div class="hero-text vertical left">
+    <h1>hello</h1>
+    <h3>Our Firm</h3>
+  </div>
+  <div class="container small">
+    <div class="row">
+      <div class="col-xs-8 welcome-text">
+        <div class="green-box" boxheight>
+          <img class="img-responsive hb-icon" src="img/house-pen-icon.png"/>
+          <h3 class="forest padded-vertical">Welcome</h3>
+          <p>We are a small firm specializing in e-design, space planning, branding, residential design and custom furniture design.  We assemble spaces that emulate and amplify the identity of our the clients.</p>
+          <a href="#">View More</a>
+        </div>
+      </div>
+      <div class="col-xs-8 col-xs-offset-4 welcome-img" boxsource>
+        <img class="img-responsive kitchen" src="img/kitchen.png" />
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section id="e-design">
+  <div class="hero-text vertical right">
+    <h1>e-design</h1>
+    <h3>Projects</h3>
+  </div>
+  <div class="container small">
+    <div class="row">
+      <div class="col-sm-6 left">
+        <img class="img-responsive" src="img/downing-render.png" />
+      </div>
+      <div class="col-sm-6 right">
+        <div class="dark-grey box text-center">
+          <h3>Downing Street Project</h3>
+          <h5 class="forest padded-vertical">Mixed Use Space</h5>
+
+          <button class="btn btn-outline" ng-click="showheight()">Learn More</button>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-sm-6 left">
+        <div class="grey box text-center">
+          <h3 class="padded-bottom">Englewood Project</h3>
+          <h5 class="forest">Residential Design</h5>
+        </div>
+      </div>
+      <div class="col-sm-6 right">
+        <img class="img-responsive" src="img/downing-render.png" />
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider text-center">
+  <h3>Hayley Bagwell Designs Are Thoughful and Ecletic</h3>
+</div>
+
+<section id="services">
+  <div class="hero-text">
+    <h1>services</h1>
+    <h3>What We Do</h3>
+  </div>
+  <div class="container small">
+    <div class="row">
+      <div ng-repeat="service in services">
+          <div class="clearfix" ng-if="$index % 3 == 0"></div>
+          <div class="col-sm-4 service">
+            <div class="hexagon-grey"></div>
+            <div class="hexagon-black">
+              <a href="#" ng-href="{{service.link}}"><img class="img-responsive {{service.title}}" ng-src="{{service.img}}"/></a>
+            </div>
+
+            <h3 class="forest padded-bottom">{{service.title}}</h3>
+            <p>{{service.desc}}</p>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <h3>CTA HERE</h3>
+      </div>
+    </div>
+  </div>
+</section>

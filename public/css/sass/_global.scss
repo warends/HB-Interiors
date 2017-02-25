@@ -1,51 +1,18 @@
-@font-face {
-    font-family: 'oswald-bold';
-    src: url('../../css/fonts/oswald/oswald-bold.woff2') format('woff2'),
-         url('../../css/fonts/oswald/oswald-bold.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'oswald-regular';
-    src: url('../../css/fonts/oswald/oswald-regular.woff2') format('woff2'),
-         url('../../css/fonts/oswald/oswald-regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'work-sans';
-    src: url('../../css/fonts/ws/worksans-regular-webfont.woff2') format('woff2'),
-         url('../../css/fonts/ws/worksans-regular-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-    font-family: 'gs-ultra-bold';
-    src: url('../../css/fonts/gillsans/gill-sans-ultra-bold.ttf') format('ttf');
-    font-weight: normal;
-    font-style: normal;
-}
-@font-face {
-  font-family: 'rollandinemilie';
-  src: url('../../css/fonts/rollininemile/rollandinemilie.woff2') format('woff2'),
-       url('../../css/fonts/rollininemile/rollandinemilie.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
+
 html, body{
   font-family: $body-text, Helvetica, Arial;
   color: #000;
   font-size: 16px;
 }
 h1, h2, h3, h4, h5, h6 {
-	color: #333;
+	color: #fff;
 	text-transform: uppercase;
 	font-family: $header-text, Helvetica, Arial;
   margin: 0;
   padding: 0;
 }
 h1{
-  font-size: 50px;
+  font-size: 48px;
 }
 h3 {
   font-size: 22px;
@@ -62,4 +29,113 @@ a:hover {
 }
 .black-shadow{
   background-color: rgba(26, 26, 26, 0.85);
+}
+.hero-text {
+  position: absolute;
+  &.left{
+    left: -50px;
+    bottom: 30%;
+  }
+  &.right{
+    right: -150px;
+    bottom: 0;
+  }
+  h1{
+    color: $light-green;
+    font-family: $accent-text;
+    font-size: 100px;
+    text-transform: lowercase;
+  }
+  &.vertical{
+    transform: rotate(-90deg);
+   }
+  h3{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    color: $forest;
+  }
+}
+
+// PADDING
+.padded-vertical {
+  padding: 1em 0;
+}
+.padded-horz {
+  padding-bottom: 0 1em;
+}
+.padded-bottom {
+  padding-bottom: 1em;
+}
+.padded-top {
+  padding-bottom: 1em;
+}
+.green-box{
+  border: 4px solid $med-green;
+  padding-top: 30px;
+  padding-left: 30px;
+}
+section.padded-bottom{
+  margin-bottom: 200px;
+}
+
+// CONTAINER
+.container.small {
+  @include mq($S){
+    width: 650px;
+  }
+  @include mq($M){
+    width: 870px;
+  }
+  @include mq($L){
+    width: 970px;
+  }
+}
+
+// BUTTONS
+.btn-outline{
+  color: $forest;
+  border: 2px solid $forest;
+  border-radius: 4px;
+  background-color: transparent;
+  &:hover {
+    color: #fff;
+    border: 2px solid #fff;
+  }
+}
+
+.cta {
+  height: 150px;
+  background-color: $light-black;
+  color: white;
+}
+
+
+// FOOTER
+footer{
+  background-color: #f7f7f7;
+  position: relative;
+  .navbar-menu{
+    width: 100%;
+    position: relative;
+    left: 0;
+    .logo{
+      padding-left: 0;
+      h3{
+        color: $black;
+      }
+    }
+    .main-menu {
+      li a{
+        color: $black;
+      }
+    }
+  }
+  .social{
+    text-align: right;
+    i {
+      font-size: 24px;
+      color: $black;
+    }
+  }
 }

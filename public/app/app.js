@@ -1,8 +1,4 @@
-
-
-
 const app = angular.module('hb-interiors', ['ui.router']);
-
 
 app.config(['$locationProvider', '$stateProvider', '$urlRouterProvider', ($locationProvider, $stateProvider, $urlRouterProvider) =>{
 
