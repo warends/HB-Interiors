@@ -1,0 +1,33 @@
+#service-page {
+  padding-top: 100px;
+  .service-banner{
+    height: 300px;
+    background-color: $light-black;
+    margin-bottom: 2em;
+    h3{
+      @include vertical-align;
+    }
+  }
+  .service-menu{
+    li{
+      display: block;
+      border: 3px solid $forest;
+      margin-bottom: 10px;
+        a {
+          display: block;
+          padding: 15px 0;
+          color: $forest;
+          &:hover {
+            color: #fff;
+            background-color: $forest;
+        }
+      }
+    }
+  }
+  .sample-imgs{
+    margin-bottom: 2em;
+    img{
+      border: 1px solid $black;
+    }
+  }
+}

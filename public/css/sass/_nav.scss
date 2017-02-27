@@ -1,7 +1,9 @@
-nav {
-  position: relative;
-  top: 45px;
-  z-index: 9;
+header{
+  nav {
+    position: relative;
+    top: 45px;
+    z-index: 9;
+  }
 }
 .social {
   padding: 0 15px;
@@ -73,7 +75,6 @@ nav {
     li {
       @include vertical-align;
       display: inline-block;
-      list-style: none;
       padding: 15px;
       a{
         color: white;
