@@ -1,6 +1,6 @@
 const app = angular.module('hb-interiors', ['ui.router']);
 
-app.config(['$locationProvider', '$stateProvider', '$urlRouterProvider', ($locationProvider, $stateProvider, $urlRouterProvider) =>{
+app.config(['$locationProvider', '$stateProvider', '$urlRouterProvider', ($locationProvider, $stateProvider, $urlRouterProvider) => {
 
     $urlRouterProvider.otherwise('/');
     $locationProvider.html5Mode(true);
@@ -10,5 +10,40 @@ app.config(['$locationProvider', '$stateProvider', '$urlRouterProvider', ($locat
           url: '/',
           templateUrl: '/partials/home/home',
           controller: 'homeCtrl'
+      })
+      .state('services', {
+        url: '/services',
+        templateUrl: '/partials/services/services',
+        controller: 'serviceCtrl'
+      })
+      .state('e-design', {
+        url: '/e-design',
+        templateUrl: '/partials/ed/ed',
+        controller: 'eDesignCtrl'
+      })
+      .state('about', {
+        url: '/about',
+        templateUrl: '/partials/about/about',
+        controller: 'aboutCtrl'
+      })
+      .state('contact', {
+        url: '/contact',
+        templateUrl: '/partials/contact/contact',
+        controller: 'contactCtrl'
       });
+}]);
+
+
+app.run(['$rootScope', '$location', function($rootScope, $location){
+
+  // $rootScope.$on('$routeChangeError', function(evt, current, previous, rejection) {
+  //     if(rejection === 'not authorized') {
+  //       $location.path('/');
+  //     }
+  // });
+
+  $rootScope.$on("$stateChangeSuccess", function (event, currentRoute, previousRoute) {
+    window.scrollTo(0, 0);
+  });
+
 }]);

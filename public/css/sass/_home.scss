@@ -29,7 +29,7 @@
   }
   .welcome-text{
     p {
-      width: 50%;
+      width: 45%;
     }
   }
   .welcome-img{
@@ -41,17 +41,32 @@
   .hero-text{
     bottom: 205px;
   }
-  .col-sm-6, .box{
-    height: 350px;
-    overflow: hidden;
+  .col-sm-6{
+    .box{
+      height: 310px;
+      @include mq($M){
+        height: 420px;
+      }
+      @include mq($L){
+        height: 470px;
+      }
+      .text-box{
+        @include vertical-align;
+      }
+    }
     &.left{
       padding-right: 0;
+      padding-left: 0;
+      @include mq($S){
+        padding-left: 15px;
+      }
     }
     &.right {
       padding-left: 0;
-    }
-    h3{
-      padding-top: 130px;
+      padding-right: 0;
+      @include mq($S){
+        padding-right: 15px;
+      }
     }
   }
   .dark-grey{

@@ -1,65 +1,66 @@
 <% layout('layout') -%>
+<header>
+  <nav>
+      <div id="navbar-contact" class="black-shadow">
+          <h6 class="phone"><span class="icon icon-Phone2"></span><a href="tel1-724-554-1455"> 724.554.145</a></h6>
+          <h6 class="email"><span class="icon icon-Plaine"></span><a href="mailto:haybaglwell@gmail.com"> haybagwell@gmail.com</a></h6>
+          <div class="social">
+            <a href="#"><i class="fa fa-instagram"></i></a>
+            <a href="#"><i class="fa fa-pinterest"></i></a>
+          </div>
+      </div>
+      <div class="navbar-menu black-shadow">
+        <div class="logo">
+            <a ui-sref="home"><h2>HB</h2><h3>Hayley Bagwell<br />Interior Design</h3></a>
+        </div>
+        <ul class="main-menu">
+          <li><a href="/">Home</a></li>
+          <li><a ui-sref="e-design">E-Design</a></li>
+          <li><a ui-sref="services">More Services</a></li>
+          <li><a ui-sref="about">About Us</a></li>
+          <li><a ui-sref="contact">Contact</a></li>
+        </ul>
+      </div>
+  </nav>
+</header>
 
-<nav>
-    <div id="navbar-contact" class="black-shadow">
-        <h6 class="phone"><span class="icon icon-Phone2"></span> 724.554.1455</h6>
-        <h6 class="email"><span class="icon icon-Plaine"></span>haybagwell@gmail.com</h6>
+
+<section id="content" ng-cloak>
+  <div ui-view></div>
+</section>
+
+<footer>
+  <div class="container">
+    <div class="row">
+      <div class="col-xs-12">
+        <div class="navbar-menu">
+          <div class="logo">
+            <a ui-sref="home"><h2>HB</h2><h3>Hayley Bagwell<br />Interior Design</h3></a>
+          </div>
+          <ul class="main-menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#">E-Design</a></li>
+            <li><a href="#">More Services</a></li>
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="row padded-vertical">
+      <div class="col-xs-6">
+        <p class="copywrite">Copywrite &copy;2016 All Rights Reserved</p>
+      </div>
+      <div class="col-xs-6">
         <div class="social">
           <a href="#"><i class="fa fa-instagram"></i></a>
           <a href="#"><i class="fa fa-pinterest"></i></a>
         </div>
-    </div>
-    <div class="navbar-menu black-shadow">
-      <div class="logo">
-        <h2>HB</h2>
-        <h3>Hayley Bagwell<br />Interior Design</h3>
       </div>
-      <ul class="main-menu">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">E-Design</a></li>
-        <li><a href="#">More Services</a></li>
-        <li><a href="#">About Us</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
     </div>
-</nav>
+  </div>
+</footer>
 
-    <section id="content" ng-cloak>
-      <div ui-view></div>
-    </section>
-
-    <footer>
-      <div class="container">
-        <div class="row">
-          <div class="col-xs-12">
-            <div class="navbar-menu">
-              <div class="logo">
-                <h2>HB</h2>
-                <h3>Hayley Bagwell<br />Interior Design</h3>
-              </div>
-              <ul class="main-menu">
-                <li><a href="#">Home</a></li>
-                <li><a href="#">E-Design</a></li>
-                <li><a href="#">More Services</a></li>
-                <li><a href="#">About Us</a></li>
-                <li><a href="#">Contact</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-        <div class="row padded-vertical">
-          <div class="col-xs-6">
-            <p class="copywrite">Copywrite &copy;2016 All Rights Reserved</p>
-          </div>
-          <div class="col-xs-6">
-            <div class="social">
-              <a href="#"><i class="fa fa-instagram"></i></a>
-              <a href="#"><i class="fa fa-pinterest"></i></a>
-            </div>
-          </div>
-        </div>
-      </div>
-    </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js" aysnc></script>
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js" aysnc></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.2/angular-ui-router.min.js" aysnc></script>

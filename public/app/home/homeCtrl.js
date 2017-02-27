@@ -1,21 +1,4 @@
-
-
-app.controller('homeCtrl', ['$scope', '$timeout', function($scope, $timeout){
-
-  // $scope.boxHeight = function(img, box){
-  //   $timeout(function(){
-  //     var boxheight = $(img).height();
-  //     console.log(boxheight);
-  //     $(box).css('height', boxheight);
-  //   }, 50)
-  // }
-  //
-  // $scope.boxHeight('.kitchen', '.green-box');
-
-  // setTimeout(function(){
-  //   var ogBox = $('.kitchen').height();
-  //   $scope.boxHeight = {'height': ogBox};
-  // }, 50);
+app.controller('homeCtrl', ['$scope', '$timeout', function($scope){
 
   $scope.services = [
       { title: 'E-Design',
@@ -47,16 +30,3 @@ app.controller('homeCtrl', ['$scope', '$timeout', function($scope, $timeout){
 
 
 }]);
-
-app.directive('boxheight', function ($window) {
-    return {
-        restrict: 'A',
-        link: function (scope, elem, attrs) {
-          // var boxheight = attrs.boxheight ? attrs.boxheight : 0;
-          // elem.css('height', boxheight + 'px');
-            scope.$watch('__height', function(newHeight, oldHeight){
-              elem.css('height', newHeight + 'px');
-            })
-        }
-    };
-});

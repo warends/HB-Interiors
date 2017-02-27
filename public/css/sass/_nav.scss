@@ -4,8 +4,9 @@ nav {
   z-index: 9;
 }
 #navbar-contact{
-  position: absolute;
-  margin-left: 5%;
+  position: fixed;
+  top: 45px;
+  margin-left: 15px;
   padding: 15px 0;
   border-bottom-left-radius: 40px;
   h6 {
@@ -18,12 +19,26 @@ nav {
       font-size: 24px;
     }
   }
+  a {
+    color: #fff;
+    &:hover{
+      color: $forest;
+    }
+  }
   .social {
-    padding-left: 15px;
+    padding: 0 15px;
     i{
       padding: 0 5px;
       color: $forest;
       font-size: 20px;
+    }
+    &:after{
+      content: ' _________';
+      color: $forest;
+      float: right;
+      font-weight: bold;
+      position: relative;
+      bottom: 8px;
     }
   }
 }
@@ -53,9 +68,7 @@ nav {
     }
   }
   .main-menu {
-    position: absolute;
     height: 80px;
-    position: relative;
     padding-left: 5%;
     li {
       @include vertical-align;

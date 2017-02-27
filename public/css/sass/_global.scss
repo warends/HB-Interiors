@@ -51,9 +51,15 @@ a:hover {
    }
   h3{
     position: absolute;
-    top: 40%;
-    left: 50%;
+    top: 45%;
+    left: 40%;
     color: $forest;
+    .end-border{
+      color: $forest;
+      font-weight: bold;
+      position: relative;;
+      bottom: 10px;
+    }
   }
 }
 

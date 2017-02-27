@@ -19,7 +19,7 @@ gulp.task('js', function () {
       .on('error', (error) => {
         console.log(error.toString());
         this.emit('end');
-      }))
+      })
       .pipe(concat('app.min.js'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('public/dist/js'))
