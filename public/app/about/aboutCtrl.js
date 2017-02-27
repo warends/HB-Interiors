@@ -1,3 +1,10 @@
 app.controller('aboutCtrl', ['$scope', ($scope) => {
-  console.log('about ctrl');
+
+  $scope.isActive = false;
+  $scope.minusSign = false;
+  $scope.expandBio = () => {
+      $scope.minusSign = !$scope.minusSign;
+      $scope.isActive = !$scope.isActive;
+  };
+
 }]);

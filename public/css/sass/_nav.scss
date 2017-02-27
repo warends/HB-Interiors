@@ -3,9 +3,24 @@ nav {
   top: 45px;
   z-index: 9;
 }
+.social {
+  padding: 0 15px;
+  i{
+    padding: 0 5px;
+    color: $forest;
+    font-size: 20px;
+  }
+  &:after{
+    content: ' _________';
+    color: $forest;
+    float: right;
+    font-weight: bold;
+    position: relative;
+    bottom: 8px;
+  }
+}
 #navbar-contact{
-  position: fixed;
-  top: 45px;
+  position: absolute;
   margin-left: 15px;
   padding: 15px 0;
   border-bottom-left-radius: 40px;
@@ -25,22 +40,7 @@ nav {
       color: $forest;
     }
   }
-  .social {
-    padding: 0 15px;
-    i{
-      padding: 0 5px;
-      color: $forest;
-      font-size: 20px;
-    }
-    &:after{
-      content: ' _________';
-      color: $forest;
-      float: right;
-      font-weight: bold;
-      position: relative;
-      bottom: 8px;
-    }
-  }
+
 }
 .navbar-menu {
   border-top-left-radius: 40px;

@@ -1,0 +1,45 @@
+#about {
+  height: 800px;
+  position: relative;
+  background: url('../../img/bgs/about-bg.png') no-repeat;
+  background-position: 0 300px;
+  background-size: contain;
+  .hero-text{
+    left: 20px;
+  }
+  .container{
+    position: relative;
+    top: 150px;
+  }
+  .employee-details{
+    position: relative;
+    border-right: 3px solid;
+    border-bottom: 3px solid;
+    border-left: 3px solid;
+    border-color: $forest;
+  }
+  .social {
+    padding: 0;
+    &:after{
+      content: '';
+    }
+  }
+  .fa-plus {
+    font-size: 30px;
+    position: absolute;
+    padding: 15px;
+    right: 0;
+    top: 15px;
+  }
+  .background{
+    position: absolute;
+    width: 65%;
+    overflow: hidden;
+    left: -1000px;
+    transition: all 1s linear;
+    &.active{
+      left: 30%;
+    }
+  }
+
+}

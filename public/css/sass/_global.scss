@@ -27,6 +27,9 @@ a:hover {
 .forest {
   color: $forest;
 }
+.black{
+  color: $black;
+}
 .black-shadow{
   background-color: rgba(26, 26, 26, 0.85);
 }
@@ -64,6 +67,9 @@ a:hover {
 }
 
 // PADDING
+.padded{
+  padding: 1em;
+}
 .padded-vertical {
   padding: 1em 0;
 }
@@ -111,11 +117,22 @@ section.padded-bottom{
 }
 
 .cta {
-  height: 150px;
-  background-color: $light-black;
+  background-color: #303030;
   color: white;
+  .row{
+    height: 150px;
+  }
+  h3{
+    @include vertical-align;
+  }
 }
 
+//PAGE BANNER
+.page-banner{
+  height: 300px;
+  background: url('../../img/bgs/radiator-banner.png') no-repeat center center;
+  background-size: cover;
+}
 
 // FOOTER
 footer{
@@ -142,6 +159,9 @@ footer{
     i {
       font-size: 24px;
       color: $black;
+    }
+    &:after{
+      content: '';
     }
   }
 }
