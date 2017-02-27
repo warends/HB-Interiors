@@ -7,6 +7,12 @@
     "build": "npm run clean && webpack",
     "serve": "nodemon server.js"
   },
+  "engines": {
+    "node": "6.9.4",
+    "npm": "3.10.10"
+  },
+  "author": "will arends",
+  "license": "ISC",
   "dependencies": {
     "angular": "^1.5.8",
     "angular-resource": "^1.6.2",
