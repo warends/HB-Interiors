@@ -14,7 +14,7 @@ app.config(['$locationProvider', '$stateProvider', '$urlRouterProvider', ($locat
       .state('services', {
         url: '/services',
         templateUrl: '/partials/services/services',
-        controller: 'serviceCtrl'
+        controller: 'ServiceController'
       })
       .state('e-design', {
         url: '/e-design',
@@ -30,6 +30,11 @@ app.config(['$locationProvider', '$stateProvider', '$urlRouterProvider', ($locat
         url: '/contact',
         templateUrl: '/partials/contact/contact',
         controller: 'contactCtrl'
+      })
+      .state('services.detail', {
+        url: '/services/:name',
+        templateUrl: '/partials/services/services-detail',
+        controller: 'SelectedServiceController'
       });
 }]);
 
