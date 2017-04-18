@@ -8,7 +8,9 @@ var gulp = require('gulp'),
     sourcemaps = require('gulp-sourcemaps'),
     uglify = require('gulp-uglify'),
     cleanCSS = require('gulp-clean-css'),
-    babel = require('gulp-babel');
+    babel = require('gulp-babel'),
+    gutil = require('gulp-util'),
+    vendor = require('gulp-concat-vendor');
 
 gulp.task('js', function () {
   gulp.src(['public/app/app.js', 'public/app/**/*.js'])
@@ -29,6 +31,16 @@ gulp.task('js-prod', function () {
   gulp.src(['public/dist/js/app.min.js'])
       .pipe(uglify())
     .pipe(gulp.dest('public/dist/js'))
+});
+
+gulp.task('vendor', function () {
+  gulp.src(['public/vendor/*'])
+    .pipe(sourcemaps.init())
+      .pipe(vendor('vendor.min.js'))
+      .pipe(uglify())
+    .pipe(sourcemaps.write())
+    .pipe(gulp.dest('public/dist/js'))
+    .on('error', gutil.log);
 });
 
 gulp.task('sass', function () {

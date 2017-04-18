@@ -41,11 +41,13 @@
     "gulp-babel": "^6.1.2",
     "gulp-clean-css": "^3.0.3",
     "gulp-concat": "^2.6.1",
+    "gulp-concat-vendor": "0.0.4",
     "gulp-jshint": "^2.0.4",
     "gulp-nodemon": "^2.2.1",
     "gulp-sass": "^3.1.0",
     "gulp-sourcemaps": "^2.4.1",
     "gulp-uglify": "^2.0.1",
+    "gulp-util": "^3.0.8",
     "jshint": "^2.9.4",
     "node-sass": "^4.5.0"
   }

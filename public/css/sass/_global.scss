@@ -8,8 +8,9 @@ h1, h2, h3, h4, h5, h6 {
 	color: #fff;
 	text-transform: uppercase;
 	font-family: $header-text, Helvetica, Arial;
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
 }
 h1{
   font-size: 48px;
@@ -17,12 +18,17 @@ h1{
 h3 {
   font-size: 22px;
 }
-ul {
-  margin: 0;
-  padding: 0;
-  li{
-    list-style: none;
-  }
+h5{
+    font-size: 16px;
+}
+nav {
+    ul {
+        margin: 0;
+        padding: 0;
+    }
+    li{
+      list-style: none;
+    }
 }
 a {
   color: $forest;
@@ -43,7 +49,7 @@ a:hover {
 .hero-text {
   position: absolute;
   &.left{
-    left: -50px;
+    left: -75px;
     bottom: 30%;
   }
   &.right{
@@ -72,13 +78,17 @@ a:hover {
     }
   }
 }
+.border-dark-right{
+    border-right: 1px solid $light-black;
+}
 
 // PADDING
 .padded{
   padding: 1em;
 }
 .padded-vertical {
-  padding: 1em 0;
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 .padded-horz {
   padding-bottom: 0 1em;
@@ -122,11 +132,15 @@ section.padded-bottom{
     border: 2px solid #fff;
   }
 }
-
+.questionaire{
+    background-color: $forest;
+    color: white;
+    margin: 0 auto;
+}
 .cta {
   background-color: #303030;
   color: white;
-  .row{
+  .col-xs-12{
     height: 150px;
   }
   h3{
