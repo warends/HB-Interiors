@@ -9,6 +9,10 @@
     </div>
 
     <div class="col-sm-3">
+        <div class="service-box text-center" ng-style="{'background-image':'url({{selectedService.logo}})'}">
+            <h3 class="padded-top">Contact Info</h3>
+            <p>724.554.1455</p>
+        </div>
         <nav class="service-menu text-center">
           <ul>
             <li ng-repeat="service in services"><a ui-sref="services.detail({name: service.name})">{{service.name}}</a></li>

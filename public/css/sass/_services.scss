@@ -4,9 +4,20 @@
     height: 300px;
     background-color: $light-black;
     margin-bottom: 2em;
-    h3{
-      @include vertical-align;
+    .banner-text{
+        @include vertical-align;
     }
+    h1{
+        font-size: 32px;
+    }
+  }
+  .service-box{
+      background-color: $forest;
+      height: 300px;
+      margin-bottom: 2em;
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
   }
   .service-menu{
     li{

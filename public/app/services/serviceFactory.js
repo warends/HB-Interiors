@@ -1,19 +1,35 @@
 app.factory('ServiceFactory', () => {
   var services = [
+    // {
+    //   name: 'e-Design',
+    //   logo: 'img/icons/construction.png'
+    // },
     {
-      name: 'e-Design'
+      name: 'Space Planning',
+      link: '/services/space-planning',
+      logo: 'img/icons/house-plan.png',
+      banner: 'img/services/floor-plan.png',
+      subHead: 'creating individualized products',
+      desc: 'We can create a functional floor plan that has great flow.  Send us images of your space with measurements to allow us the ability to bring your space new comfort and functionality.'
+    },
+    // {
+    //   name: 'Branding'
+    // },
+    {
+      name: 'Interior Design',
+      link: '/services/interior-design',
+      logo: 'img/icons/think-draw-build.png',
+      banner: 'img/services/master-br.png',
+      subHead: 'creating individualized products',
+      desc: 'We would love to come to your home and give you a free hour consultation.  We will create a new and inspiring space that emulates your personality.'
     },
     {
-      name: 'Space Planning'
-    },
-    {
-      name: 'Branding'
-    },
-    {
-      name: 'Interior Design'
-    },
-    {
-      name: 'Furniture Design'
+      name: 'Furniture Design',
+      link: '/services/furniture',
+      logo: 'img/icons/construction.png',
+      banner: 'img/services/bench.png',
+      subHead: 'creating individualized products',
+      desc: 'We love to create furniture out of sustainable materials. Crafting unique furniture has become a wondeful passion of our.  Let us help you create something one-of-a-kind for your space.'
     }
   ];
 
