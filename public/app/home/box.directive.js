@@ -1,5 +1,5 @@
 
-app.directive('boxHeight', ['$window', '$timeout', function ($window, $timeout) {
+angular.module('box.height.dir', []).directive('boxHeight', ['$window', '$timeout', function ($window, $timeout) {
     return {
         restrict: 'A',
         link: (scope, elem, attrs) => {
@@ -15,7 +15,7 @@ app.directive('boxHeight', ['$window', '$timeout', function ($window, $timeout) 
     };
 }]);
 
-app.directive('targetHeight', function(){
+angular.module('target.height.dir', []).directive('targetHeight', function(){
   return {
     restrict: 'A',
     link: (scope, elem, attrs) => {

@@ -1,4 +1,4 @@
-const app = angular.module('hb-interiors', ['ui.router']);
+const app = angular.module('hb-interiors', ['home', 'services', 'ed.controller', 'contact.controller', 'about.controller', 'ui.router']);
 
 app.config(['$locationProvider', '$stateProvider', '$urlRouterProvider', ($locationProvider, $stateProvider, $urlRouterProvider) => {
 
@@ -9,32 +9,32 @@ app.config(['$locationProvider', '$stateProvider', '$urlRouterProvider', ($locat
       .state('home', {
           url: '/',
           templateUrl: '/partials/home/home',
-          controller: 'homeCtrl'
+          controller: 'HomeController'
       })
       .state('services', {
-        url: '/services',
-        templateUrl: '/partials/services/services',
-        controller: 'ServiceController'
+          url: '/services',
+          templateUrl: '/partials/services/services',
+          controller: 'ServiceController'
       })
       .state('e-design', {
-        url: '/e-design',
-        templateUrl: '/partials/ed/ed',
-        controller: 'eDesignCtrl'
+          url: '/e-design',
+          templateUrl: '/partials/ed/ed',
+          controller: 'EDesignController'
       })
       .state('about', {
-        url: '/about',
-        templateUrl: '/partials/about/about',
-        controller: 'aboutCtrl'
+          url: '/about',
+          templateUrl: '/partials/about/about',
+          controller: 'AboutController'
       })
       .state('contact', {
-        url: '/contact',
-        templateUrl: '/partials/contact/contact',
-        controller: 'contactCtrl'
+          url: '/contact',
+          templateUrl: '/partials/contact/contact',
+          controller: 'ContactController'
       })
       .state('services.detail', {
-        url: '/services/:name',
-        templateUrl: '/partials/services/services-detail',
-        controller: 'SelectedServiceController'
+          url: '/:slug',
+          templateUrl: '/partials/services/services-detail',
+          controller: 'SelectedServiceController'
       });
 }]);
 
@@ -48,7 +48,7 @@ app.run(['$rootScope', '$location', function($rootScope, $location){
   // });
 
   $rootScope.$on("$stateChangeSuccess", function (event, currentRoute, previousRoute) {
-    // window.scrollTo(0, 0);
+
   });
 
 }]);

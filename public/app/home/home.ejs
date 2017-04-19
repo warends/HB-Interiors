@@ -48,7 +48,7 @@
             <h3>What is E-Design</h3>
             <h5 class="forest padded-vertical">E-DESIGN IS A MORE
 AFFORDABLE WAY TO DESIGN A SPACE.  WITH YOUR HELP, WE CAN PULL TOGEHER PRODUCTS THAT YOU WILL LOVE TO FURNISH YOUR SPACE.</h5>
-            <button class="btn btn-outline" ng-click="showheight()">Learn More</button>
+            <a ui-sref="e-design" class="btn btn-outline">Learn More</a>
           </div>
         </div>
       </div>
@@ -85,7 +85,7 @@ AFFORDABLE WAY TO DESIGN A SPACE.  WITH YOUR HELP, WE CAN PULL TOGEHER PRODUCTS 
           <div class="col-sm-4 service">
             <div class="hexagon-grey"></div>
             <div class="hexagon-black">
-              <a ui-sref="services.detail({name: service.name})"><img class="img-responsive {{service.title}}" ng-src="{{service.logo}}"/></a>
+              <a ui-sref="services.detail({slug: service.slug})"><img class="img-responsive {{service.title}}" ng-src="{{service.logo}}"/></a>
             </div>
 
             <h3 class="forest padded-bottom">{{service.name}}</h3>

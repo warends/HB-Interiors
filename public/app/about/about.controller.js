@@ -1,4 +1,4 @@
-app.controller('aboutCtrl', ['$scope', ($scope) => {
+angular.module('about.controller', []).controller('AboutController', ['$scope', ($scope) => {
 
   $scope.isActive = false;
   $scope.minusSign = false;

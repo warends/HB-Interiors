@@ -1,4 +1,4 @@
-app.factory('ServiceFactory', () => {
+angular.module('service.factory', []).factory('ServiceFactory', () => {
   var services = [
     // {
     //   name: 'e-Design',
@@ -6,7 +6,7 @@ app.factory('ServiceFactory', () => {
     // },
     {
       name: 'Space Planning',
-      link: '/services/space-planning',
+      slug: 'space-planning',
       logo: 'img/icons/house-plan.png',
       banner: 'img/services/floor-plan.png',
       subHead: 'creating individualized products',
@@ -17,7 +17,7 @@ app.factory('ServiceFactory', () => {
     // },
     {
       name: 'Interior Design',
-      link: '/services/interior-design',
+      slug: 'interior-design',
       logo: 'img/icons/think-draw-build.png',
       banner: 'img/services/master-br.png',
       subHead: 'creating individualized products',
@@ -25,7 +25,7 @@ app.factory('ServiceFactory', () => {
     },
     {
       name: 'Furniture Design',
-      link: '/services/furniture',
+      slug: 'furniture',
       logo: 'img/icons/construction.png',
       banner: 'img/services/bench.png',
       subHead: 'creating individualized products',
@@ -37,9 +37,9 @@ app.factory('ServiceFactory', () => {
     list: function(){
       return services;
     },
-    find: function(name){
+    find: function(slug){
         return _.find(services, (service) => {
-          return service.name == name;
+          return service.slug == slug;
         });
     }
   }
