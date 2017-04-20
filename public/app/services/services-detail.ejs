@@ -22,8 +22,9 @@
     </div>
     <nav class="service-menu text-center">
       <ul>
-        <li class="cta"><a ui-sref="contact">Contact</a></li>
+
         <li ng-repeat="service in services"><a ui-sref="services.detail({slug: service.slug})">{{service.name}}</a></li>
+        <li class="cta"><a ui-sref="contact">Contact</a></li>
       </ul>
     </nav>
 </div>
