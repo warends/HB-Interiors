@@ -1,7 +1,7 @@
 angular.module('contact.controller', []).controller('ContactController', ['$scope', '$http', ($scope, $http) => {
 
     $scope.form = {};
-    
+
     $scope.sendMail = function(){
          var data =({
            contactName : this.contactName,

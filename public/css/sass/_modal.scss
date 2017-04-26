@@ -1,0 +1,46 @@
+.ng-modal-overlay {
+  position:fixed;
+  z-index:9998;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-color:#000000;
+  opacity: 0.6;
+}
+.ng-modal-dialog {
+  z-index:10000;
+  position: fixed;
+  width: 90%; /* Default */
+  border-radius: 4px;
+
+  /* Center the dialog */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+
+  background-color: #fff;
+  box-shadow: 4px 4px 80px #000;
+  @include mq($S){
+    width: 75%;
+  }
+  @include mq($M){
+    width: 50%;
+  }
+}
+.ng-modal-dialog-content {
+  padding:10px;
+  text-align: left;
+}
+.ng-modal-close {
+  position: absolute;
+  top: 3px;
+  right: 5px;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 120%;
+  display: inline-block;
+  font-weight: bold;
+}
