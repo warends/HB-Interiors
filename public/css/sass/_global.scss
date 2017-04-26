@@ -93,6 +93,10 @@ a:hover {
   padding-top: 1em;
   padding-bottom: 1em;
 }
+.padded-vert-2x{
+    padding-top: 2em;
+    padding-bottom: 2em;
+}
 .padded-horz {
   padding-bottom: 0 1em;
 }
@@ -139,9 +143,18 @@ section.padded-bottom{
     background-color: $forest;
     color: white;
     margin: 0 auto;
+    border: 2px solid $forest;
+    text-transform: uppercase;
+    &:hover{
+        border: 2px solid $light-black;
+        color: white;
+    }
+}
+.caps {
+    text-transform: uppercase;
 }
 .cta {
-  background-color: #303030;
+  background-color: $forest;
   color: white;
   .col-xs-12{
     height: 150px;

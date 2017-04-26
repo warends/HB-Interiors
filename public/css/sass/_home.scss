@@ -45,14 +45,14 @@
   .hero-text{
     bottom: 205px;
   }
-  .col-sm-6{
+  .col-sm-5{
     .box{
       height: 310px;
       @include mq($M){
         height: 420px;
       }
       @include mq($L){
-        height: 470px;
+        height: 389px;
       }
       .text-box{
         padding: 0 4em;

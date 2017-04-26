@@ -39,10 +39,10 @@
   </div>
   <div class="container small">
     <div class="row">
-      <div class="col-sm-6 left">
+      <div class="col-sm-5 col-sm-offset-1 left">
         <img class="img-responsive" src="img/living-room-home.png" />
       </div>
-      <div class="col-sm-6 right">
+      <div class="col-sm-5 right">
         <div class="dark-grey box text-center">
           <div class="text-box">
             <h3>What is E-Design</h3>
@@ -54,7 +54,7 @@ AFFORDABLE WAY TO DESIGN A SPACE.  WITH YOUR HELP, WE CAN PULL TOGEHER PRODUCTS 
       </div>
     </div>
     <div class="row">
-      <div class="col-sm-6 left">
+      <div class="col-sm-5 col-sm-offset-1 left">
         <div class="grey box text-center">
           <div class="text-box">
             <h3 class="padded-bottom">Englewood Project</h3>
@@ -62,7 +62,7 @@ AFFORDABLE WAY TO DESIGN A SPACE.  WITH YOUR HELP, WE CAN PULL TOGEHER PRODUCTS 
           </div>
         </div>
       </div>
-      <div class="col-sm-6 right">
+      <div class="col-sm-5 right">
         <img class="img-responsive border-dark-right" src="img/living-room-dimensions.png" />
       </div>
     </div>
@@ -81,8 +81,8 @@ AFFORDABLE WAY TO DESIGN A SPACE.  WITH YOUR HELP, WE CAN PULL TOGEHER PRODUCTS 
   <div class="container small">
     <div class="row">
       <div ng-repeat="service in services">
-          <div class="clearfix" ng-if="$index % 3 == 0"></div>
-          <div class="col-sm-4 service">
+          <!-- <div class="clearfix" ng-if="$index % 4 == 0"></div> -->
+          <div class="col-sm-3 service">
             <div class="hexagon-grey"></div>
             <div class="hexagon-black">
               <a ui-sref="services.detail({slug: service.slug})"><img class="img-responsive {{service.title}}" ng-src="{{service.logo}}"/></a>
@@ -99,8 +99,8 @@ AFFORDABLE WAY TO DESIGN A SPACE.  WITH YOUR HELP, WE CAN PULL TOGEHER PRODUCTS 
 <section class="cta">
   <div class="container">
     <div class="row">
-      <div class="col-xs-12">
-        <h3>CTA HERE</h3>
+      <div class="col-xs-12 text-center">
+        <h3>HAYLEY BAGWELL DESIGNS ARE THOUGHTFUL AND ECLECTIC</h3>
       </div>
     </div>
   </div>

@@ -37,22 +37,23 @@ var nodemailer = require('nodemailer');
 // });
 
 exports.sendMail = function(req, res){
-  var data = req.body;
-  var mailOptions = {
-    from: data.contactEmail,
-    to: 'willarends@gmail.com',
-    subject: 'Message from ' + data.contactName,
-    //text: data.contactMessage,
-    html: data.contactMessage + '<br><br><p>Email: ' + data.contactEmail + '<br>Company: ' + data.contactCompany + '<br>Name: ' + data.contactName + '</p>'
-  }
-  transporter.sendMail(mailOptions, function(err, info){
-    if(err){
-      console.log(err);
-      res.json({message: err.toString()});
-    } else {
-      console.log('Message Sent: ' + info.response);
-      res.json(data);
-    }
-  });
+    console.log('mail sent!');
+  // var data = req.body;
+  // var mailOptions = {
+  //   from: data.contactEmail,
+  //   to: 'willarends@gmail.com',
+  //   subject: 'Message from ' + data.contactName,
+  //   //text: data.contactMessage,
+  //   html: data.contactMessage + '<br><br><p>Email: ' + data.contactEmail + '<br>Company: ' + data.contactCompany + '<br>Name: ' + data.contactName + '</p>'
+  // }
+  // transporter.sendMail(mailOptions, function(err, info){
+  //   if(err){
+  //     console.log(err);
+  //     res.json({message: err.toString()});
+  //   } else {
+  //     console.log('Message Sent: ' + info.response);
+  //     res.json(data);
+  //   }
+  // });
 
 };
