@@ -4,11 +4,11 @@ angular.module('box.height.dir', []).directive('boxHeight', ['$window', '$timeou
         restrict: 'A',
         link: (scope, elem, attrs) => {
           $timeout(() => {
-            scope.newHeight = elem.height();
+            scope.newHeight = elem[0].offsetHeight;
           }, 500);
           angular.element($window).bind('resize', () => {
             scope.$apply(() => {
-              scope.newHeight = elem.height();
+              scope.newHeight = elem[0].offsetHeight;
             });
           });
         }

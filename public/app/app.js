@@ -1,4 +1,4 @@
-const app = angular.module('hb-interiors', ['home', 'services', 'ed.controller', 'contact.controller', 'about.controller', 'ui.router']);
+const app = angular.module('hb-interiors', ['home', 'services', 'common.modal', 'ed.controller', 'contact.controller', 'about.controller', 'ui.router', 'ngScrollReveal']);
 
 app.config(['$locationProvider', '$stateProvider', '$urlRouterProvider', ($locationProvider, $stateProvider, $urlRouterProvider) => {
 

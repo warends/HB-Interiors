@@ -65,13 +65,190 @@
           <img src="/img/e-design/living-room-rendering.png" class="img-responsive padded-vertical" />
       </div>
       <div class="col-sm-6 text-center">
-          <a href="#" class="btn questionaire">Questionaire</a>
+          <a href="#" class="btn btn-lg questionaire" ng-click="toggleQForm()">Questionaire</a>
       </div>
-
     </div>
 
   </div>
 </section>
+
+<global-modal show='qShow'>
+    <h2 class="text-center">Questionaire</h2>
+    <form id="signup" name="questioniareForm">
+        <div class="row">
+            <div class="col-xs-12">
+                <h3 class="padded-vertical">Contact Details</h3>
+            </div>
+        </div>
+
+        <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="name">Name:</label>
+                      <input type="text" name="name" ng-model="name" class="form-control" required/>
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email:</label>
+                      <input type="email" name="email" ng-model="email" class="form-control" required/>
+                    </div>
+                    <div class="form-group">
+                      <label for="address">Address:</label>
+                      <input type="text" name="address" ng-model="address" class="form-control" required/>
+                    </div>
+                </div>
+
+                <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="city">City:</label>
+                      <input type="text" name="city" ng-model="city" class="form-control" required/>
+                    </div>
+                    <div class="form-group">
+                      <label for="state">State:</label>
+                      <select class="form-control" id="state" name="state" required>
+                			<option value="">State</option>
+                			<option value="AK">Alaska</option>
+                			<option value="AL">Alabama</option>
+                			<option value="AR">Arkansas</option>
+                			<option value="AZ">Arizona</option>
+                			<option value="CA">California</option>
+                			<option value="CO">Colorado</option>
+                			<option value="CT">Connecticut</option>
+                			<option value="DC">District of Columbia</option>
+                			<option value="DE">Delaware</option>
+                			<option value="FL">Florida</option>
+                			<option value="GA">Georgia</option>
+                			<option value="HI">Hawaii</option>
+                			<option value="IA">Iowa</option>
+                			<option value="ID">Idaho</option>
+                			<option value="IL">Illinois</option>
+                			<option value="IN">Indiana</option>
+                			<option value="KS">Kansas</option>
+                			<option value="KY">Kentucky</option>
+                			<option value="LA">Louisiana</option>
+                			<option value="MA">Massachusetts</option>
+                			<option value="MD">Maryland</option>
+                			<option value="ME">Maine</option>
+                			<option value="MI">Michigan</option>
+                			<option value="MN">Minnesota</option>
+                			<option value="MO">Missouri</option>
+                			<option value="MS">Mississippi</option>
+                			<option value="MT">Montana</option>
+                			<option value="NC">North Carolina</option>
+                			<option value="ND">North Dakota</option>
+                			<option value="NE">Nebraska</option>
+                			<option value="NH">New Hampshire</option>
+                			<option value="NJ">New Jersey</option>
+                			<option value="NM">New Mexico</option>
+                			<option value="NV">Nevada</option>
+                			<option value="NY">New York</option>
+                			<option value="OH">Ohio</option>
+                			<option value="OK">Oklahoma</option>
+                			<option value="OR">Oregon</option>
+                			<option value="PA">Pennsylvania</option>
+                			<option value="PR">Puerto Rico</option>
+                			<option value="RI">Rhode Island</option>
+                			<option value="SC">South Carolina</option>
+                			<option value="SD">South Dakota</option>
+                			<option value="TN">Tennessee</option>
+                			<option value="TX">Texas</option>
+                			<option value="UT">Utah</option>
+                			<option value="VA">Virginia</option>
+                			<option value="VT">Vermont</option>
+                			<option value="WA">Washington</option>
+                			<option value="WI">Wisconsin</option>
+                			<option value="WV">West Virginia</option>
+                			<option value="WY">Wyoming</option>
+                		</select>
+                    </div>
+                    <div class="form-group">
+                      <label for="name">Zip:</label>
+                      <input type="number" name="zip" ng-model="zip" class="form-control" required/>
+                    </div>
+
+                </div>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-12">
+                <h3 class="padded-vertical">Preferences/Style Details</h3>
+            </div>
+        </div>
+
+        <div class="row">
+                <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="name">What rooms are you looking to e-design?</label>
+                      <input type="text" name="rooms" ng-model="rooms" class="form-control" required/>
+                    </div>
+                    <div class="form-group">
+                      <label for="budget">What is your overall budget, including design fees and furniture purchases?</label>
+                      <input type="text" name="budget" ng-model="budget" class="form-control" required/>
+                    </div>
+                    <div class="form-group">
+                      <label for="likes">What do you like and dislike about the space?</label>
+                      <textarea name="likes" ng-model="likes" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="space">How is the space going to be used? (i.e. to relax or entertain)</label>
+                      <textarea name="space" ng-model="space" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="users">Who will be the users of the space?</label>
+                      <input type="text" name="users" ng-model="users" class="form-control"/>
+                    </div>
+                    <div class="form-group">
+                      <label for="keep">Are there specific items you would like to keep in the design?  If so, please provide photos.</label>
+                      <input type="text" name="keep" ng-model="keep" class="form-control"/>
+                    </div>
+                </div>
+                <div class="col-sm-6">
+                    <div class="form-group">
+                      <label for="style">What colors and styles are you drawn to and want to see in the design?</label>
+                      <textarea name="style" ng-model="style" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label for="dislike">What colors and styles do you dislike?</label>
+                      <textarea name="dislike" ng-model="dislike" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <label>Do you like patterns or solids?</label>
+                        <div class="radio-inline">
+                            <label><input type="radio" name="patterns" value="patterns" checked>Patterns</label>
+                        </div>
+                        <div class="radio-inline">
+                            <label><input type="radio" name="patterns" value="solids">Solids</label>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="feel">What is the overall feeling that you’d like to have in the space?</label>
+                      <textarea name="feel" ng-model="feel" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <label>Do you like the current lighting?</label>
+                      <div class="radio-inline">
+                          <label><input type="radio" name="lighting" value="yes" checked>Yes</label>
+                      </div>
+                      <div class="radio-inline">
+                          <label><input type="radio" name="lighting" value="no">No</label>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="time">Is there a specific timeline that you have for the project?</label>
+                      <input type="text" name="time" ng-model="time" class="form-control" />
+                    </div>
+
+                    <div class="form-group">
+                      <label for="extra">Is there anything else you’d like us to know about regarding the design?</label>
+                      <textarea name="extra" ng-model="extra" class="form-control"></textarea>
+                    </div>
+                    <div class="form-group">
+                      <input type="submit" class="btn btn-primary" ng-disabled="questioniareForm.$invalid" ng-click="submitQuestionaire" value="Submit"/>
+                    </div>
+                </div>
+
+        </div>
+    </form>
+  </global-modal>
 
 <section class="cta bg-black">
   <div class="container">

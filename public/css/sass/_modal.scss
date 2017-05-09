@@ -13,25 +13,20 @@
   position: fixed;
   width: 90%; /* Default */
   border-radius: 4px;
-
+  height: 90%;
+  overflow-y: scroll;
   /* Center the dialog */
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   -webkit-transform: translate(-50%, -50%);
   -moz-transform: translate(-50%, -50%);
-
-  background-color: #fff;
+  color: $light-black;
+  background-color: $forest;
   box-shadow: 4px 4px 80px #000;
-  @include mq($S){
-    width: 75%;
-  }
-  @include mq($M){
-    width: 50%;
-  }
 }
 .ng-modal-dialog-content {
-  padding:10px;
+  padding:20px;
   text-align: left;
 }
 .ng-modal-close {
