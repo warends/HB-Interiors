@@ -8,4 +8,6 @@ var express = require('express'),
 
   router.post('/contact-form', contact.sendMail);
 
+  router.post('/questionaire-form', contact.sendQuestionaire);
+
 module.exports = router;

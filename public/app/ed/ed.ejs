@@ -85,22 +85,22 @@
                 <div class="col-sm-6">
                     <div class="form-group">
                       <label for="name">Name:</label>
-                      <input type="text" name="name" ng-model="name" class="form-control" required/>
+                      <input type="text" name="name" ng-model="formData.name" class="form-control" required/>
                     </div>
                     <div class="form-group">
                       <label for="email">Email:</label>
-                      <input type="email" name="email" ng-model="email" class="form-control" required/>
+                      <input type="email" name="email" ng-model="formData.email" class="form-control" required/>
                     </div>
                     <div class="form-group">
                       <label for="address">Address:</label>
-                      <input type="text" name="address" ng-model="address" class="form-control" required/>
+                      <input type="text" name="address" ng-model="formData.address" class="form-control" required/>
                     </div>
                 </div>
 
                 <div class="col-sm-6">
                     <div class="form-group">
                       <label for="city">City:</label>
-                      <input type="text" name="city" ng-model="city" class="form-control" required/>
+                      <input type="text" name="city" ng-model="formData.city" class="form-control" required/>
                     </div>
                     <div class="form-group">
                       <label for="state">State:</label>
@@ -162,7 +162,7 @@
                     </div>
                     <div class="form-group">
                       <label for="name">Zip:</label>
-                      <input type="number" name="zip" ng-model="zip" class="form-control" required/>
+                      <input type="number" name="zip" ng-model="formData.zip" class="form-control" required/>
                     </div>
 
                 </div>
@@ -178,74 +178,75 @@
                 <div class="col-sm-6">
                     <div class="form-group">
                       <label for="name">What rooms are you looking to e-design?</label>
-                      <input type="text" name="rooms" ng-model="rooms" class="form-control" required/>
+                      <input type="text" name="rooms" ng-model="formData.rooms" class="form-control" required/>
                     </div>
                     <div class="form-group">
                       <label for="budget">What is your overall budget, including design fees and furniture purchases?</label>
-                      <input type="text" name="budget" ng-model="budget" class="form-control" required/>
+                      <input type="text" name="budget" ng-model="formData.budget" class="form-control" required/>
                     </div>
                     <div class="form-group">
                       <label for="likes">What do you like and dislike about the space?</label>
-                      <textarea name="likes" ng-model="likes" class="form-control"></textarea>
+                      <textarea name="likes" ng-model="formData.likes" class="form-control"></textarea>
                     </div>
                     <div class="form-group">
                       <label for="space">How is the space going to be used? (i.e. to relax or entertain)</label>
-                      <textarea name="space" ng-model="space" class="form-control"></textarea>
+                      <textarea name="space" ng-model="formData.space" class="form-control"></textarea>
                     </div>
                     <div class="form-group">
                       <label for="users">Who will be the users of the space?</label>
-                      <input type="text" name="users" ng-model="users" class="form-control"/>
+                      <input type="text" name="users" ng-model="formData.users" class="form-control"/>
                     </div>
                     <div class="form-group">
                       <label for="keep">Are there specific items you would like to keep in the design?  If so, please provide photos.</label>
-                      <input type="text" name="keep" ng-model="keep" class="form-control"/>
+                      <input type="text" name="keep" ng-model="formData.keep" class="form-control"/>
                     </div>
                 </div>
                 <div class="col-sm-6">
                     <div class="form-group">
                       <label for="style">What colors and styles are you drawn to and want to see in the design?</label>
-                      <textarea name="style" ng-model="style" class="form-control"></textarea>
+                      <textarea name="style" ng-model="formData.style" class="form-control"></textarea>
                     </div>
                     <div class="form-group">
                       <label for="dislike">What colors and styles do you dislike?</label>
-                      <textarea name="dislike" ng-model="dislike" class="form-control"></textarea>
+                      <textarea name="dislike" ng-model="formData.dislike" class="form-control"></textarea>
                     </div>
                     <div class="form-group">
                         <label>Do you like patterns or solids?</label>
                         <div class="radio-inline">
-                            <label><input type="radio" name="patterns" value="patterns" checked>Patterns</label>
+                            <label><input type="radio" name="patterns" ng-model="formData.patterns" value="patterns" checked>Patterns</label>
                         </div>
                         <div class="radio-inline">
-                            <label><input type="radio" name="patterns" value="solids">Solids</label>
+                            <label><input type="radio" name="patterns" ng-model="formData.solids" value="solids">Solids</label>
                         </div>
                     </div>
                     <div class="form-group">
                       <label for="feel">What is the overall feeling that you’d like to have in the space?</label>
-                      <textarea name="feel" ng-model="feel" class="form-control"></textarea>
+                      <textarea name="feel" ng-model="formData.feel" class="form-control"></textarea>
                     </div>
                     <div class="form-group">
                       <label>Do you like the current lighting?</label>
                       <div class="radio-inline">
-                          <label><input type="radio" name="lighting" value="yes" checked>Yes</label>
+                          <label><input type="radio" name="lighting" value="yes" ng-model="formData.lightingYes" checked>Yes</label>
                       </div>
                       <div class="radio-inline">
-                          <label><input type="radio" name="lighting" value="no">No</label>
+                          <label><input type="radio" name="lighting" ng-model="formData.lightingNo" value="no">No</label>
                       </div>
                     </div>
                     <div class="form-group">
                       <label for="time">Is there a specific timeline that you have for the project?</label>
-                      <input type="text" name="time" ng-model="time" class="form-control" />
+                      <input type="text" name="time" ng-model="formData.time" class="form-control" />
                     </div>
 
                     <div class="form-group">
                       <label for="extra">Is there anything else you’d like us to know about regarding the design?</label>
-                      <textarea name="extra" ng-model="extra" class="form-control"></textarea>
-                    </div>
-                    <div class="form-group">
-                      <input type="submit" class="btn btn-primary" ng-disabled="questioniareForm.$invalid" ng-click="submitQuestionaire" value="Submit"/>
-                    </div>
-                </div>
+                      <textarea name="extra" ng-model="formData.extra" class="form-control"></textarea>
+                  </div>
 
+                </div>
+        </div>
+
+        <div class="form-group pull-right">
+          <input type="submit" class="btn btn-lg btn-primary" ng-disabled="questioniareForm.$invalid" ng-click="submitQuestionaire()" value="Submit"/>
         </div>
     </form>
   </global-modal>

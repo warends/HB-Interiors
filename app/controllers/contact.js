@@ -57,3 +57,9 @@ exports.sendMail = function(req, res){
   // });
 
 };
+
+exports.sendQuestionaire = function(req, res) {
+    console.log('Q form Sent!');
+    var data = req.body;
+    console.log(data);
+}
