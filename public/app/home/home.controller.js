@@ -2,5 +2,4 @@ angular.module('home.controller', []).controller('HomeController', ['$scope', 'S
 
   $scope.services = ServiceFactory.list();
 
-
 }]);

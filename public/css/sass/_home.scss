@@ -29,16 +29,21 @@
 }
 #welcome {
   position: relative;
-  #square-svg{
-      position: absolute;
-      top: -30px;
-      left: -30px;
-      #square {
-          stroke-dasharray: 2264;
-          stroke-dashoffset: 2264;
+  .welcome-text{
+      #square-svg{
+          position: absolute;
+          top: -30px;
+          left: -30px;
+          #square {
+              stroke-dasharray: 2264;
+              stroke-dashoffset: 2264;
+          }
+      }
+      &.active #square {
           animation: square_line 2s ease-in forwards;
       }
   }
+
   .hb-icon{
     width: 100px;
   }

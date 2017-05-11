@@ -1,4 +1,4 @@
-app.factory('Meta', function(){
+angular.module('common.meta', []).factory('Meta', function(){
   var title = 'Hayley Bagwell Interior Design, Seattle, WA';
   var desc = 'Super DERRR';
   return {
