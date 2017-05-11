@@ -49,6 +49,9 @@ a:hover {
 .black-shadow{
   background-color: rgba(26, 26, 26, 0.85);
 }
+.new-lines {
+    white-space: pre-wrap;
+}
 .hero-text {
   position: absolute;
   &.left{
