@@ -16,7 +16,7 @@
   </div>
   <div class="container small">
     <div class="row">
-      <div class="col-xs-8 welcome-text" in-view ng-class="{active:view}">
+      <div class="col-xs-8 welcome-text" in-view view-obj="welcome" ng-class="{active:welcome.visible}">
         <div class="" target-height>
             <svg id="square-svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 622 522">
               <rect id="square" x="3" y="3" width="616" height="516" fill="none" stroke="#9fa8a1" stroke-width="6"/>
@@ -35,7 +35,7 @@
 </section>
 
 
-<section id="e-design">
+<section id="e-design" ng-scroll-reveal="options">
   <div class="hero-text vertical right">
     <h1>e-design</h1>
     <h3>Projects<span class="end-border">  _______</span></h3>
