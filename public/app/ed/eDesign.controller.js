@@ -1,4 +1,4 @@
-angular.module('ed.controller', []).controller('EDesignController', ['$scope', '$http', ($scope, $http) => {
+angular.module('ed.controller', []).controller('EDesignController', ['$scope', '$http', 'QFactory', ($scope, $http, QFactory) => {
     window.scrollTo(0, 0);
 
     $scope.qShow = false;
