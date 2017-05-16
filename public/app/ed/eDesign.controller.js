@@ -7,6 +7,7 @@ angular.module('ed.controller', []).controller('EDesignController', ['$scope', '
     }
 
     $scope.formData = {};
+    $scope.questions = QFactory.list();
 
     $scope.submitQuestionaire = function(){
         console.log($scope.formData);
