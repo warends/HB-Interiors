@@ -3,17 +3,43 @@
     <div class="row" ng-repeat="question in questions">
         <div class="col-xs-12 slide" ng-class="{{question.id}}">
             <p class="question">{{question.question}}</p>
+
             <div ng-show="question.type == 'radio'">
-                <div class="radio" ng-class="question.cols" ng-repeat="answer in question.answers">
-                  <label><input type="radio" name="{{answer}}" value="{{answer}}">
-                      <img class="img-responsive" ng-src="/img/question/{{answer}}.png">
-                  </label>
+                <div class="row">
+                    <div class="radio" ng-class="question.cols" ng-repeat="answer in question.answers">
+                      <label>
+                          <input type="radio" name="{{answer}}" value="{{answer}}">
+                          <img class="img-responsive" ng-src="/img/question/{{answer}}.png">
+                      </label>
+                    </div>
                 </div>
             </div>
+
             <div ng-show="question.type == 'checkbox'">
-                <div class="checkbox" ng-repeat="answer in question.answers">
-                    <label><input type="checkbox" value="{{answer}}" />{{answer}}</label>
+                <div class="row">
+                    <div ng-hide="question.images">
+                        <div class="checkbox" ng-class="question.cols" ng-repeat="answer in question.answers">
+                            <label>
+                                <input type="checkbox" name="{{answer}}" value="{{answer}}" />
+                                <div ng-class="answer" class="color">
+                                    {{answer}}
+                                </div>
+                            </label>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="row">
+                    <div ng-show="question.images">
+                        <div class="checkbox" ng-class="question.cols" ng-repeat="image in question.images">
+                            <label>
+                                <input type="checkbox" name="{{image}}" value="{{image}}" />
+                                <img class="img-responsive" ng-src="/img/question/{{image}}.png">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+
             </div>
         </div>
     </div>

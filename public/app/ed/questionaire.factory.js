@@ -23,7 +23,8 @@ angular.module('questionaire.factory', []).factory('QFactory', () => {
             question: 'Where would you shop for furniture?',
             text: true,
             cols: 'col-sm-2',
-            answers: ['Ikea', 'Pier 1', 'West Elm', 'Crate and Barrel', 'CB2', 'Restoration Hardware']
+            answers: ['Ikea', 'Pier 1', 'West Elm', 'Crate and Barrel', 'CB2', 'Restoration Hardware'],
+            images: ['ikea', 'pier-1', 'west-elm', 'crate-barrel', 'cb2', 'restoration']
         },
         {
             id: 'q4',
@@ -31,7 +32,8 @@ angular.module('questionaire.factory', []).factory('QFactory', () => {
             question: 'What colors would you like to see in the design',
             text: false,
             cols: 'col-sm-2',
-            answers: ['Black', 'Grey', 'Red', 'Orange', 'Yellow', 'Lime', 'Green', 'Aqua', 'Turqious', 'Slate', 'Blue', 'Purple', 'Pink', 'Brown', 'Cream', 'White']
+            design: 'colors',
+            answers: ['Black', 'Grey', 'Red', 'Orange', 'Yellow', 'Lime', 'Green', 'Aqua', 'Turquoise', 'Slate', 'Blue', 'Purple', 'Pink', 'Brown', 'Cream', 'White']
         },
         {
             id: 'q5',
@@ -39,7 +41,7 @@ angular.module('questionaire.factory', []).factory('QFactory', () => {
             question: 'Select which colors you would NOT want to see',
             text: false,
             cols: 'col-sm-2',
-            answers: ['Black', 'Grey', 'Red', 'Orange', 'Yellow', 'Lime', 'Green', 'Aqua', 'Turqious', 'Slate', 'Blue', 'Purple', 'Pink', 'Brown', 'Cream', 'White']
+            answers: ['Black', 'Grey', 'Red', 'Orange', 'Yellow', 'Lime', 'Green', 'Aqua', 'Turquoise', 'Slate', 'Blue', 'Purple', 'Pink', 'Brown', 'Cream', 'White']
         },
         {
             id: 'q6',

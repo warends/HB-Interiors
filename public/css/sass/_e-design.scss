@@ -45,7 +45,91 @@
         cursor: pointer;
         border: 2px solid transparent;
     }
+    label > input[type="checkbox"] {
+        visibility: hidden;
+        position: absolute;
+    }
+    label > input[type="checkbox"] + img {
+        cursor: pointer;
+        border: 2px solid transparent;
+    }
     label > input:checked + img {
         border: 2px solid red;
+    }
+    .checkbox {
+        label{
+            width: 100%;
+        }
+        .color{
+            width: 100%;
+            height: 100px;
+            &.Black {
+                border-radius: 4px;
+                background-color: black;
+            }
+            &.Grey {
+                border-radius: 4px;
+                background-color: grey;
+            }
+            &.Red {
+                border-radius: 4px;
+                background-color: red;
+            }
+            &.Orange {
+                border-radius: 4px;
+                background-color: orange;
+            }
+            &.Yellow {
+                border-radius: 4px;
+                background-color: yellow;
+            }
+            &.Lime {
+                border-radius: 4px;
+                background-color: lime;
+            }
+            &.Green {
+                border-radius: 4px;
+                background-color: green;
+            }
+            &.Aqua {
+                border-radius: 4px;
+                background-color: aqua;
+            }
+            &.Turquoise  {
+                border-radius: 4px;
+                background-color: Turquoise;
+            }
+            &.Slate {
+                border-radius: 4px;
+                background-color: #333;
+            }
+            &.Blue {
+                border-radius: 4px;
+                background-color: blue;
+            }
+            &.Purple {
+                border-radius: 4px;
+                background-color: purple;
+            }&.Pink {
+                border-radius: 4px;
+                background-color: pink;
+            }
+            &.Brown {
+                border-radius: 4px;
+                background-color: brown;
+            }
+            &.Cream {
+                border-radius: 4px;
+                background-color: Beige;
+            }
+            &.White {
+                border-radius: 4px;
+                background-color: white;
+            }
+    }
+
+
+
+
     }
 }
