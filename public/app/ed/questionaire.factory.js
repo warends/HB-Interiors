@@ -6,13 +6,15 @@ angular.module('questionaire.factory', []).factory('QFactory', () => {
             type: 'radio',
             question: 'Which space would you like designed first?',
             text: true,
-            answers: ['Living', 'Bedroom', 'Dining', 'Bath', 'Ktchen', 'Other']
+            cols: 'col-sm-2',
+            answers: ['Living', 'Bedroom', 'Dining', 'Bath', 'Kitchen', 'Other']
         },
         {
             id: 'q2',
             type: 'radio',
             question: 'Which image(s) are you drawn to?',
             text: false,
+            cols: 'col-sm-2',
             answers: ['img1', 'img2', 'img3', 'img4', 'img5', 'img6']
         },
         {
@@ -20,6 +22,7 @@ angular.module('questionaire.factory', []).factory('QFactory', () => {
             type: 'checkbox',
             question: 'Where would you shop for furniture?',
             text: true,
+            cols: 'col-sm-2',
             answers: ['Ikea', 'Pier 1', 'West Elm', 'Crate and Barrel', 'CB2', 'Restoration Hardware']
         },
         {
@@ -27,6 +30,7 @@ angular.module('questionaire.factory', []).factory('QFactory', () => {
             type: 'checkbox',
             question: 'What colors would you like to see in the design',
             text: false,
+            cols: 'col-sm-2',
             answers: ['Black', 'Grey', 'Red', 'Orange', 'Yellow', 'Lime', 'Green', 'Aqua', 'Turqious', 'Slate', 'Blue', 'Purple', 'Pink', 'Brown', 'Cream', 'White']
         },
         {
@@ -34,6 +38,7 @@ angular.module('questionaire.factory', []).factory('QFactory', () => {
             type: 'checkbox',
             question: 'Select which colors you would NOT want to see',
             text: false,
+            cols: 'col-sm-2',
             answers: ['Black', 'Grey', 'Red', 'Orange', 'Yellow', 'Lime', 'Green', 'Aqua', 'Turqious', 'Slate', 'Blue', 'Purple', 'Pink', 'Brown', 'Cream', 'White']
         },
         {
@@ -41,7 +46,8 @@ angular.module('questionaire.factory', []).factory('QFactory', () => {
             type: 'radio',
             question: 'HOW MUCH MONEY ARE YOU BUDGETING FOR YOUR PROJECT AFTER THE DESIGN FEE, WHICH BEGINS AROUND $1,500 PER SPACE?',
             text: false,
-            answers: ['$1000-$2500', '$2500-$5000', '$5000-$10,000', '$10,000-$15,000', '$15,000-$25,000', '$25,000+']
+            cols: 'col-sm-2',
+            answers: ['1-2', '2-5', '5-10', '10-15', '15-25', '25up']
         }
     ];
 
