@@ -22,6 +22,6 @@ angular.module('home.controller', []).controller('HomeController', ['$scope', 'S
       selector: '.col-sm-5',
       interval: 300
     }
- };
+};
 
 }]);

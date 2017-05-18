@@ -26,11 +26,6 @@ app.config(['$locationProvider', '$stateProvider', '$urlRouterProvider', ($locat
           templateUrl: '/partials/about/about',
           controller: 'AboutController'
       })
-      .state('contact', {
-          url: '/contact',
-          templateUrl: '/partials/contact/contact',
-          controller: 'ContactController'
-      })
       .state('services.detail', {
           url: '/:slug',
           templateUrl: '/partials/services/services-detail',
