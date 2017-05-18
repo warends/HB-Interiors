@@ -1,5 +1,4 @@
 #about {
-  height: 800px;
   position: relative;
   background: url('../../img/bgs/about-bg.png') no-repeat;
   background-position: 0 300px;
@@ -8,8 +7,9 @@
     left: 20px;
   }
   .container{
-    position: relative;
-    top: 150px;
+    .bio{
+        margin-top: 150px;
+    }
   }
   .employee-details{
     position: relative;
@@ -32,14 +32,14 @@
     top: 15px;
   }
   .background{
-    position: absolute;
-    width: 65%;
+    //position: absolute;
+    //width: 65%;
     overflow: hidden;
-    left: -1000px;
+    //left: -1000px;
     transition: all 1s linear;
-    &.active{
-      left: 30%;
-    }
+    // &.active{
+    //   left: 30%;
+    // }
   }
 
 }

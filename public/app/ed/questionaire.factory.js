@@ -48,6 +48,10 @@ angular.module('questionaire.factory', []).factory('QFactory', () => {
             text: false,
             cols: 'col-sm-2',
             answers: ['1-2', '2-5', '5-10', '10-15', '15-25', '25up']
+        },
+        {
+            id: 'q7',
+            type: 'text'
         }
     ];
 
