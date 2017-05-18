@@ -16,8 +16,8 @@
             </div>
 
             <div ng-show="question.type == 'checkbox'">
-                <div class="row">
-                    <div ng-hide="question.images">
+                <div ng-hide="question.images">
+                    <div class="row">
                         <div class="checkbox" ng-class="question.cols" ng-repeat="answer in question.answers">
                             <label>
                                 <input type="checkbox" name="{{answer}}" value="{{answer}}" />
@@ -29,12 +29,13 @@
                     </div>
                 </div>
 
-                <div class="row">
-                    <div ng-show="question.images">
+
+                <div ng-show="question.images">
+                    <div class="row">
                         <div class="checkbox" ng-class="question.cols" ng-repeat="image in question.images">
                             <label>
                                 <input type="checkbox" name="{{image}}" value="{{image}}" />
-                                <img class="img-responsive" ng-src="/img/question/{{image}}.png">
+                            <img class="img-responsive" ng-src="/img/question/{{image}}.png">
                             </label>
                         </div>
                     </div>
@@ -42,22 +43,24 @@
 
             </div>
             <div ng-show="question.type == 'text'">
-                <p>Thank you for helping us get a sense of your design style! Please enter your your information so that we may contact you with a personalized design.</p>
-                <div class="form-group">
-                  <label for="name">Name:</label>
-                  <input type="text" name="name" ng-model="formData.name" class="form-control" required/>
-                </div>
-                <div class="form-group">
-                  <label for="email">Email:</label>
-                  <input type="email" name="email" ng-model="formData.email" class="form-control" required/>
-                </div>
-                <div class="form-group">
-                  <label for="note">Leave a Note</label>
-                  <textarea name="note" ng-model="formData.note" class="form-control"></textarea>
-                </div>
-                <p>E-Design from anywhere!<br />...Locally serving the greater Seattle area</p>
-                <div class="form-group pull-right">
-                  <input type="submit" class="btn btn-lg btn-outline white" ng-disabled="questioniareForm.$invalid" ng-click="submitQuestionaire()" value="Submit"/>
+                <div class="row">
+                    <p>Thank you for helping us get a sense of your design style! Please enter your your information so that we may contact you with a personalized design.</p>
+                    <div class="form-group">
+                      <label for="name">Name:</label>
+                      <input type="text" name="name" ng-model="formData.name" class="form-control" required/>
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Email:</label>
+                      <input type="email" name="email" ng-model="formData.email" class="form-control" required/>
+                    </div>
+                    <div class="form-group">
+                      <label for="note">Leave a Note</label>
+                      <textarea name="note" ng-model="formData.note" class="form-control"></textarea>
+                    </div>
+                    <p>E-Design from anywhere!<br />...Locally serving the greater Seattle area</p>
+                    <div class="form-group pull-right">
+                      <input type="submit" class="btn btn-lg btn-outline white" ng-disabled="questioniareForm.$invalid" ng-click="submitQuestionaire()" value="Submit"/>
+                    </div>
                 </div>
             </div>
         </div>
@@ -70,22 +73,4 @@
         </div>
     </div>
 
-    <!-- <div class="row">
-            <div class="col-xs-12 slide">
-                <p>Thank you for helping us get a sense of your design style! Please enter your your information so that we may contact you with a personalized design.</p>
-                <div class="form-group">
-                  <label for="name">Name:</label>
-                  <input type="text" name="name" ng-model="formData.name" class="form-control" required/>
-                </div>
-                <div class="form-group">
-                  <label for="email">Email:</label>
-                  <input type="email" name="email" ng-model="formData.email" class="form-control" required/>
-                </div>
-                <div class="form-group">
-                  <label for="note">Leave a Note</label>
-                  <textarea name="note" ng-model="formData.note" class="form-control"></textarea>
-                </div>
-                <p>E-Design from anywhere!<br />...Locally serving the greater Seattle area</p>
-            </div>
-    </div> -->
 </form>

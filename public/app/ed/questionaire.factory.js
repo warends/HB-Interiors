@@ -6,7 +6,7 @@ angular.module('questionaire.factory', []).factory('QFactory', () => {
             type: 'radio',
             question: 'Which space would you like designed first?',
             text: true,
-            cols: 'col-sm-2',
+            cols: 'col-sm-4',
             answers: ['Living', 'Bedroom', 'Dining', 'Bath', 'Kitchen', 'Other']
         },
         {
@@ -14,7 +14,7 @@ angular.module('questionaire.factory', []).factory('QFactory', () => {
             type: 'radio',
             question: 'Which image(s) are you drawn to?',
             text: false,
-            cols: 'col-sm-2',
+            cols: 'col-sm-4',
             answers: ['img1', 'img2', 'img3', 'img4', 'img5', 'img6']
         },
         {
@@ -22,7 +22,7 @@ angular.module('questionaire.factory', []).factory('QFactory', () => {
             type: 'checkbox',
             question: 'Where would you shop for furniture?',
             text: true,
-            cols: 'col-sm-2',
+            cols: 'col-sm-4',
             answers: ['Ikea', 'Pier 1', 'West Elm', 'Crate and Barrel', 'CB2', 'Restoration Hardware'],
             images: ['ikea', 'pier-1', 'west-elm', 'crate-barrel', 'cb2', 'restoration']
         },
@@ -48,7 +48,7 @@ angular.module('questionaire.factory', []).factory('QFactory', () => {
             type: 'radio',
             question: 'HOW MUCH MONEY ARE YOU BUDGETING FOR YOUR PROJECT AFTER THE DESIGN FEE, WHICH BEGINS AROUND $1,500 PER SPACE?',
             text: false,
-            cols: 'col-sm-2',
+            cols: 'col-sm-4',
             answers: ['1-2', '2-5', '5-10', '10-15', '15-25', '25up']
         },
         {
