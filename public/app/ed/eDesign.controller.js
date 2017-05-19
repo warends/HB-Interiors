@@ -10,19 +10,12 @@ angular.module('ed.controller', []).controller('EDesignController', ['$scope', '
     $scope.questions = QFactory.list();
     $scope.currentQuestion = 0;
 
-    $scope.setCurrentQuestion = (index) => {
-        $scope.currentQuestion = index;
-    }
-
     $scope.isCurrentQIndex = (index) => {
         return $scope.currentQuestion === index;
     }
 
     $scope.nextQ = () => {
-        console.log($scope.questions.length);
         $scope.currentQuestion = ($scope.currentQuestion < $scope.questions.length -1) ? ++$scope.currentQuestion : 0;
-        console.log($scope.currentQuestion);
-
     }
 
     $scope.prevQ = () => {
@@ -37,6 +30,15 @@ angular.module('ed.controller', []).controller('EDesignController', ['$scope', '
             }, (err) => {
                 console.log('There was a problem submitting your form ' + err);
             });
+    }
+
+    $scope.mySplit = function(string, nb) {
+        var array = string.split('-');
+        if(array[nb+1] === undefined){
+            return array[nb];
+        } else {
+            return array[nb] + ' ' + array[nb+1];
+        }
     }
 
 

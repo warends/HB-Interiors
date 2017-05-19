@@ -1,15 +1,16 @@
 <form id="questionaire" name="questioniareForm">
 
     <div class="row" ng-repeat="question in questions" ng-hide="!isCurrentQIndex($index)">
-        <div class="col-xs-12 slide" ng-class="{{question.id}}">
-            <p class="question">{{question.question}}</p>
+        <div class="col-xs-12 slide">
+            <p class="question padded-vert lead text-center">{{question.question}}</p>
 
             <div ng-show="question.type == 'radio'">
-                <div class="row">
+                <div class="row" ng-class="question.id">
                     <div class="radio" ng-class="question.cols" ng-repeat="answer in question.answers">
                       <label>
                           <input type="radio" name="{{answer}}" value="{{answer}}">
                           <img class="img-responsive" ng-src="/img/question/{{answer}}.png">
+                          <p class="lead">{{answer}}</p>
                       </label>
                     </div>
                 </div>
@@ -17,13 +18,11 @@
 
             <div ng-show="question.type == 'checkbox'">
                 <div ng-hide="question.images">
-                    <div class="row">
+                    <div class="row" ng-class="question.id">
                         <div class="checkbox" ng-class="question.cols" ng-repeat="answer in question.answers">
                             <label>
                                 <input type="checkbox" name="{{answer}}" value="{{answer}}" />
-                                <div ng-class="answer" class="color">
-                                    {{answer}}
-                                </div>
+                                <div ng-class="answer" class="color"></div>
                             </label>
                         </div>
                     </div>
@@ -31,11 +30,12 @@
 
 
                 <div ng-show="question.images">
-                    <div class="row">
+                    <div class="row" ng-class="question.id">
                         <div class="checkbox" ng-class="question.cols" ng-repeat="image in question.images">
                             <label>
                                 <input type="checkbox" name="{{image}}" value="{{image}}" />
-                            <img class="img-responsive" ng-src="/img/question/{{image}}.png">
+                                <img class="img-responsive" ng-src="/img/question/{{image}}.png">
+                                <p class="lead">{{mySplit(image, 0)}}</p>
                             </label>
                         </div>
                     </div>
@@ -44,6 +44,7 @@
             </div>
             <div ng-show="question.type == 'text'">
                 <div class="row">
+                    <div class="col-xs-8 col-xs-offset-2"
                     <p>Thank you for helping us get a sense of your design style! Please enter your your information so that we may contact you with a personalized design.</p>
                     <div class="form-group">
                       <label for="name">Name:</label>
@@ -59,17 +60,17 @@
                     </div>
                     <p>E-Design from anywhere!<br />...Locally serving the greater Seattle area</p>
                     <div class="form-group pull-right">
-                      <input type="submit" class="btn btn-lg btn-outline white" ng-disabled="questioniareForm.$invalid" ng-click="submitQuestionaire()" value="Submit"/>
+                      <input type="submit" class="btn btn-lg btn-outline" ng-disabled="questioniareForm.$invalid" ng-click="submitQuestionaire()" value="Submit"/>
                     </div>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-xs-12">
-            <btn class="btn btn-danger pull-left" ng-click="prevQ()" ng-hide="currentQuestion == '0'">Prev</btn>
-            <btn class="btn btn-primary pull-right" ng-click="nextQ()" ng-hide="currentQuestion == (questions.length-1)">Next</btn>
+    <div class="controls">
+        <div class="col-xs-10 col-xs-offset-1">
+            <i ng-click="prevQ()" ng-hide="currentQuestion == '0'"class="fa fa-caret-left prev pull-left" aria-hidden="true"></i>
+            <i ng-click="nextQ()" ng-hide="currentQuestion == (questions.length-1)"class="fa fa-caret-right pull-right next" aria-hidden="true"></i>
         </div>
     </div>
 
