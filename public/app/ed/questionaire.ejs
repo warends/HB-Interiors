@@ -4,44 +4,56 @@
         <div class="col-xs-12 slide">
             <p class="question padded-vert lead text-center">{{question.question}}</p>
 
-            <div ng-show="question.type == 'radio'">
-                <div class="row" ng-class="question.id">
-                    <div class="radio" ng-class="question.cols" ng-repeat="answer in question.answers">
-                      <label>
-                          <input type="radio" name="{{answer}}" value="{{answer}}">
-                          <img class="img-responsive" ng-src="/img/question/{{answer}}.png">
-                          <p class="lead">{{answer}}</p>
-                      </label>
+                <div class="row" ng-class="question.id" ng-show="question.type == 'radio'">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                        <div ng-repeat="answer in question.answers" class="q-radio">
+                            <div class="clearfix" ng-if="$index % 3 == 0"></div>
+                            <div class="radio" ng-class="question.cols">
+                                <label>
+                                    <input type="radio" name="{{question.id}}" value="{{answer}}">
+                                    <img class="img-responsive" ng-src="/img/question/{{answer}}.png">
+                                    <p class="lead">{{answer}}</p>
+                                </label>
+                            </div>
+                        </div>
                     </div>
-                </div>
-            </div>
+
+                </div><!--end radios-->
 
             <div ng-show="question.type == 'checkbox'">
-                <div ng-hide="question.images">
-                    <div class="row" ng-class="question.id">
-                        <div class="checkbox" ng-class="question.cols" ng-repeat="answer in question.answers">
-                            <label>
-                                <input type="checkbox" name="{{answer}}" value="{{answer}}" />
-                                <div ng-class="answer" class="color"></div>
-                            </label>
+
+                <div class="row" ng-class="question.id" ng-hide="question.images">
+                        <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                            <div ng-repeat="answer in question.answers">
+                                <div class="clearfix" ng-if="$index % 6 == 0"></div>
+                                <div class="checkbox" ng-class="question.cols">
+                                    <label>
+                                        <input type="checkbox" value="{{answer}}" />
+                                        <div ng-class="answer" class="color"></div>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+
+
+                <div class="row" ng-class="question.id" ng-show="question.images">
+                    <div class="col-xs-12 col-sm-8 col-sm-offset-2">
+                        <div ng-repeat="image in question.images">
+                            <div class="clearfix" ng-if="$index % 3 == 0"></div>
+                            <div class="checkbox "ng-class="question.cols">
+                                <label>
+                                    <input type="checkbox" value="{{image}}" />
+                                    <img class="img-responsive" ng-src="/img/question/{{image}}.png">
+                                    <p class="lead">{{mySplit(image, 0)}}</p>
+                                </label>
+                            </div>
                         </div>
                     </div>
                 </div>
 
+            </div><!--end checkboxes-->
 
-                <div ng-show="question.images">
-                    <div class="row" ng-class="question.id">
-                        <div class="checkbox" ng-class="question.cols" ng-repeat="image in question.images">
-                            <label>
-                                <input type="checkbox" name="{{image}}" value="{{image}}" />
-                                <img class="img-responsive" ng-src="/img/question/{{image}}.png">
-                                <p class="lead">{{mySplit(image, 0)}}</p>
-                            </label>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
             <div ng-show="question.type == 'text'">
                 <div class="row">
                     <div class="col-xs-8 col-xs-offset-2"

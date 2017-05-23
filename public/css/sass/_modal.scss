@@ -14,8 +14,7 @@
   width: 90%; /* Default */
   border-radius: 4px;
   height: 90%;
-  overflow-y: scroll;
-  /* Center the dialog */
+  overflow-y: auto;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);

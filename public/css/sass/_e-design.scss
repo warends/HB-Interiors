@@ -67,32 +67,17 @@
         visibility: hidden;
         position: absolute;
     }
-    label > input[type="checkbox"] + img {
+    label > input[type="checkbox"] + img, label > input:checked + .color {
         cursor: pointer;
         border: 4px solid transparent;
     }
-    label > input:checked + img {
+    label > input:checked + img, label > input:checked + .color {
         border: 4px solid $forest;
         border-radius: 4px;
     }
     .checkbox+.checkbox, .radio+.radio {
         margin-top: 10px;
         margin-bottom: 10px;
-    }
-    .radio.col-sm-3{
-        &:first-child, &:nth-child(4){
-            margin-left: 12.4999999%;
-        }
-    }
-    .checkbox.col-sm-3{
-        &:first-child, &:nth-child(4){
-            margin-left: 13.4999999%;
-        }
-    }
-    .checkbox.col-sm-1{
-        &:first-child, &:nth-child(9){
-            margin-left: 16.666664%;
-        }
     }
     .checkbox, .radio p.lead {
         text-transform: capitalize;
