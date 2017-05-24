@@ -33,7 +33,7 @@ angular.module('questionaire.factory', []).factory('QFactory', () => {
             id: 'q5',
             type: 'checkbox',
             question: 'What colors would you like to see in the design',
-            cols: 'col-sm-2',
+            cols: 'col-color',
             design: 'colors',
             answers: ['Black', 'Grey', 'Red', 'Orange', 'Yellow', 'Lime', 'Green', 'Aqua', 'Turquoise', 'Slate', 'Blue', 'Purple', 'Pink', 'Brown', 'Cream', 'White']
         },
@@ -41,7 +41,7 @@ angular.module('questionaire.factory', []).factory('QFactory', () => {
             id: 'q6',
             type: 'checkbox',
             question: 'Select which colors you would NOT want to see',
-            cols: 'col-sm-2',
+            cols: 'col-color',
             answers: ['Black', 'Grey', 'Red', 'Orange', 'Yellow', 'Lime', 'Green', 'Aqua', 'Turquoise', 'Slate', 'Blue', 'Purple', 'Pink', 'Brown', 'Cream', 'White']
         },
         {

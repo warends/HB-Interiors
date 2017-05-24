@@ -38,13 +38,14 @@ angular.module('service.factory', []).factory('ServiceFactory', () => {
     }
   ];
 
+
   return {
     list: function(){
       return services;
     },
     find: function(slug){
-        return _.find(services, (service) => {
-          return service.slug == slug;
+        return services.find(function(service) {
+            return service.slug == slug;
         });
     }
   }

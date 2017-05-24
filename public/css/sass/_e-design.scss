@@ -79,8 +79,15 @@
         margin-top: 10px;
         margin-bottom: 10px;
     }
-    .checkbox, .radio p.lead {
+    .radio p.lead, .checkbox p.lead {
         text-transform: capitalize;
+        transform: rotate(-45deg);
+        position: relative;
+        left: 100px;
+        top: -85px;
+    }
+    .col-color{
+        width: 12%;
     }
     .checkbox {
         label{
@@ -96,58 +103,58 @@
             }
             &.Grey {
                 border-radius: 4px;
-                background-color: grey;
+                background-color: #c9c3c3;
             }
             &.Red {
                 border-radius: 4px;
-                background-color: red;
+                background-color: #d44d4d;
             }
             &.Orange {
                 border-radius: 4px;
-                background-color: orange;
+                background-color: #ee9731;
             }
             &.Yellow {
                 border-radius: 4px;
-                background-color: yellow;
+                background-color: #eee331;
             }
             &.Lime {
                 border-radius: 4px;
-                background-color: lime;
+                background-color: #62a421;
             }
             &.Green {
                 border-radius: 4px;
-                background-color: green;
+                background-color: #197f38;
             }
             &.Aqua {
                 border-radius: 4px;
-                background-color: aqua;
+                background-color: #9febea;
             }
             &.Turquoise  {
                 border-radius: 4px;
-                background-color: Turquoise;
+                background-color: #50a3a2;
             }
             &.Slate {
                 border-radius: 4px;
-                background-color: #333;
+                background-color: #5087a3;
             }
             &.Blue {
                 border-radius: 4px;
-                background-color: blue;
+                background-color: #1f41c1;
             }
             &.Purple {
                 border-radius: 4px;
-                background-color: purple;
+                background-color: #771fc1;
             }&.Pink {
                 border-radius: 4px;
-                background-color: pink;
+                background-color: #eb2ad7;
             }
             &.Brown {
                 border-radius: 4px;
-                background-color: brown;
+                background-color: #534c02;
             }
             &.Cream {
                 border-radius: 4px;
-                background-color: Beige;
+                background-color: #f2f1e7;
             }
             &.White {
                 border: 1px solid $light-black;

@@ -25,8 +25,8 @@
                 <div class="row" ng-class="question.id" ng-hide="question.images">
                         <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                             <div ng-repeat="answer in question.answers">
-                                <div class="clearfix" ng-if="$index % 6 == 0"></div>
-                                <div class="checkbox" ng-class="question.cols">
+                                <div class="clearfix" ng-if="$index % 8 == 0"></div>
+                                <div class="checkbox col-sm-2" ng-class="question.cols">
                                     <label>
                                         <input type="checkbox" value="{{answer}}" />
                                         <div ng-class="answer" class="color"></div>
