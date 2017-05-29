@@ -10,10 +10,11 @@
                             <div class="clearfix" ng-if="$index % 3 == 0"></div>
                             <div class="radio" ng-class="question.cols">
                                 <label>
-                                    <input type="radio" name="{{question.id}}" value="{{answer}}">
+                                    <input type="radio" name="{{question.id}}" value="{{answer}}" ng-model="radio">
                                     <img class="img-responsive" ng-src="/img/question/{{answer}}.png">
                                     <p class="lead">{{answer}}</p>
                                 </label>
+                                <!-- <span>{{question.id}}</span> -->
                             </div>
                         </div>
                     </div>

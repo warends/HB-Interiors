@@ -19,13 +19,13 @@
               <div class="col-md-6">
                     <div class="form-group">
                       <label for="name">Name:</label>
-                      <input type="text" name="name" data-ng-model="contactName" class="form-control" id="user-name" placeholder="Name" data-error="Please write your name" required>
+                      <input type="text" name="name" ng-model="form.contactName" class="form-control" id="user-name" placeholder="Name" data-error="Please write your name" required>
                       <div class="help-block with-errors"></div>
                     </div>
 
                     <div class="form-group">
                       <label for="company">Company:</label>
-                      <input type="text" name="company" data-ng-model="contactCompany" class="form-control" id="user-company" placeholder="Company">
+                      <input type="text" name="company" ng-model="form.contactCompany" class="form-control" id="user-company" placeholder="Company">
                     </div>
 
               </div>
@@ -33,13 +33,13 @@
               <div class="col-md-6">
                 <div class="form-group">
                     <label for="email-address">Email:</label>
-                    <input type="email" name="email" data-ng-model="contactEmail" class="form-control required" id="user-email" placeholder="Email Address" data-error="Please leave your email" required>
+                    <input type="email" name="email" ng-model="form.contactEmail" class="form-control required" id="user-email" placeholder="Email Address" data-error="Please leave your email" required>
                     <div class="help-block with-errors"></div>
                 </div>
 
                 <div class="form-group">
                     <label for="message">Message:</label>
-                    <textarea class="form-control required" data-ng-model="contactMessage" name="message" id="user-message" rows="4" placeholder="Message" data-error="Whats on your mind?" required></textarea>
+                    <textarea class="form-control required" ng-model="form.contactMessage" name="message" id="user-message" rows="4" placeholder="Message" data-error="Whats on your mind?" required></textarea>
                     <div class="help-block with-errors"></div>
                 </div>
 

@@ -7,6 +7,8 @@ angular.module('ed.controller', []).controller('EDesignController', ['$scope', '
     }
 
     $scope.formData = {};
+    $scope.radio = '';
+    //console.log($scope.radio);
     $scope.questions = QFactory.list();
     $scope.currentQuestion = 0;
 
