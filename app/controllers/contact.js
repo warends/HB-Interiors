@@ -30,7 +30,6 @@ transporter.verify(function(error, success) {
 });
 
 exports.sendMail = function(req, res){
-    console.log('mail sent!');
   var data = req.body;
   console.log(data);
   var mailOptions = {
@@ -44,7 +43,6 @@ exports.sendMail = function(req, res){
       console.log(err);
       res.json({message: err.toString()});
     } else {
-      console.log('Message Sent: ' + info.response);
       res.json(data);
     }
   });
