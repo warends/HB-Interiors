@@ -1,4 +1,4 @@
-<form id="questionaire" name="questioniareForm">
+<form id="questionaire" name="qForm" role="form">
 
     <div class="row" ng-repeat="question in questions" ng-hide="!isCurrentQIndex($index)">
         <div class="col-xs-12 slide">
@@ -10,13 +10,13 @@
                             <div class="clearfix" ng-if="$index % 3 == 0"></div>
                             <div class="radio" ng-class="question.cols">
                                 <label>
-                                    <input type="radio" name="{{question.id}}" value="{{answer}}" ng-model="radio">
+                                    <input type="radio" name="{{question.id}}" value="{{answer}}" data-ng-model="question.response">
                                     <img class="img-responsive" ng-src="/img/question/{{answer}}.png">
                                     <p class="lead">{{answer}}</p>
                                 </label>
-                                <!-- <span>{{question.id}}</span> -->
                             </div>
                         </div>
+                        <span>{{question.response}}</span>
                     </div>
 
                 </div><!--end radios-->
@@ -29,11 +29,12 @@
                                 <div class="clearfix" ng-if="$index % 8 == 0"></div>
                                 <div class="checkbox col-sm-2" ng-class="question.cols">
                                     <label>
-                                        <input type="checkbox" value="{{answer}}" />
+                                        <input type="checkbox" value="{{answer}}" data-ng-model="question.response"/>
                                         <div ng-class="answer" class="color"></div>
                                     </label>
                                 </div>
                             </div>
+                            <span>{{question.response}}</span>
                         </div>
                 </div>
 
@@ -44,12 +45,13 @@
                             <div class="clearfix" ng-if="$index % 3 == 0"></div>
                             <div class="checkbox "ng-class="question.cols">
                                 <label>
-                                    <input type="checkbox" value="{{image}}" />
+                                    <input type="checkbox" value="{{image}}"/>
                                     <img class="img-responsive" ng-src="/img/question/{{image}}.png">
                                     <p class="lead">{{mySplit(image, 0)}}</p>
                                 </label>
                             </div>
                         </div>
+                        <span>{{question.response}}</span>
                     </div>
                 </div>
 
@@ -79,6 +81,7 @@
             </div>
         </div>
     </div>
+    <span>{{q1}}</span>
 
     <div class="controls">
         <div class="col-xs-10 col-xs-offset-1">
