@@ -14,7 +14,32 @@ angular.module('questionaire.factory', []).factory('QFactory', () => {
             type: 'checkbox',
             question: 'Which image(s) are you drawn to?',
             cols: 'col-sm-4',
-            images: ['img1', 'img2', 'img3', 'img4', 'img5', 'img6'],
+            images: [
+                {
+                    name: 'img1',
+                    selected: false,
+                },
+                {
+                    name: 'img2',
+                    selected: false,
+                },
+                {
+                    name: 'img3',
+                    selected: false,
+                },
+                {
+                    name: 'img4',
+                    selected: false,
+                },
+                {
+                    name: 'img5',
+                    selected: false,
+                },
+                {
+                    name: 'img6',
+                    selected: false,
+                }
+            ],
             response: ''
         },
         {
@@ -22,8 +47,32 @@ angular.module('questionaire.factory', []).factory('QFactory', () => {
             type: 'checkbox',
             question: 'Where would you shop for furniture?',
             cols: 'col-sm-4',
-            images: ['ikea', 'pier-1', 'west-elm', 'crate-barrel', 'cb2', 'restoration-hardware'],
-            response: ''
+            images: [
+                {
+                    name: 'ikea',
+                    selected: false,
+                },
+                {
+                    name: 'pier-1',
+                    selected: false,
+                },
+                {
+                    name: 'west-elm',
+                    selected: false,
+                },
+                {
+                    name: 'crate-barrel',
+                    selected: false,
+                },
+                {
+                    name: 'cb2',
+                    selected: false,
+                },
+                {
+                    name: 'restoration-hardware',
+                    selected: false,
+                }
+            ],
         },
         {
             id: 'q4',
@@ -39,16 +88,112 @@ angular.module('questionaire.factory', []).factory('QFactory', () => {
             question: 'What colors would you like to see in the design',
             cols: 'col-color',
             design: 'colors',
-            answers: ['Black', 'Grey', 'Red', 'Orange', 'Yellow', 'Lime', 'Green', 'Aqua', 'Turquoise', 'Slate', 'Blue', 'Purple', 'Pink', 'Brown', 'Cream', 'White'],
-            response: ''
+            colors: [
+                {   name: 'Black',
+                    selected: false
+                },
+                {   name: 'Grey',
+                    selected: false
+                },
+                {   name: 'Red',
+                    selected: false
+                },
+                {   name: 'Orange',
+                    selected: false
+                },
+                {   name: 'Yellow',
+                    selected: false
+                },
+                {   name: 'Lime',
+                    selected: false
+                },
+                {   name: 'Green',
+                    selected: false
+                },
+                {   name: 'Aqua',
+                    selected: false
+                },
+                {   name: 'Turquoise',
+                    selected: false
+                },
+                {   name: 'Slate',
+                    selected: false
+                },
+                {   name: 'Blue',
+                    selected: false
+                },
+                {   name: 'Purple',
+                    selected: false
+                },
+                {   name: 'Pink',
+                    selected: false
+                },
+                {   name: 'Brown',
+                    selected: false
+                },
+                {   name: 'Cream',
+                    selected: false
+                },
+                {   name: 'White',
+                    selected: false
+                }
+            ]
         },
         {
             id: 'q6',
             type: 'checkbox',
             question: 'Select which colors you would NOT want to see',
             cols: 'col-color',
-            answers: ['Black', 'Grey', 'Red', 'Orange', 'Yellow', 'Lime', 'Green', 'Aqua', 'Turquoise', 'Slate', 'Blue', 'Purple', 'Pink', 'Brown', 'Cream', 'White'],
-            answer: ''
+            colors: [
+                {   name: 'Black',
+                    selected: false
+                },
+                {   name: 'Grey',
+                    selected: false
+                },
+                {   name: 'Red',
+                    selected: false
+                },
+                {   name: 'Orange',
+                    selected: false
+                },
+                {   name: 'Yellow',
+                    selected: false
+                },
+                {   name: 'Lime',
+                    selected: false
+                },
+                {   name: 'Green',
+                    selected: false
+                },
+                {   name: 'Aqua',
+                    selected: false
+                },
+                {   name: 'Turquoise',
+                    selected: false
+                },
+                {   name: 'Slate',
+                    selected: false
+                },
+                {   name: 'Blue',
+                    selected: false
+                },
+                {   name: 'Purple',
+                    selected: false
+                },
+                {   name: 'Pink',
+                    selected: false
+                },
+                {   name: 'Brown',
+                    selected: false
+                },
+                {   name: 'Cream',
+                    selected: false
+                },
+                {   name: 'White',
+                    selected: false
+                }
+            ]
         },
         {
             id: 'q7',
