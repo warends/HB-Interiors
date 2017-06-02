@@ -10,6 +10,7 @@ angular.module('ed.controller', []).controller('EDesignController', ['$scope', '
     $scope.colorNoList = [];
     $scope.drawnToList = [];
     $scope.furnitureList = [];
+    $scope.formData= {};
     function addToList(answer, list){
         var index = list.indexOf(answer);
         if(index > -1){
@@ -47,21 +48,27 @@ angular.module('ed.controller', []).controller('EDesignController', ['$scope', '
     }
 
     $scope.submitQuestionaire = () => {
-        console.log($scope.questions);
 
-        // var data = {
-        //     this.q1 = $scope.questions[0].response,
-        //     //this.q2 = $scope.questions[1]
-        //     //this.q3 = $scope.questions[2].
-        //     this.q4 = $scope.questions[3].response
-        // }
+        var data = {
+            q1: $scope.questions[0].response,
+            q2: $scope.drawnToList,
+            q3: $scope.furnitureList,
+            q4: $scope.questions[3].response,
+            q4: $scope.colorList,
+            q5: $scope.colorNoList,
+            name: $scope.formData.name,
+            email: $scope.formData.email,
+            phone: $scope.formData.phone,
+            note: $scope.formData.note
+        }
+        console.log(data);
 
-        // $http.post('/questionaire-form', $scope.formData)
-        //     .then((response) => {
-        //         console.log(response.data);
-        //     }, (err) => {
-        //         console.log('There was a problem submitting your form ' + err);
-        //     });
+        $http.post('/questionaire-form', data)
+            .then((response) => {
+                console.log(response.data);
+            }, (err) => {
+                console.log('There was a problem submitting your form ' + err);
+            });
     }
 
     $scope.mySplit = function(string, nb) {

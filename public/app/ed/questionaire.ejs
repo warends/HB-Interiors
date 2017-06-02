@@ -16,7 +16,7 @@
                                 </label>
                             </div>
                         </div>
-                        <span>{{question.response}}</span>
+                        <!-- <span>{{question.response}}</span> -->
                     </div>
 
                 </div><!--end radios-->
@@ -69,10 +69,14 @@
                       <input type="email" name="email" ng-model="formData.email" class="form-control" required/>
                     </div>
                     <div class="form-group">
-                      <label for="note">Leave a Note</label>
-                      <textarea name="note" ng-model="formData.note" class="form-control"></textarea>
+                      <label for="phone">Phone Number:</label>
+                      <input type="tel" name="phone" ng-model="formData.phone" class="form-control" required/>
                     </div>
-                    <p>E-Design from anywhere!<br />...Locally serving the greater Seattle area</p>
+                    <div class="form-group">
+                      <label for="note">Leave a Note</label>
+                      <textarea name="note" ng-model="formData.note" class="form-control" required></textarea>
+                    </div>
+                    <p>E-Design from anywhere!  ...Locally serving the greater Seattle area</p>
                     <div class="form-group pull-right">
                       <input type="submit" class="btn btn-lg btn-outline" ng-disabled="questioniareForm.$invalid" ng-click="submitQuestionaire()" value="Submit"/>
                     </div>

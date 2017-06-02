@@ -40,7 +40,6 @@ angular.module('questionaire.factory', []).factory('QFactory', () => {
                     selected: false,
                 }
             ],
-            response: ''
         },
         {
             id: 'q3',
