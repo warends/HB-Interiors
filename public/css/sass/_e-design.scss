@@ -62,7 +62,8 @@
     label > input[type="radio"] + img {
         cursor: pointer;
         border: 4px solid transparent;
-        //transform: rotate(-45deg);
+        //+
+        transform: rotate(-45deg);
     }
     label > input[type="checkbox"] {
         visibility: hidden;
