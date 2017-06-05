@@ -14,20 +14,22 @@
     <h1>hello</h1>
     <h3>Our Firm<span class="end-border">  _______</span></h3>
   </div>
-  <div class="container small">
+  <div class="container sm">
     <div class="row">
-      <div class="col-xs-8 welcome-text" in-view view-obj="welcome" ng-class="{active:welcome.visible}">
+      <div class="col-sm-8 welcome-box" in-view view-obj="welcome" ng-class="{active:welcome.visible}">
         <div class="" target-height>
             <svg id="square-svg" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 622 522">
               <rect id="square" x="3" y="3" width="616" height="516" fill="none" stroke="#9fa8a1" stroke-width="6"/>
             </svg>
-          <img class="img-responsive hb-icon" src="img/house-pen-icon.png"/>
-          <h3 class="forest padded-vertical">Welcome</h3>
-          <p>We are a small firm specializing in e-design, space planning, branding, residential design and custom furniture design.  We assemble spaces that emulate and amplify the identity of our the clients.</p>
-          <a href="#">View More</a>
+            <div class="welcome-text">
+                <img class="img-responsive hb-icon" src="img/house-pen-icon.png"/>
+                <h3 class="forest padded-vertical">Welcome</h3>
+                <p>We are a small firm specializing in e-design, space planning, branding, residential design and custom furniture design.  We assemble spaces that emulate and amplify the identity of our the clients.</p>
+                <a class="btn btn-outline" href="#">View More</a>
+            </div>
         </div>
       </div>
-      <div class="col-xs-8 col-xs-offset-4 welcome-img" >
+      <div class="col-sm-8 col-sm-offset-4 welcome-img" >
         <img class="img-responsive" src="img/spare-bed-home.png" box-height/>
       </div>
     </div>
@@ -40,7 +42,7 @@
     <h1>e-design</h1>
     <h3>Projects<span class="end-border">  _______</span></h3>
   </div>
-  <div class="container small">
+  <div class="container sm">
     <div class="row">
       <div class="col-sm-5 col-sm-offset-1 left">
         <img class="img-responsive" src="img/living-room-home.png" />
@@ -72,24 +74,26 @@ AFFORDABLE WAY TO DESIGN A SPACE.  WITH YOUR HELP, WE CAN PULL TOGEHER PRODUCTS 
   </div>
 </section>
 
-<div class="divider text-center">
-  <h3>Hayley Bagwell Designs Are Thoughful and Ecletic</h3>
-</div>
+<div class="divider text-center"></div>
 
 <section id="services">
   <div class="hero-text">
     <h1>services</h1>
     <h3>What We Do<span class="end-border">  _______</span></h3>
   </div>
-  <div class="container small">
+  <div class="container sm">
     <div class="row">
       <div ng-repeat="service in services">
           <!-- <div class="clearfix" ng-if="$index % 4 == 0"></div> -->
           <div class="col-sm-3 service">
-            <div class="hexagon-grey"></div>
-            <div class="hexagon-black">
-              <a ui-sref="services.detail({slug: service.slug})"><img class="img-responsive {{service.title}}" ng-src="{{service.logo}}"/></a>
-            </div>
+              <div class="hex-box">
+                  <div class="hexagon-grey"></div>
+                  <div class="hexagon-black">
+                    <a ui-sref="services.detail({slug: service.slug})">
+                        <img class="img-responsive {{service.title}}" ng-src="{{service.logo}}" ng-class="service.slug"/>
+                    </a>
+                  </div>
+              </div>
 
             <h3 class="forest padded-bottom">{{service.name}}</h3>
             <p>{{service.desc}}</p>

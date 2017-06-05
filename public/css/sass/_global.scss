@@ -53,23 +53,39 @@ a:hover {
     white-space: pre-wrap;
 }
 .hero-text {
-  position: absolute;
+    position: absolute;
   &.left{
-    left: -75px;
-    bottom: 30%;
+    left: 15px;
+    top: -130px;
+    @include mq($S){
+        left: -75px;
+        bottom: 50%;
+    }
+    @include mq($M){
+        bottom: 30%;
+    }
   }
   &.right{
-    right: -150px;
-    bottom: 0;
+      right: 15px;
+      top: -100px;
+    @include mq($S){
+        right: -150px;
+        bottom: 0;
+    }
   }
   h1{
-    color: $light-green;
+    color: darken($light-green, 10%);
     font-family: $accent-text;
-    font-size: 100px;
+    font-size: 66px;
     text-transform: lowercase;
+    @include mq($M){
+        font-size: 100px;
+    }
   }
   &.vertical{
-    transform: rotate(-90deg);
+      @include mq($S){
+          transform: rotate(-90deg);
+      }
    }
   h3{
     position: absolute;
@@ -80,7 +96,10 @@ a:hover {
       color: $forest;
       font-weight: bold;
       position: relative;;
-      bottom: 10px;
+      bottom: 20px;
+      @include mq($M){
+          bottom: 20px;
+      }
     }
   }
 }
@@ -119,7 +138,7 @@ section.padded-bottom{
 }
 
 // CONTAINER
-.container.small {
+.container.sm {
   @include mq($S){
     width: 650px;
   }
@@ -180,23 +199,53 @@ section.padded-bottom{
 footer{
   background-color: #f7f7f7;
   position: relative;
-  .navbar-menu{
+  .footer-menu{
     width: 100%;
     position: relative;
     margin-bottom: 15px;
     .logo{
-      padding-left: 0;
+        float: none;
+        padding: 0;
+        position: relative;
+        left: 50%;
+        margin-left: -112px;
+        h2{
+            font-size: 55px;
+            @include mq($M){
+                font-size: 64px;
+            }
+        }
       h3{
-        color: $black;
+          font-size: 16px;
+          color: $black;
+          @include mq($M){
+              font-size: 22px;
+          }
       }
     }
-    .main-menu {
-      li a, .fa{
-        color: $black;
-        &:hover{
-          color: $forest;
+    ul{
+        margin: 0;
+        padding: 0;
+        height: 35px;
+        text-align: center;
+        @include mq($S){
+            height: 80px;
+            text-align: left;
         }
-      }
+    }
+    li{
+        display: inline-block;
+        @include vertical-align;
+        padding: 15px 10px;
+        @include mq($M){
+            padding: 15px;
+        }
+        a, .fa{
+            color: $black;
+            &:hover{
+                color: $forest;
+            }
+        }
     }
   }
   .fa {

@@ -15,9 +15,9 @@ angular.module('home.controller', []).controller('HomeController', ['$scope', 'S
        scale: 1,
        duration: 1000,
        // reset: true,
-       // afterReveal: function (domEl) {
-       //   document.getElementById("gallery").style.visibility = "visible";
-       // },
+    //    afterReveal: function (domEl) {
+    //        document.getElementById("gallery").style.visibility = "visible";
+    //    },
        sequence: {
           selector: '.col-sm-5',
           interval: 300

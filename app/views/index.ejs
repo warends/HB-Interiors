@@ -58,21 +58,27 @@
 <footer>
   <div class="container">
     <div class="row">
-      <div class="col-xs-12">
-        <div class="navbar-menu">
-          <div class="logo">
-            <a ui-sref="home"><h2>HB</h2><h3>Hayley Bagwell<br />Interior Design</h3></a>
-          </div>
-          <ul class="main-menu">
-            <li><a ui-sref="home">Home</a></li>
-            <li><a ui-sref="e-design">E-Design</a></li>
-            <li><a ui-sref="services.detail({slug: 'interior-design'})">Services</a></li>
-            <li><a ui-sref="about">About Us</a></li>
-            <li class="pull-right"><a href="#"><i class="fa fa-instagram"></i></a></li>
-            <li class="pull-right"><a href="#"><i class="fa fa-pinterest"></i></a></li>
-          </ul>
+        <div class="footer-menu">
+            <div class="col-sm-4">
+                <div class="logo">
+                  <a ui-sref="home"><h2>HB</h2><h3>Hayley Bagwell<br />Interior Design</h3></a>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <ul class="list-unstyled">
+                  <li><a ui-sref="e-design">E-Design</a></li>
+                  <li><a ui-sref="services.detail({slug: 'interior-design'})">Services</a></li>
+                  <li><a ui-sref="about">About Us</a></li>
+                </ul>
+            </div>
+            <div class="col-sm-2">
+                <ul class="social-footer list-unstyled">
+                    <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+                </ul>
+            </div>
+
         </div>
-      </div>
     </div>
     <div class="row">
       <div class="col-xs-12 text-center">
