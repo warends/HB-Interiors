@@ -55,7 +55,7 @@
   .welcome-text {
       padding-left: 50px;
       @include mq($S){
-          padding: 10px 0 0 20px;
+          padding: 10px 0 0 0;
       }
       .hb-icon{
         width: 100px;
@@ -76,7 +76,7 @@
       p {
           width: 100%;
           @include mq($S){
-              width: 45%;
+              width: 50%;
           }
       }
   }
@@ -84,7 +84,7 @@
   .welcome-img{
     top: 0;
     @include mq($S){
-        top: -300px;
+        top: -335px;
     }
     img{
         //width: 500px;
