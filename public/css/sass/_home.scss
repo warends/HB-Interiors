@@ -55,7 +55,7 @@
   .welcome-text {
       padding-left: 50px;
       @include mq($S){
-          padding: 10px 0 0 0;
+          padding: 0;
       }
       .hb-icon{
         width: 100px;
@@ -67,7 +67,7 @@
         }
       }
       h3{
-          padding: 10px 0;
+          padding: 5px 0;
           @include mq($M){
               padding-top: 1em;
               padding-bottom: 1em;
@@ -76,7 +76,11 @@
       p {
           width: 100%;
           @include mq($S){
+              font-size: 14px;
               width: 50%;
+          }
+          @include mq($M){
+              font-size: 16px;
           }
       }
   }
@@ -92,11 +96,11 @@
   }
 }
 #e-design{
-    margin-top: 100px;
+    margin-top: 150px;
     position: relative;
     visibility: visible;
     @include mq($S){
-        margin-top: -100px;
+        margin-top: -150px;
     }
     .hero-text{
         right: 15px;
@@ -108,6 +112,9 @@
   .col-sm-5{
     .box{
       height: 300px;
+      @include mq($S){
+        height: 256px;
+      }
       @include mq($M){
         height: 347px;
       }
