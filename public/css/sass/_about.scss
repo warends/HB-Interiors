@@ -40,6 +40,12 @@
     // &.active{
     //   left: 30%;
     // }
+    .btn-outline {
+        display: block;
+        @include mq($S){
+            display: inline-block;
+        }
+    }
   }
 
 }

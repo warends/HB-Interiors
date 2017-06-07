@@ -10,6 +10,12 @@
     top: 400px;
     border-top-left-radius: 40px;
   }
+  h1{
+      font-size: 30px;
+      @include mq($S){
+          font-size: 48px;
+      }
+  }
   .separator {
     position: absolute;
     bottom: 0;
@@ -141,7 +147,7 @@
 .divider{
   width: 100%;
   background: $forest;
-  padding: 20px 0;
+  padding: 5px 0;
   @include mq($S){
         margin-bottom: 2em;
   }
@@ -153,12 +159,10 @@
     left: 20px;
   }
   .hex-box{
-      width: 100%;
-      position: relative;
-      left: 50%;
-      margin-left: -85px;
+      width: 170px;
+      margin: 0 auto;
       @include mq($S){
-          left: 0;
+
           margin-left: 0;
       }
   }

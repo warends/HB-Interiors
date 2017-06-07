@@ -200,15 +200,16 @@ footer{
   background-color: #f7f7f7;
   position: relative;
   .footer-menu{
-    width: 100%;
     position: relative;
-    margin-bottom: 15px;
     .logo{
         float: none;
         padding: 0;
-        position: relative;
-        left: 50%;
-        margin-left: -112px;
+        margin: 0 auto;
+        width: 200px;
+        @include mq($S){
+            width: 300px;
+            margin: 0;
+        }
         h2{
             font-size: 55px;
             @include mq($M){
