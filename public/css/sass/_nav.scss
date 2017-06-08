@@ -44,10 +44,83 @@ header{
   }
 
 }
+#menu-icon{
+    display:inline-block;
+    position: absolute;
+	width: 40px;
+	height: 40px;
+    top: 25px;
+    right: 40px;
+    @include mq($S){
+        display: none;
+    }
+    .icon-bar{
+        display: block;
+        position: absolute;
+        height: 4px;
+        width: 50%;
+        background: white;
+        opacity: 1;
+        transform: rotate(0deg);
+        transition: .25s ease-in-out;
+    }
+    span:nth-child(even) {
+      left: 50%;
+      border-radius: 0 9px 9px 0;
+    }
+    span:nth-child(odd) {
+      left:0px;
+      border-radius: 9px 0 0 9px;
+    }
+    span:nth-child(1), span:nth-child(2) {
+      top: 0px;
+    }
+    span:nth-child(3), span:nth-child(4) {
+      top: 12px;
+    }
+    span:nth-child(5), span:nth-child(6) {
+      top: 25px;
+    }
+    &.active {
+			span:nth-child(1), span:nth-child(6) {
+				transform: rotate(45deg);
+			}
+			span:nth-child(2), span:nth-child(5) {
+			  transform: rotate(-45deg);
+			}
+			span:nth-child(1) {
+			  left: 4px;
+			  top: 5px;
+			}
+			span:nth-child(2) {
+			  left: calc(50% - 3px);
+			  top: 5px;
+			}
+			span:nth-child(3) {
+			  left: -50%;
+			  opacity: 0;
+			}
+			span:nth-child(4) {
+			  left: 100%;
+			  opacity: 0;
+			}
+			span:nth-child(5) {
+			  left: 4px;
+			  top: 22px;
+			}
+			span:nth-child(6) {
+			  left: calc(50% - 3px);
+			  top: 22px;
+			}
+		}
+}
 .logo {
   float: left;
-  padding: 0 3% 0 5%;
+  padding: 0 5%;
   height: 80px;
+  @include mq('min-width:450px'){
+      padding: 0 3%;
+  }
   h2{
     float: left;
     margin: 0;
@@ -66,16 +139,41 @@ header{
 }
 .navbar-menu {
   border-top-left-radius: 40px;
-  width: 75%;
+  width: 100%;
   position: absolute;
   right: 0;
+  @include mq('min-width:450px'){
+      width: 75%;
+  }
   .main-menu {
     height: 80px;
-    padding-left: 5%;
+    display: none;
+    position: absolute;
+    padding: 20px;
+    right: 0;
+    top: 70px;
+    @include mq($S){
+        right: 20px;
+        top: 0;
+        display: block;
+    }
+    &.active{
+        display: block;
+        background-color: rgba(26, 26, 26, 0.85);
+        height: 240px;
+        width: 100%;
+    }
     li {
-      @include vertical-align;
-      display: inline-block;
-      padding: 15px;
+      text-align: center;
+      padding: 10px 0;
+      margin: 0;
+      width: 100%;
+      @include mq($S){
+          width: auto;
+          @include vertical-align;
+          display: inline-block;
+          padding: 15px;
+      }
       a{
         color: white;
       }

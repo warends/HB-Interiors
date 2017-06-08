@@ -2,7 +2,7 @@ angular.module('common.nav', []).controller('NavController', ['$scope', '$http',
 
     $scope.contactShow = false;
     $scope.toggleContact = () => {
-        $scope.contactShow = true;
+        $scope.contactShow = !$scope.contactShow;
     }
 
     $scope.formData = {};
@@ -17,6 +17,11 @@ angular.module('common.nav', []).controller('NavController', ['$scope', '$http',
            }, function(message, status, headers, config){
              notifier.notify('There was an error processing your request. Please try again');
            });
+    }
+
+    $scope.selected = false;
+    $scope.toggleMenu = function(){
+        $scope.selected = !$scope.selected;
     }
 
 }]);
