@@ -5,8 +5,6 @@ header{
     z-index: 9;
   }
 }
-
-
   // &:after{
   //   content: ' _________';
   //   color: $forest;
@@ -71,6 +69,74 @@ header{
         color: $forest;
         font-size: 20px;
       }
+  }
+}
+
+.logo {
+  float: left;
+  padding: 0 5%;
+  height: 80px;
+  @include mq('min-width:450px'){
+      padding: 0 3%;
+  }
+  h2{
+    float: left;
+    margin: 0;
+    font-size: 64px;
+    padding-right: 15px;
+    color: $forest;
+    font-family: $logo-text;
+    @include vertical-align;
+  }
+  h3{
+    float: left;
+    margin: 3px 0 0 0;
+    color: white;
+    @include vertical-align;
+  }
+}
+.navbar-menu {
+  border-top-left-radius: 40px;
+  width: 100%;
+  position: absolute;
+  right: 0;
+  @include mq('min-width:450px'){
+      width: 75%;
+  }
+  .main-menu {
+    height: 80px;
+    display: none;
+    position: absolute;
+    padding: 20px;
+    right: 0;
+    top: 70px;
+    @include mq($M){
+        left: 300px;
+        top: 0;
+        display: block;
+    }
+    &.active{
+        display: block;
+        background-color: rgba(26, 26, 26, 0.85);
+        height: 240px;
+        width: 100%;
+    }
+    li {
+      text-align: center;
+      padding: 10px 0;
+      margin: 0;
+      width: 100%;
+      @include mq($M){
+          width: auto;
+          @include vertical-align;
+          display: inline-block;
+          padding: 15px 15px;
+      }
+
+      a{
+        color: white;
+      }
+    }
   }
 }
 #menu-icon{
@@ -142,75 +208,4 @@ header{
 			  top: 22px;
 			}
 		}
-}
-.logo {
-  float: left;
-  padding: 0 5%;
-  height: 80px;
-  @include mq('min-width:450px'){
-      padding: 0 3%;
-  }
-  h2{
-    float: left;
-    margin: 0;
-    font-size: 64px;
-    padding-right: 15px;
-    color: $forest;
-    font-family: $logo-text;
-    @include vertical-align;
-  }
-  h3{
-    float: left;
-    margin: 3px 0 0 0;
-    color: white;
-    @include vertical-align;
-  }
-}
-.navbar-menu {
-  border-top-left-radius: 40px;
-  width: 100%;
-  position: absolute;
-  right: 0;
-  @include mq('min-width:450px'){
-      width: 75%;
-  }
-  .main-menu {
-    height: 80px;
-    display: none;
-    position: absolute;
-    padding: 20px;
-    right: 0;
-    top: 70px;
-    @include mq($M){
-        left: 300px;
-        top: 0;
-        display: block;
-    }
-    // @include mq('min-width:1045px'){
-    //     padding: 20px;
-    // }
-
-    &.active{
-        display: block;
-        background-color: rgba(26, 26, 26, 0.85);
-        height: 240px;
-        width: 100%;
-    }
-    li {
-      text-align: center;
-      padding: 10px 0;
-      margin: 0;
-      width: 100%;
-      @include mq($M){
-          width: auto;
-          @include vertical-align;
-          display: inline-block;
-          padding: 15px 8px;
-      }
-
-      a{
-        color: white;
-      }
-    }
-  }
 }
