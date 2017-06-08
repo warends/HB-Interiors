@@ -5,44 +5,73 @@ header{
     z-index: 9;
   }
 }
-.social {
-  padding: 0 15px;
-  i{
-    padding: 0 5px;
-    color: $forest;
-    font-size: 20px;
-  }
-  &:after{
-    content: ' _________';
-    color: $forest;
-    float: right;
-    font-weight: bold;
-    position: relative;
-    bottom: 8px;
-  }
-}
+
+
+  // &:after{
+  //   content: ' _________';
+  //   color: $forest;
+  //   float: right;
+  //   font-weight: bold;
+  //   position: relative;
+  //   bottom: 8px;
+  // }
+
 #navbar-contact{
   position: absolute;
-  margin-left: 15px;
-  padding: 15px 0;
+  padding: 8px 0;
   border-bottom-left-radius: 40px;
+  top: -50px;
+  right: 0;
+  @include mq($S){
+      left: 15px;
+      top: 0;
+      padding: 15px 0;
+      right: auto;
+  }
   h6 {
-    padding: 10px 15px;
     color: white;
-    .icon {
-      margin: 5px;
-      vertical-align: middle;
-      color: $forest;
-      font-size: 24px;
+    display: none;
+    @include mq($S){
+        display: inline-block;
     }
   }
+  .icon {
+    margin: 5px;
+    vertical-align: middle;
+    color: $forest;
+    font-size: 24px;
+  }
   a {
+    display: inline-block;
     color: #fff;
+    padding: 5px 10px;
     &:hover{
       color: $forest;
     }
+    @include mq($S){
+        display: block;
+    }
   }
-
+  .social {
+      padding-left: 0;
+      display: inline-block;
+      @include mq($S){
+          display: block;
+          padding-left: 15px;
+      }
+      a{
+          display: inline-block;
+          @include mq($S){
+              padding: 5px;
+              display: inline-block;
+          }
+      }
+      i{
+        padding: 0 5px;
+        color: $forest;
+        font-size: 20px;
+      }
+  }
 }
 #menu-icon{
     display:inline-block;
@@ -51,7 +80,7 @@ header{
 	height: 40px;
     top: 25px;
     right: 40px;
-    @include mq($S){
+    @include mq($M){
         display: none;
     }
     .icon-bar{
@@ -152,11 +181,15 @@ header{
     padding: 20px;
     right: 0;
     top: 70px;
-    @include mq($S){
-        right: 20px;
+    @include mq($M){
+        left: 300px;
         top: 0;
         display: block;
     }
+    // @include mq('min-width:1045px'){
+    //     padding: 20px;
+    // }
+
     &.active{
         display: block;
         background-color: rgba(26, 26, 26, 0.85);
@@ -168,12 +201,13 @@ header{
       padding: 10px 0;
       margin: 0;
       width: 100%;
-      @include mq($S){
+      @include mq($M){
           width: auto;
           @include vertical-align;
           display: inline-block;
-          padding: 15px;
+          padding: 15px 8px;
       }
+
       a{
         color: white;
       }
