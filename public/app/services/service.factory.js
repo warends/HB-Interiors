@@ -21,8 +21,8 @@ angular.module('service.factory', []).factory('ServiceFactory', () => {
       banner: 'img/services/branding.jpg',
       subHead: 'Helping your customers get to know you',
       desc: "It is important to be able to stand out from the rest of the designers in your area.  By creating branding tools that potential clients or architects can get their hands on moves you to the front of the line.\n \nWe develop these business tools, such as portfolio booklets and business cards to reach your specific audience.",
-      img1: 'img/services/floorplan.png',
-      img2: 'img/services/floorplan.png'
+      img1: 'img/services/branding1.png',
+      img2: 'img/services/branding2.png'
     },
     {
       name: 'Interior Design',

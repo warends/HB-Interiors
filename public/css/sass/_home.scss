@@ -2,7 +2,7 @@
 #home-banner{
   position: relative;
   height: 700px;
-  background: url('../../img/bgs/cocktail-table.jpg') no-repeat center center;
+  background: url('../../img/bgs/living-room.jpg') no-repeat center center;
   background-size: cover;
   .banner-head{
     padding: 10px 0;
@@ -130,7 +130,7 @@
     }
   .col-sm-5{
     .box{
-      height: 300px;
+      height: 355px;
       @include mq($S){
         height: 256px;
       }
