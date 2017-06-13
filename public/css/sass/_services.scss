@@ -20,6 +20,12 @@
       background-position: center center;
       background-size: 125px;
   }
+  .col-sm-3 {
+      float: none;
+      @include mq($S){
+          float: right;
+      }
+  }
   .service-menu{
     li{
       display: block;
