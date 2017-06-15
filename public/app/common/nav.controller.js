@@ -1,4 +1,4 @@
-angular.module('common.nav', []).controller('NavController', ['$scope', '$http', 'NotifierService', function($scope, $http, notifier){
+angular.module('common.nav', []).controller('NavController', ['$scope', '$http', '$window', 'NotifierService', function($scope, $http, $window, notifier){
 
     $scope.contactShow = false;
     $scope.toggleContact = () => {
@@ -23,5 +23,18 @@ angular.module('common.nav', []).controller('NavController', ['$scope', '$http',
     $scope.toggleMenu = function(){
         $scope.selected = !$scope.selected;
     }
+
+    $scope.socialShow = false;
+    if($window.innerWidth < 992){
+        console.log($window.innerWidth);
+        angular.element($window).bind('scroll', () => {
+            if($window.scrollY > 100){
+                console.log($scope.socialShow);
+                $scope.socialShow = true;
+            }
+        });
+    }
+
+    //console.log($window.srollY);
 
 }]);

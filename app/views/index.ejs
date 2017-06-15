@@ -1,9 +1,9 @@
 <% layout('layout') -%>
 <header ng-controller="NavController">
   <nav>
-      <div id="navbar-contact" class="black-shadow">
-          <!-- <a href="tel:1-724-554-1455"><span class="icon icon-Phone2"></span><h6> 724.554.1455</h6></a>
-          <a href="mailto:haybaglwell@gmail.com"><span class="icon icon-Plaine"></span> <h6>haybagwell@gmail.com</h6></a> -->
+      <div id="navbar-contact" class="black-shadow" ng-class="{'active': socialShow}">
+          <a href="tel:1-724-554-1455"><span class="icon icon-Phone2"></span><h6> 724.554.1455</h6></a>
+          <a href="mailto:haybaglwell@gmail.com"><span class="icon icon-Plaine"></span> <h6>haybagwell@gmail.com</h6></a>
           <div class="social">
             <a href="#"><i class="fa fa-instagram"></i></a>
             <a href="#"><i class="fa fa-pinterest"></i></a>
@@ -20,6 +20,9 @@
           <li><a ui-sref="services.detail({slug: 'interior-design'})">Services</a></li>
           <li><a ui-sref="about">About</a></li>
           <li><a href="#" ng-click="toggleContact()">Contact</a></li>
+          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+          <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
+          <li><a href="#"><i class="fa fa-houzz"></i></a></li>
         </ul>
 
         <a href="#" id="menu-icon" ng-click="toggleMenu()" ng-class="{'active':selected}">

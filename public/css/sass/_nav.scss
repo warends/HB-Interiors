@@ -15,11 +15,15 @@ header{
   // }
 
 #navbar-contact{
-  position: absolute;
-  padding: 8px 0;
-  border-bottom-left-radius: 40px;
-  top: -50px;
-  right: 0;
+    display: none;
+    position: fixed;
+    padding: 8px 0;
+    border-bottom-left-radius: 40px;
+    top: 0;
+    right: 0;
+    &.active{
+        display: block;
+    }
   @include mq($S){
       left: 15px;
       top: 0;
