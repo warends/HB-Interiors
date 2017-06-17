@@ -93,7 +93,6 @@
           }
       }
   }
-
   .welcome-img{
     top: 0;
     @include mq($S){
@@ -185,6 +184,7 @@
   @include mq($S){
       padding-bottom: 0;
       top: -230px;
+      margin-bottom: -150px;
   }
   .hero-text{
     left: 20px;

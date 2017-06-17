@@ -1,8 +1,7 @@
-angular.module('common.nav', []).controller('NavController', ['$scope', '$http', '$window', 'NotifierService', function($scope, $http, $window, notifier){
+angular.module('common.nav', []).controller('NavController', ['$scope', '$http', '$window', 'NotifierService', 'ContactService', function($scope, $http, $window, notifier, ContactService){
 
-    $scope.contactShow = false;
     $scope.toggleContact = () => {
-        $scope.contactShow = !$scope.contactShow;
+        //ContactService.toggleContact()
     }
 
     $scope.formData = {};
@@ -28,13 +27,13 @@ angular.module('common.nav', []).controller('NavController', ['$scope', '$http',
     if($window.innerWidth < 992){
         console.log($window.innerWidth);
         angular.element($window).bind('scroll', () => {
-            if($window.scrollY > 100){
+            if($window.scrollY > 140){
                 console.log($scope.socialShow);
                 $scope.socialShow = true;
+            } else {
+                $scope.socialShow = false;
             }
         });
     }
-
-    //console.log($window.srollY);
 
 }]);

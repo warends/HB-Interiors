@@ -12,9 +12,10 @@ angular.module('common.inview', []).directive('inView', ['$window', ($window) =>
                 if(pos.top + scope.viewObj.offset < $window.scrollY) {
                     scope.viewObj.visible = true;
                     //console.log('in view :' + scope.viewObj.visible);
-                } else {
-                    scope.viewObj.visible = false;
                 }
+                // else {
+                //     scope.viewObj.visible = false;
+                // }
                 scope.$apply();
             });
         }
