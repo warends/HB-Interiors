@@ -1,10 +1,9 @@
 angular.module('common.contact', []).service('ContactService', [() => {
 
-    //$scope.contactShow = false;
-
     return {
+        isShowing: false,
         toggleContact() {
-            //$scope.contactShow = !$scope.contactShow;
+            this.isShowing = !this.isShowing;
         }
     }
 

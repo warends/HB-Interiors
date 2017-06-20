@@ -1,7 +1,8 @@
 angular.module('common.nav', []).controller('NavController', ['$scope', '$http', '$window', 'NotifierService', 'ContactService', function($scope, $http, $window, notifier, ContactService){
 
     $scope.toggleContact = () => {
-        //ContactService.toggleContact()
+        ContactService.toggleContact();
+        console.log(ContactService.isShowing);
     }
 
     $scope.formData = {};
