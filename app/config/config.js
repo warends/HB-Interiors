@@ -4,7 +4,7 @@ var path = require('path'),
 module.exports = {
   development : {
       rootPath: rootPath,
-      db: 'mongodb://localhost/hg-interiors',
+      db: 'mongodb://localhost/hb-interiors',
       port: process.env.PORT || 8080
   },
   test: {

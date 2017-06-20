@@ -1,4 +1,4 @@
-angular.module('common.modal', []).directive('globalModal', function(){
+angular.module('common.modal', []).directive('globalModal', ['$rootScope', function($rootScope){
 
   return{
     restrict: 'E',
@@ -15,10 +15,10 @@ angular.module('common.modal', []).directive('globalModal', function(){
         scope.dialogStyle.height = attrs.height;
 
       scope.hideModal = function(){
-        scope.show = false;
+        $rootScope.contactShow = false;
       };
     },
     templateUrl: '/partials/common/modal'
   }
 
-});
+}]);

@@ -36,11 +36,11 @@ app.config(['$locationProvider', '$stateProvider', '$urlRouterProvider', ($locat
 
 app.run(['$rootScope', '$location', function($rootScope, $location){
 
-  // $rootScope.$on('$routeChangeError', function(evt, current, previous, rejection) {
-  //     if(rejection === 'not authorized') {
-  //       $location.path('/');
-  //     }
-  // });
+  console.log($rootScope.contactShow);
+  $rootScope.toggleContact = function(){
+      $rootScope.contactShow = !$rootScope.contactShow;
+      console.log($rootScope.contactShow);
+  }
 
   $rootScope.$on("$stateChangeSuccess", function (event, currentRoute, previousRoute) {
 
