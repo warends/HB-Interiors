@@ -133,7 +133,7 @@ header{
     &.active{
         display: block;
         background-color: rgba(26, 26, 26, 0.85);
-        height: 240px;
+        height: auto;
         width: 100%;
     }
     li {
@@ -146,9 +146,6 @@ header{
           @include vertical-align;
           display: inline-block;
           padding: 15px 10px;
-          &:nth-child(6), &:nth-child(7), &:nth-child(8){
-              padding: 15px 15px 0 15px;
-          }
       }
       @include mq($L){
           padding: 15px;
@@ -156,14 +153,25 @@ header{
 
       a{
         color: white;
-        .fa{
-            //color: white;
-            font-size: 24px;
+        .fa-pinterest{
+            color: #C92228;
+            font-size: 30px;
+            transition: all 0.5s linear;
+            &:hover{
+                transform: scale(1.5);
+            }
         }
         &:hover{
             color: $forest;
         }
       }
+    }
+    .social{
+        display: none;
+        @include mq($M){
+            padding: 0 15px;
+            display: inline-block;
+        }
     }
   }
 }
@@ -236,4 +244,21 @@ header{
 			  top: 22px;
 			}
 		}
+}
+.hb {
+    transition: all 0.5s linear;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    &:hover{
+        transform: scale(1.5);
+    }
+}
+.hb-instagram{
+    background: url('../../img/icons/instagram.png') no-repeat center center;
+    background-size: 30px 30px;
+}
+.hb-houzz{
+    background: url('../../img/icons/houzz.png') no-repeat center center;
+    background-size: 30px 30px;
 }

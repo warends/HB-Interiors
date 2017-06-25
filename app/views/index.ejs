@@ -20,9 +20,9 @@
           <li><a ui-sref="services.detail({slug: 'interior-design'})">Services</a></li>
           <li><a ui-sref="about">About</a></li>
           <li><a href="#" ng-click="toggleContact()">Contact</a></li>
-          <li><a href="#"><i class="fa fa-instagram"></i></a></li>
-          <li><a href="#"><i class="fa fa-pinterest"></i></a></li>
-          <li><a href="#"><i class="fa fa-houzz"></i></a></li>
+          <li class="social"><a href="#"><i class="hb hb-instagram"></i></a></li>
+          <li class="social"><a href="#"><i class="fa fa-pinterest"></i></a></li>
+          <li class="social"><a href="#"><i class="hb hb-houzz"></i></a></li>
         </ul>
 
         <a href="#" id="menu-icon" ng-click="toggleMenu()" ng-class="{'active':selected}">
@@ -64,9 +64,9 @@
 </header>
 
 
-<section id="content" ng-cloak>
+<div id="content" ng-cloak>
   <div ui-view></div>
-</section>
+</div>
 
 
 <footer>
