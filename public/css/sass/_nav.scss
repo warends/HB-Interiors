@@ -73,8 +73,7 @@ header{
       }
       i{
         padding: 0 5px;
-        color: $forest;
-        font-size: 20px;
+        font-size: 36px;
       }
   }
 }
@@ -153,17 +152,6 @@ header{
 
       a{
         color: white;
-        .fa-pinterest{
-            color: #C92228;
-            font-size: 30px;
-            transition: all 0.5s linear;
-            &:hover{
-                transform: scale(1.5);
-            }
-        }
-        &:hover{
-            color: $forest;
-        }
       }
     }
     .social{
@@ -171,6 +159,10 @@ header{
         @include mq($M){
             padding: 0 15px;
             display: inline-block;
+            top: 60%;
+            &:nth-child(8){
+                top: 65%;
+            }
         }
     }
   }
@@ -246,7 +238,7 @@ header{
 		}
 }
 .hb {
-    transition: all 0.5s linear;
+    transition: all 0.3s linear;
     display: inline-block;
     height: 30px;
     width: 30px;
@@ -261,4 +253,21 @@ header{
 .hb-houzz{
     background: url('../../img/icons/houzz.png') no-repeat center center;
     background-size: 30px 30px;
+}
+.hb-phone{
+    background: url('../../img/icons/phone.svg') no-repeat center center;
+    background-size: 30px 30px;
+}
+.hb-plane{
+    background: url('../../img/icons/plane.svg') no-repeat center center;
+    background-size: 30px 30px;
+}
+
+a .fa-pinterest{
+  color: #C92228;
+  font-size: 36px;
+  transition: all 0.5s linear;
+  &:hover{
+      transform: scale(1.5);
+  }
 }
