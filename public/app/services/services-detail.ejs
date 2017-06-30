@@ -3,9 +3,8 @@
     </div>
     <nav class="service-menu text-center">
       <ul>
-
-        <li ng-repeat="service in services"><a ui-sref="services.detail({slug: service.slug})">{{service.name}}</a></li>
-        <li class="cta"><a href="#">Contact</a></li>
+        <li ng-repeat="service in services"><a ui-sref="services.detail({slug: service.slug})" ng-class="{'active': service.slug == selectedService.slug}">{{service.name}}</a></li>
+        <li ng-click="toggleContact()" class="cta"><a href="#">Contact</a></li>
       </ul>
     </nav>
 </div>

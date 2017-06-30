@@ -60,7 +60,7 @@ angular.module('questionaire.factory', []).factory('QFactory', () => {
                     selected: false,
                 },
                 {
-                    name: 'crate-barrel',
+                    name: 'crate-&-barrel',
                     selected: false,
                 },
                 {

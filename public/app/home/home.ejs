@@ -26,7 +26,7 @@
                 <h3 class="forest padded-vertical">Welcome</h3>
                 <p>We are a small firm specializing in e-design, space planning, branding, residential design and custom furniture design.  We assemble spaces that emulate and amplify the identity of our the clients.</p>
                 <a class="btn btn-outline" href="#" ui-sref="e-design">E-Design</a>
-                <a class="btn btn-outline" href="#" ui-sref="services.detail({slug: 'interior-design'})">Other Services</a>
+                <a class="btn btn-outline" href="#" ui-sref="services.detail({slug: 'interior-design'})">More Services</a>
             </div>
         </div>
       </div>
@@ -51,7 +51,7 @@
       <div class="col-sm-5 right">
         <div class="dark-grey box text-center">
           <div class="text-box">
-            <h3>What is E-Design</h3>
+            <h3>What is E-Design?</h3>
             <h5 class="forest padded-vertical">Fill out our design questionnaire to help us create your personalized style with E-design.</h5>
           </div>
         </div>
@@ -61,7 +61,9 @@
       <div class="col-sm-5 col-sm-offset-1 left">
         <div class="grey box text-center">
           <div class="text-box">
-            <a ui-sref="e-design" class="btn btn-outline btn-lg">Questionnaire</a>
+              <h3 class="white">Limited Time Sale!</h3>
+              <h5 class="white padded-bottom">Purchase one e-design room and get the second room designed for free!</h5>
+            <a ui-sref="e-design" class="btn btn-outline btn-lg" ng-click="toggleQForm()">Questionnaire</a>
           </div>
         </div>
       </div>

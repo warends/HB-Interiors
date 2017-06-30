@@ -1,11 +1,6 @@
 angular.module('ed.controller', []).controller('EDesignController', ['$scope', '$http', 'QFactory', ($scope, $http, QFactory) => {
     window.scrollTo(0, 0);
 
-    $scope.qShow = false;
-    $scope.toggleQForm = () => {
-        $scope.qShow = !$scope.qShow;
-    }
-
     $scope.colorList = [];
     $scope.colorNoList = [];
     $scope.drawnToList = [];
@@ -71,12 +66,14 @@ angular.module('ed.controller', []).controller('EDesignController', ['$scope', '
             });
     }
 
-    $scope.mySplit = function(string, nb) {
+    $scope.mySplit = function(string, i) {
         var array = string.split('-');
-        if(array[nb+1] === undefined){
-            return array[nb];
+        if(array[i+1] === undefined){
+            return array[i];
+        } else if(array[i+2] === undefined){
+            return array[i] + ' ' + array[i+1];
         } else {
-            return array[nb] + ' ' + array[nb+1];
+            return array[i] + ' ' + array[i+1] + ' ' + array[i+2];
         }
     }
 

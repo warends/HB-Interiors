@@ -37,11 +37,13 @@
 #questionaire{
     position: relative;
     .controls{
-        .fa{
+        .hb{
             position: absolute;
             top: -300px;
             font-size: 70px;
             color: $light-black;
+            height: 50px;
+            width: 50px;
         }
         .next{
             right: 0;
@@ -55,11 +57,46 @@
             display: none;
         }
     }
-    .q1 .radio{
-        padding: 25px;
+    .q1 {
+        .radio{
+            padding: 25px;
+        }
+        .q-radio{
+            &:nth-child(2) p.lead{
+                left: 155px;
+            }
+            &:nth-child(4) p.lead{
+                left: 175px;
+            }
+            &:nth-child(6) p.lead{
+                left: 170px;
+            }
+        }
     }
-    .q3 .checkbox {
-        padding: 35px;
+    .q3 {
+        .checkbox {
+            padding: 35px;
+        }
+        .q-image {
+            p.lead{
+                left: 145px;
+                top: 105px;
+                width: 100%;
+            }
+            &:nth-child(3) p.lead{
+                left: 125px;
+                top: 125px;
+            }
+            &:nth-child(4) p.lead{
+                left: 105px;
+                top: 140px;
+            }
+            &:nth-child(6) p.lead{
+                width: 75%;
+                left: 135px;
+                top: 145px;
+            }
+        }
     }
     label > input[type="radio"] {
         visibility: hidden;
@@ -95,8 +132,8 @@
         text-transform: capitalize;
         transform: rotate(-45deg);
         position: absolute;
-        left: 150px;
-        top: 150px;
+        left: 165px;
+        top: 165px;
     }
     .col-color{
         width: 12%;

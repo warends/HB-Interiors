@@ -157,7 +157,7 @@ header{
     .social{
         display: none;
         @include mq($M){
-            padding: 0 15px;
+            padding: 0 10px;
             display: inline-block;
             top: 60%;
             &:nth-child(8){

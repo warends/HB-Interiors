@@ -4,16 +4,18 @@ angular.module('service.factory', []).factory('ServiceFactory', () => {
     //   name: 'e-Design',
     //   logo: 'img/icons/construction.png'
     // },
+
+
     {
-      name: 'Space Planning',
-      slug: 'space-planning',
-      logo: 'img/icons/measurement.svg',
-      banner: 'img/services/floor-plan.png',
+      name: 'Interior Design',
+      slug: 'interior-design',
+      logo: 'img/icons/home.svg',
+      banner: 'img/services/master-br.png',
       subHead: 'creating individualized products',
-      desc: "What is space planning? Do you feel like your space is not functional? Would you like assistance arranging the layout of your space? We are here to help! We will organize your existing furniture in a way that creates a more natural and functional flow with a customized floor plan that you will love.",
-      img1: 'img/services/bubble1.png',
-      img2: 'img/services/floorplan.png'
-  },
+      desc: "Local to the Seattle area? We are here to assist you in your design needs. We want you to feel at home in your home. We’d love to get to know you to develop a style that is all your own. A design package with concepts and a floor plan will be created all the way through installation. Contact us for a free consultation!",
+      img1: 'img/services/kitchen.png',
+      img2: 'img/services/interior-design.png'
+    },
     {
       name: 'Branding',
       slug: 'branding',
@@ -25,14 +27,14 @@ angular.module('service.factory', []).factory('ServiceFactory', () => {
       img2: 'img/services/branding2.png'
     },
     {
-      name: 'Interior Design',
-      slug: 'interior-design',
-      logo: 'img/icons/home.svg',
-      banner: 'img/services/master-br.png',
+      name: 'Space Planning',
+      slug: 'space-planning',
+      logo: 'img/icons/measurement.svg',
+      banner: 'img/services/floor-plan.png',
       subHead: 'creating individualized products',
-      desc: "Local to the Seattle area? We are here to assist you in your design needs. We want you to feel at home in your home. We’d love to get to know you to develop a style that is all your own. A design package with concepts and a floor plan will be created all the way through installation. Contact us for a free consultation!",
-      img1: 'img/services/kitchen.png',
-      img2: 'img/services/interior-design.png'
+      desc: "What is space planning? Do you feel like your space is not functional? Would you like assistance arranging the layout of your space? We are here to help! We will organize your existing furniture in a way that creates a more natural and functional flow with a customized floor plan that you will love.",
+      img1: 'img/services/bubble1.png',
+      img2: 'img/services/floorplan.png'
     },
     {
       name: 'Furniture Design',

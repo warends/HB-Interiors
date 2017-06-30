@@ -36,14 +36,17 @@ app.config(['$locationProvider', '$stateProvider', '$urlRouterProvider', ($locat
 
 app.run(['$rootScope', '$location', function($rootScope, $location){
 
-  console.log($rootScope.contactShow);
   $rootScope.toggleContact = function(){
       $rootScope.contactShow = !$rootScope.contactShow;
       console.log($rootScope.contactShow);
   }
+  $rootScope.qShow = false;
+  $rootScope.toggleQForm = () => {
+      $rootScope.qShow = !$rootScope.qShow;
+  }
 
   $rootScope.$on("$stateChangeSuccess", function (event, currentRoute, previousRoute) {
-
+      window.scrollTo(0,0);
   });
 
 }]);

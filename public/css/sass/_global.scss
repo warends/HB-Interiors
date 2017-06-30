@@ -248,3 +248,40 @@ footer{
 [ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
   display: none !important;
 }
+.hb {
+    transition: all 0.3s linear;
+    display: inline-block;
+    height: 30px;
+    width: 30px;
+    &:hover{
+        transform: scale(1.5);
+    }
+}
+.hb-instagram{
+    background: url('../../img/icons/instagram.png') no-repeat center center;
+    background-size: 30px 30px;
+}
+.hb-houzz{
+    background: url('../../img/icons/houzz.png') no-repeat center center;
+    background-size: 30px 30px;
+}
+.hb-pinterest{
+    background: url('../../img/icons/pinterest.png') no-repeat center center;
+    background-size: 30px 30px;
+}
+.hb-phone{
+    background: url('../../img/icons/phone.svg') no-repeat center center;
+    background-size: 30px 30px;
+}
+.hb-plane{
+    background: url('../../img/icons/plane.svg') no-repeat center center;
+    background-size: 30px 30px;
+}
+.hb-arrow-right{
+    background: url('../../img/icons/arrow-right-rounded.svg') no-repeat center center;
+    background-size: 50px 50px;
+}
+.hb-arrow-left{
+    background: url('../../img/icons/arrow-left-rounded.svg') no-repeat center center;
+    background-size: 50px 50px;
+}

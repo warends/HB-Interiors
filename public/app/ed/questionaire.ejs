@@ -1,4 +1,4 @@
-<form id="questionaire" name="qForm" role="form">
+<form id="questionaire" name="qForm" role="form" ng-controller="EDesignController">
 
     <div class="row" ng-repeat="question in questions" ng-hide="!isCurrentQIndex($index)">
         <div class="col-xs-12 slide">
@@ -33,7 +33,6 @@
                                         <div ng-class="color.name" class="color"></div>
                                     </label>
                                 </div>
-
                             </div>
                         </div>
                 </div>
@@ -41,7 +40,7 @@
 
                 <div class="row" ng-class="question.id" ng-show="question.images">
                     <div class="col-xs-12 col-sm-8 col-sm-offset-2">
-                        <div ng-repeat="image in question.images">
+                        <div ng-repeat="image in question.images" class="q-image">
                             <div class="clearfix" ng-if="$index % 3 == 0"></div>
                             <div class="checkbox "ng-class="question.cols">
                                 <label>
@@ -88,8 +87,8 @@
 
     <div class="controls">
         <div class="col-xs-10 col-xs-offset-1">
-            <i ng-click="prevQ()" ng-hide="currentQuestion == '0'"class="fa fa-caret-left prev pull-left" aria-hidden="true"></i>
-            <i ng-click="nextQ()" ng-hide="currentQuestion == (questions.length-1)"class="fa fa-caret-right pull-right next" aria-hidden="true"></i>
+            <i ng-click="prevQ()" ng-hide="currentQuestion == '0'"class="hb hb-arrow-left prev pull-left" aria-hidden="true"></i>
+            <i ng-click="nextQ()" ng-hide="currentQuestion == (questions.length-1)"class="hb hb-arrow-right pull-right next" aria-hidden="true"></i>
         </div>
     </div>
 

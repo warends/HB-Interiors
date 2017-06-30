@@ -16,6 +16,7 @@ angular.module('common.modal', []).directive('globalModal', ['$rootScope', funct
 
       scope.hideModal = function(){
         $rootScope.contactShow = false;
+        $rootScope.qShow = false;
         scope.show = false;
       };
     },
