@@ -4,8 +4,8 @@ var generator = require('xoauth2').createXOAuth2Generator({
   user: 'haybagwell@gmail.com',
   clientId: process.env.GMAIL_HB_CLIENT_ID,
   clientSecret: process.env.GMAIL_HB_CLIENT_SECRET,
-  refreshToken: '1/DMYsqRblMuJY7MOPDGtTdMyauSxcFsGyrAbhWswSEKk',
-  accessToken: 'ya29.GlteBIHYhUkZ137MBseKOtMJu0KaQMezUYcZKm3E7TAeZF42s2B_T1DlN4s9LM-cTSuLC2O4Q4PbjxeYrxRG5uUE9H5Emz6sxhR7IJTCsZS9f23PI7MrF_ztGK2x'
+  refreshToken: '1/5il5V_9q2ERIEnjeN49qu2DNP6R6sE2B_f5ApHTNiPo',
+  accessToken: 'ya29.GlurBLStgdQZ6hxvjdyb32fqoTv4iQBBLHbGq7ui_FTgw37ET6q6tM6kUfo7TYrkooDiV01RmUMsdt4eFg5BhyMI9wX8bkcBF8UyXkeiGsQW0sA7ZNbl8LEfo5Hw'
 });
 
 //listen for token updates (if refreshToken is set) you probably want to store these to a db
@@ -20,14 +20,14 @@ var transporter = nodemailer.createTransport({
       },
       debug: true
 });
-// 
-// transporter.verify(function(error, success) {
-//   if (error) {
-//     console.log(error);
-//   } else {
-//     console.log('Server is ready to take our messages');
-//   }
-// });
+
+transporter.verify(function(error, success) {
+  if (error) {
+    console.log(error);
+  } else {
+    console.log('Server is ready to take our messages');
+  }
+});
 
 exports.sendMail = function(req, res){
   var data = req.body;

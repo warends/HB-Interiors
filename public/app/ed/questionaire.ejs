@@ -7,7 +7,8 @@
                 <div class="row" ng-class="question.id" ng-show="question.type == 'radio'">
                     <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                         <div ng-repeat="answer in question.answers" class="q-radio">
-                            <div class="clearfix" ng-if="$index % 3 == 0"></div>
+                            <!-- <div class="clearfix" ng-if="$index % 2 == 0 && screenW <= '768'"></div> -->
+                            <div class="clearfix" ng-if="$index % 3 == 0 && screenW >= 768"></div>
                             <div class="radio" ng-class="question.cols">
                                 <label>
                                     <input type="radio" name="{{question.id}}" value="{{answer}}" ng-model="question.response">
@@ -26,8 +27,8 @@
                 <div class="row" ng-class="question.id" ng-hide="question.images">
                         <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                             <div ng-repeat="color in question.colors">
-                                <div class="clearfix" ng-if="$index % 8 == 0"></div>
-                                <div class="checkbox col-sm-2" ng-class="question.cols">
+                                <div class="clearfix" ng-if="$index % 8 == 0 && screenW >= 768"></div>
+                                <div class="checkbox col-xs-4 col-sm-2" ng-class="question.cols">
                                     <label>
                                         <input type="checkbox" value="{{color.name}}" ng-model="color.selected" ng-click="toggleColor(color.name, question.id)"/>
                                         <div ng-class="color.name" class="color"></div>
@@ -41,7 +42,7 @@
                 <div class="row" ng-class="question.id" ng-show="question.images">
                     <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                         <div ng-repeat="image in question.images" class="q-image">
-                            <div class="clearfix" ng-if="$index % 3 == 0"></div>
+                            <div class="clearfix" ng-if="$index % 3 == 0 && screenW >= 768"></div>
                             <div class="checkbox "ng-class="question.cols">
                                 <label>
                                     <input type="checkbox" value="{{image.name}}" ng-model="image.selected" ng-click="toggleColor(image.name, question.id)"/>
@@ -57,7 +58,7 @@
 
             <div ng-show="question.type == 'text'">
                 <div class="row">
-                    <div class="col-xs-8 col-xs-offset-2"
+                    <div class="col-sm-8 col-sm-offset-2"
                     <p>Thank you for helping us get a sense of your design style! Please enter your your information so that we may contact you with a personalized design.</p>
                     <div class="form-group">
                       <label for="name">Name:</label>

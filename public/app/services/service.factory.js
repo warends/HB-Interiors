@@ -11,7 +11,7 @@ angular.module('service.factory', []).factory('ServiceFactory', () => {
       slug: 'interior-design',
       logo: 'img/icons/home.svg',
       banner: 'img/services/master-br.png',
-      subHead: 'creating individualized products',
+      subHead: 'amplifying client spaces',
       desc: "Local to the Seattle area? We are here to assist you in your design needs. We want you to feel at home in your home. We’d love to get to know you to develop a style that is all your own. A design package with concepts and a floor plan will be created all the way through installation. Contact us for a free consultation!",
       img1: 'img/services/kitchen.png',
       img2: 'img/services/interior-design.png'
@@ -31,7 +31,7 @@ angular.module('service.factory', []).factory('ServiceFactory', () => {
       slug: 'space-planning',
       logo: 'img/icons/measurement.svg',
       banner: 'img/services/floor-plan.png',
-      subHead: 'creating individualized products',
+      subHead: 'making your space functional',
       desc: "What is space planning? Do you feel like your space is not functional? Would you like assistance arranging the layout of your space? We are here to help! We will organize your existing furniture in a way that creates a more natural and functional flow with a customized floor plan that you will love.",
       img1: 'img/services/bubble1.png',
       img2: 'img/services/floorplan.png'

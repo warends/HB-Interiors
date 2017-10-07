@@ -4,7 +4,7 @@
     <nav class="service-menu text-center">
       <ul>
         <li ng-repeat="service in services"><a ui-sref="services.detail({slug: service.slug})" ng-class="{'active': service.slug == selectedService.slug}">{{service.name}}</a></li>
-        <li ng-click="toggleContact()" class="cta"><a href="#">Contact</a></li>
+        <li ng-click="toggleContact()" class=""><a href="#">Contact</a></li>
       </ul>
     </nav>
 </div>
@@ -21,10 +21,38 @@
     </div>
     <div class="row sample-imgs">
       <div class="col-sm-6">
-        <img ng-src="{{selectedService.img1}}" class="img-responsive" />
+          <div ng-if="branding">
+              <img ng-src="{{selectedService.img1}}" class="img-responsive" ng-click="toggleBook1"/>
+          </div>
+          <div ng-if="!branding">
+              <img ng-src="{{selectedService.img1}}" class="img-responsive" />
+          </div>
+
       </div>
       <div class="col-sm-6">
-        <img ng-src="{{selectedService.img2}}" class="img-responsive" />
+          <div ng-if="branding">
+              <img ng-src="{{selectedService.img2}}" class="img-responsive" ng-click="toggleBook2"/>
+          </div>
+          <div ng-if="!branding">
+              <img ng-src="{{selectedService.img2}}" class="img-responsive" />
+          </div>
       </div>
     </div>
 </div>
+
+<global-modal show="book1Show" width="60%" height="75%">
+    <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+            <h3 class="black text-center padded-bottom">BOOK 1</h3>
+
+        </div>
+    </div>
+</global-modal>
+<global-modal show="book2Show" width="60%" height="75%">
+    <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+            <h3 class="black text-center padded-bottom">BOOK 2</h3>
+
+        </div>
+    </div>
+</global-modal>

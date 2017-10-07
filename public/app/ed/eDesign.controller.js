@@ -1,5 +1,8 @@
-angular.module('ed.controller', []).controller('EDesignController', ['$scope', '$http', 'QFactory', ($scope, $http, QFactory) => {
+angular.module('ed.controller', []).controller('EDesignController', ['$scope', '$http', '$window', 'QFactory', ($scope, $http, $window, QFactory) => {
     window.scrollTo(0, 0);
+
+    $scope.screenW = $window.innerWidth;
+    console.log($scope.screenW);
 
     $scope.colorList = [];
     $scope.colorNoList = [];
@@ -35,10 +38,13 @@ angular.module('ed.controller', []).controller('EDesignController', ['$scope', '
     }
 
     $scope.nextQ = () => {
+        document.querySelectorAll('.ng-modal-dialog-content').scrollTop = 0;
+        console.log('scrolled');
         $scope.currentQuestion = ($scope.currentQuestion < $scope.questions.length -1) ? ++$scope.currentQuestion : 0;
     }
 
     $scope.prevQ = () => {
+        window.scrollTo(0, 0);
         $scope.currentQuestion = ($scope.currentQuestion > 0) ? --$scope.currentQuestion : $scope.questions.length -1;
     }
 
@@ -61,6 +67,7 @@ angular.module('ed.controller', []).controller('EDesignController', ['$scope', '
         $http.post('/questionaire-form', data)
             .then((response) => {
                 console.log(response.data);
+                $scope.currentQuestion = 0;
             }, (err) => {
                 console.log('There was a problem submitting your form ' + err);
             });

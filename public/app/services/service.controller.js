@@ -4,5 +4,12 @@ angular.module('service.controller', []).controller('ServiceController', ['$scop
 
 angular.module('service.detail.controller', []).controller('SelectedServiceController', ['$scope', '$stateParams', 'ServiceFactory', ($scope, $stateParams, ServiceFactory) => {
   $scope.selectedService = ServiceFactory.find($stateParams.slug);
-  console.log($scope.selectedService);
+  $scope.branding = false;
+  if($scope.selectedService.name === 'Branding'){
+      $scope.branding = true;
+  } else {
+      $scope.branding = false;
+  }
+  $scope.book1Show = false;
+  // console.log($scope.selectedService.name);
 }]);

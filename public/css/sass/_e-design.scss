@@ -15,13 +15,24 @@
          padding-left: 20px;
       }
   }
+  .floor-plan {
+      padding-top: 2em;
+      .img-desc{
+        top: 75%;
+        }
+    }
+  .updated-plan{
+      padding: 2em 0;
+  }
  .img-desc{
-     position: absolute;
-     transform: rotate(-90deg);
-	 transform-origin: left top 0;
+     @include mq($S){
+         position: absolute;
+         transform: rotate(-90deg);
+         transform-origin: left top 0;
+         left: -15px;
+         top: 60%;
+     }
      color: $black;
-     left: -15px;
-     top: 60%;
  }
 }
 .submenu {
@@ -36,14 +47,21 @@
 }
 #questionaire{
     position: relative;
+    margin-bottom: 100px;
+    @include mq($M){
+        margin-bottom: 0;
+    }
     .controls{
         .hb{
             position: absolute;
-            top: -300px;
+            top: 50%;
             font-size: 70px;
             color: $light-black;
             height: 50px;
             width: 50px;
+            @include mq($S){
+                top: -300px;
+            }
         }
         .next{
             right: 0;
@@ -59,10 +77,29 @@
     }
     .q1 {
         .radio{
-            padding: 25px;
+            padding: 0;
+            @include mq($S){
+                padding: 25px;
+            }
+            img{
+                display: none;
+                @include mq($S){
+                    display: block;
+                }
+            }
+            .ng-valid-parse{
+                &~p.lead{
+                    background-color: $forest;
+                    color: white;
+                }
+            }
         }
         .q-radio{
             &:nth-child(2) p.lead{
+                @include mq($S){
+                    left: 55%;
+                    top: 85%;
+                }
                 left: 155px;
             }
             &:nth-child(4) p.lead{
@@ -75,13 +112,18 @@
     }
     .q3 {
         .checkbox {
-            padding: 35px;
+            padding: 0;
+            @include mq($M){
+                padding: 35px;
+            }
         }
         .q-image {
             p.lead{
-                left: 145px;
-                top: 105px;
-                width: 100%;
+                @include mq($M){
+                    left: 145px;
+                    top: 105px;
+                    width: 100%;
+                }
             }
             &:nth-child(3) p.lead{
                 left: 125px;
@@ -92,9 +134,23 @@
                 top: 140px;
             }
             &:nth-child(6) p.lead{
-                width: 75%;
-                left: 135px;
-                top: 145px;
+                @include mq($M){
+                    width: 75%;
+                    left: 135px;
+                    top: 145px;
+                }
+            }
+            img{
+                display: none;
+                @include mq($S){
+                    display: block;
+                }
+            }
+            .ng-valid-parse{
+                &~p.lead{
+                    background-color: $forest;
+                    color: white;
+                }
             }
         }
     }
@@ -130,18 +186,41 @@
     }
     .radio p.lead, .checkbox p.lead {
         text-transform: capitalize;
-        transform: rotate(-45deg);
-        position: absolute;
-        left: 165px;
-        top: 165px;
+        padding: 15px 0;
+        border: 2px solid $forest;
+        width: 90px;
+        text-align: center;
+        margin: 0 auto;
+        @include mq($S){
+            left: 165px;
+            top: 165px;
+            transform: rotate(-45deg);
+            position: absolute;
+        }
+        &.ng-not-empty{
+            background-color: $forest;
+            color: white;
+        }
+
+    }
+    .q3 .checkbox p.lead {
+        width: 120px;
     }
     .col-color{
-        width: 12%;
+        @include mq($S){
+            width: 100%;
+        }
+        @include mq($M){
+            width: 12%;
+        }
     }
     .radio{
-        // label{
-        //     padding: 20px 30px;
-        // }
+        label{
+            padding-left: 0;
+            @include mq($M){
+                padding-left: 20px;
+            }
+        }
     }
     .checkbox {
         label{
@@ -150,7 +229,10 @@
         }
         .color{
             width: 100%;
-            height: 150px;
+            height: 50px;
+            @include mq($M){
+                height: 150px;
+            }
             &.Black {
                 border-radius: 4px;
                 background-color: black;
