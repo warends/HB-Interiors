@@ -198,6 +198,7 @@ footer{
         }
         h2{
             font-size: 55px;
+            padding-right: 0;
             @include mq($M){
                 font-size: 64px;
             }
@@ -239,9 +240,12 @@ footer{
             }
         }
     }
-    .social-footer li:nth-child(3){
-        top: 53%;
+    .social-footer li{
+        padding: 15px 5px;
     }
+    // .social-footer li:nth-child(3){
+    //     top: 53%;
+    // }
   }
 
 }

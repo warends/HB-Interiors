@@ -83,7 +83,7 @@
   <div class="container sm">
     <div class="row">
       <div ng-repeat="service in services">
-          <!-- <div class="clearfix" ng-if="$index % 4 == 0"></div> -->
+          <div class="clearfix" ng-if="$index % 2 == 0 && screenW <= 992"></div>
           <div class="col-sm-6 col-md-3 service">
               <div class="hex-box">
                   <div class="hexagon-grey"></div>

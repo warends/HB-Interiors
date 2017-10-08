@@ -7,7 +7,7 @@
                 <div class="row" ng-class="question.id" ng-show="question.type == 'radio'">
                     <div class="col-xs-12 col-sm-8 col-sm-offset-2">
                         <div ng-repeat="answer in question.answers" class="q-radio">
-                            <!-- <div class="clearfix" ng-if="$index % 2 == 0 && screenW <= '768'"></div> -->
+
                             <div class="clearfix" ng-if="$index % 3 == 0 && screenW >= 768"></div>
                             <div class="radio" ng-class="question.cols">
                                 <label>

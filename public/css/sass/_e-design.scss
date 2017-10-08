@@ -91,53 +91,60 @@
                 &~p.lead{
                     background-color: $forest;
                     color: white;
+                    @include mq($S){
+                        background-color: transparent;
+                        color: black;
+                    }
                 }
             }
         }
         .q-radio{
             &:nth-child(2) p.lead{
-                @include mq($S){
-                    left: 55%;
-                    top: 85%;
+                // @include mq($S){
+                //     left: 55%;
+                //     top: 85%;
+                // }
+                left: 55%;
+                @include mq($L){
+                    left: 62%;
                 }
-                left: 155px;
             }
             &:nth-child(4) p.lead{
-                left: 175px;
+                left: 67%;
             }
-            &:nth-child(6) p.lead{
-                left: 170px;
-            }
+            // &:nth-child(6) p.lead{
+            //     left: 170px;
+            // }
         }
     }
     .q3 {
         .checkbox {
             padding: 0;
-            @include mq($M){
+            @include mq($S){
                 padding: 35px;
             }
         }
         .q-image {
-            p.lead{
-                @include mq($M){
-                    left: 145px;
-                    top: 105px;
+            &:nth-child(3) p.lead{
+                left: 30%;
+                top: 70%;
+                width: 135px;
+                @include mq($S){
                     width: 100%;
                 }
             }
-            &:nth-child(3) p.lead{
-                left: 125px;
-                top: 125px;
-            }
             &:nth-child(4) p.lead{
-                left: 105px;
-                top: 140px;
+                width: 135px;
+                @include mq($S){
+                    width: 35%;
+                }
+
             }
             &:nth-child(6) p.lead{
-                @include mq($M){
+                @include mq($S){
                     width: 75%;
-                    left: 135px;
-                    top: 145px;
+                    left: 45%;
+                    top: 70%;
                 }
             }
             img{
@@ -146,7 +153,7 @@
                     display: block;
                 }
             }
-            .ng-valid-parse{
+            .ng-not-empty{
                 &~p.lead{
                     background-color: $forest;
                     color: white;
@@ -184,6 +191,12 @@
         margin-top: 10px;
         margin-bottom: 10px;
     }
+    .q3 .checkbox p.lead{
+        width: 135px;
+        @include mq($S){
+            width: auto;
+        }
+    }
     .radio p.lead, .checkbox p.lead {
         text-transform: capitalize;
         padding: 15px 0;
@@ -192,10 +205,17 @@
         text-align: center;
         margin: 0 auto;
         @include mq($S){
-            left: 165px;
-            top: 165px;
+            padding: 0;
+            border: none;
+            width: auto;
+            left: 60%;
+            top: 70%;
             transform: rotate(-45deg);
             position: absolute;
+        }
+        @include mq($L){
+            left: 65%;
+            top: 75%;
         }
         &.ng-not-empty{
             background-color: $forest;
@@ -203,13 +223,7 @@
         }
 
     }
-    .q3 .checkbox p.lead {
-        width: 120px;
-    }
     .col-color{
-        @include mq($S){
-            width: 100%;
-        }
         @include mq($M){
             width: 12%;
         }
@@ -230,7 +244,7 @@
         .color{
             width: 100%;
             height: 50px;
-            @include mq($M){
+            @include mq($S){
                 height: 150px;
             }
             &.Black {

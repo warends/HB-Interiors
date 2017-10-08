@@ -27,18 +27,18 @@ header{
         opacity: 1;
         visibility: visible;
     }
-  @include mq($S){
-      left: 15px;
-      top: 0;
-      padding: 15px 0;
-      right: auto;
-  }
+  // @include mq($S){
+  //     left: 15px;
+  //     top: 0;
+  //     padding: 15px 0;
+  //     right: auto;
+  // }
   h6 {
     color: white;
     display: none;
-    @include mq($S){
-        display: inline-block;
-    }
+    // @include mq($S){
+    //     display: inline-block;
+    // }
   }
   .icon {
     margin: 5px;
@@ -53,15 +53,15 @@ header{
     &:hover{
       color: $forest;
     }
-    @include mq($S){
-        display: block;
-    }
+    // @include mq($S){
+    //     display: block;
+    // }
   }
   .social {
       padding-left: 0;
       display: inline-block;
       @include mq($S){
-          display: block;
+          display: inline-block;
           padding-left: 15px;
       }
       a{
@@ -264,7 +264,7 @@ header{
 }
 .hb-plane{
     background: url('../../img/icons/plane.svg') no-repeat center center;
-    background-size: 30px 30px;
+    background-size: 35px 35px;
 }
 
 a .fa-pinterest{

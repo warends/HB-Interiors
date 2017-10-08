@@ -3,7 +3,7 @@
   <nav>
       <div id="navbar-contact" class="black-shadow" ng-class="{'active': socialShow}">
           <a href="tel:1-724-554-1455"><i class="hb hb-phone"></i><h6> 724.554.1455</h6></a>
-          <a href="mailto:haybaglwell@gmail.com"><i class="hb hb-plane"></i> <h6>haybagwell@gmail.com</h6></a>
+          <a ng-click="toggleContact()"><i class="hb hb-plane"></i> <h6>haybagwell@gmail.com</h6></a>
           <div class="social">
               <li class="social"><a href="https://www.instagram.com/hayhaybag/?hl=en" target="_blank"><i class="hb hb-instagram"></i></a></li>
               <li class="social"><a href="https://www.pinterest.com/haybagwell/" target="_blank"><i class="hb hb-pinterest"></i></a></li>
@@ -15,11 +15,11 @@
         <a class="logo" ui-sref="home"><h2>HB</h2><h3>Hayley Bagwell<br />Interior Design</h3></a>
 
         <ul class="main-menu" ng-class="{'active':selected}">
-          <li><a href="/">Home</a></li>
-          <li><a ui-sref="e-design">E-Design</a></li>
-          <li><a ui-sref="services.detail({slug: 'interior-design'})">Services</a></li>
-          <li><a ui-sref="about">About</a></li>
-          <li><a href="#" ng-click="toggleContact()">Contact</a></li>
+          <li><a ng-click="toggleMenu()" href="/">Home</a></li>
+          <li><a ng-click="toggleMenu()" ui-sref="e-design">E-Design</a></li>
+          <li><a ng-click="toggleMenu()" ui-sref="services.detail({slug: 'interior-design'})">Services</a></li>
+          <li><a ng-click="toggleMenu()" ui-sref="about">About</a></li>
+          <li><a ng-click="toggleMenu()" href="#" ng-click="toggleContact()">Contact</a></li>
           <li class="social"><a href="https://www.instagram.com/hayhaybag/?hl=en"><i class="hb hb-instagram"></i></a></li>
           <li class="social"><a href="https://www.pinterest.com/haybagwell/"><i class="hb hb-pinterest"></i></a></li>
           <li class="social"><a href="https://www.houzz.com/user/haybagwell"><i class="hb hb-houzz"></i></a></li>
@@ -72,7 +72,7 @@
 <footer>
   <div class="container footer-menu">
     <div class="row">
-            <div class="col-sm-4">
+            <div class="col-sm-3">
                 <div class="logo">
                   <a ui-sref="home"><h2>HB</h2><h3>Hayley Bagwell<br />Interior Design</h3></a>
                 </div>
@@ -85,7 +85,7 @@
                   <li><a ui-sref="about">About</a></li>
                 </ul>
             </div>
-            <div class="col-sm-2">
+            <div class="col-sm-3">
                 <ul class="social-footer list-unstyled">
                     <li><a href="https://www.instagram.com/hayhaybag/?hl=en"><i class="hb hb-instagram"></i></a></li>
                     <li><a href="https://www.pinterest.com/haybagwell/"><i class="hb hb-pinterest"></i></a></li>

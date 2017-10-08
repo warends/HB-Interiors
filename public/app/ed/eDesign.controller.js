@@ -30,6 +30,12 @@ angular.module('ed.controller', []).controller('EDesignController', ['$scope', '
         }
     }
 
+    $scope.select = function(e){
+        var box = angular.element(e.target);
+        console.log(box);
+    }
+
+    var qForm = document.getElementById('qFormTitle');
     $scope.questions = QFactory.list();
     $scope.currentQuestion = 0;
 
@@ -38,13 +44,13 @@ angular.module('ed.controller', []).controller('EDesignController', ['$scope', '
     }
 
     $scope.nextQ = () => {
-        document.querySelectorAll('.ng-modal-dialog-content').scrollTop = 0;
+        qForm.scrollIntoView(true);
         console.log('scrolled');
         $scope.currentQuestion = ($scope.currentQuestion < $scope.questions.length -1) ? ++$scope.currentQuestion : 0;
     }
 
     $scope.prevQ = () => {
-        window.scrollTo(0, 0);
+        qForm.scrollIntoView(true);
         $scope.currentQuestion = ($scope.currentQuestion > 0) ? --$scope.currentQuestion : $scope.questions.length -1;
     }
 
