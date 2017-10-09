@@ -16,7 +16,9 @@ angular.module('common.nav', []).controller('NavController', ['$scope', '$http',
 
     $scope.selected = false;
     $scope.toggleMenu = function(){
-        $scope.selected = !$scope.selected;
+        if($window.innerWidth < 992){
+            $scope.selected = !$scope.selected;
+        }
     }
 
     $scope.socialShow = false;

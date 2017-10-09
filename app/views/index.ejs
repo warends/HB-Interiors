@@ -15,14 +15,14 @@
         <a class="logo" ui-sref="home"><h2>HB</h2><h3>Hayley Bagwell<br />Interior Design</h3></a>
 
         <ul class="main-menu" ng-class="{'active':selected}">
-          <li><a ng-click="toggleMenu()" href="/">Home</a></li>
+          <li><a ng-click="toggleMenu()" ui-sref="home">Home</a></li>
           <li><a ng-click="toggleMenu()" ui-sref="e-design">E-Design</a></li>
           <li><a ng-click="toggleMenu()" ui-sref="services.detail({slug: 'interior-design'})">Services</a></li>
           <li><a ng-click="toggleMenu()" ui-sref="about">About</a></li>
-          <li><a ng-click="toggleMenu()" href="#" ng-click="toggleContact()">Contact</a></li>
-          <li class="social"><a href="https://www.instagram.com/hayhaybag/?hl=en"><i class="hb hb-instagram"></i></a></li>
-          <li class="social"><a href="https://www.pinterest.com/haybagwell/"><i class="hb hb-pinterest"></i></a></li>
-          <li class="social"><a href="https://www.houzz.com/user/haybagwell"><i class="hb hb-houzz"></i></a></li>
+          <li><a ng-click="toggleContact()">Contact</a></li>
+          <li class="social"><a target="_blank" href="https://www.instagram.com/hayhaybag/?hl=en"><i class="hb hb-instagram"></i></a></li>
+          <li class="social"><a target="_blank" href="https://www.pinterest.com/haybagwell/"><i class="hb hb-pinterest"></i></a></li>
+          <li class="social"><a target="_blank" href="https://www.houzz.com/user/haybagwell"><i class="hb hb-houzz"></i></a></li>
         </ul>
 
         <a href="#" id="menu-icon" ng-click="toggleMenu()" ng-class="{'active':selected}">
@@ -87,9 +87,9 @@
             </div>
             <div class="col-sm-3">
                 <ul class="social-footer list-unstyled">
-                    <li><a href="https://www.instagram.com/hayhaybag/?hl=en"><i class="hb hb-instagram"></i></a></li>
-                    <li><a href="https://www.pinterest.com/haybagwell/"><i class="hb hb-pinterest"></i></a></li>
-                    <li><a href="https://www.houzz.com/user/haybagwell"><i class="hb hb-houzz"></i></a></li>
+                    <li><a target="_blank" href="https://www.instagram.com/hayhaybag/?hl=en"><i class="hb hb-instagram"></i></a></li>
+                    <li><a target="_blank" href="https://www.pinterest.com/haybagwell/"><i class="hb hb-pinterest"></i></a></li>
+                    <li><a target="_blank" href="https://www.houzz.com/user/haybagwell"><i class="hb hb-houzz"></i></a></li>
                 </ul>
             </div>
 

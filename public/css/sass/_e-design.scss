@@ -109,9 +109,9 @@
                     left: 62%;
                 }
             }
-            &:nth-child(4) p.lead{
-                left: 67%;
-            }
+            // &:nth-child(4) p.lead{
+            //     left: 67%;
+            // }
             // &:nth-child(6) p.lead{
             //     left: 170px;
             // }
@@ -208,7 +208,7 @@
             padding: 0;
             border: none;
             width: auto;
-            left: 60%;
+            left: 65%;
             top: 70%;
             transform: rotate(-45deg);
             position: absolute;

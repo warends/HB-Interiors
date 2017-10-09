@@ -1,11 +1,11 @@
 var nodemailer = require('nodemailer');
 
 var generator = require('xoauth2').createXOAuth2Generator({
-  user: 'haybagwell@gmail.com',
+  user: 'willarends@gmail.com',
   clientId: process.env.GMAIL_HB_CLIENT_ID,
   clientSecret: process.env.GMAIL_HB_CLIENT_SECRET,
-  refreshToken: '1/5il5V_9q2ERIEnjeN49qu2DNP6R6sE2B_f5ApHTNiPo',
-  accessToken: 'ya29.GlurBLStgdQZ6hxvjdyb32fqoTv4iQBBLHbGq7ui_FTgw37ET6q6tM6kUfo7TYrkooDiV01RmUMsdt4eFg5BhyMI9wX8bkcBF8UyXkeiGsQW0sA7ZNbl8LEfo5Hw'
+  refreshToken: '1/-jF2nJd-aZ7g4_lR8j5s5O73INKpy6dqNliRrdHqzrTRFathmgmaWzFhp1fhh_Jj',
+  accessToken: 'ya29.GlvfBHBBl_CMXWCqBWzqNa250VI9d5eqhjn7aGpwU_V-CZzy1Kmv5apcio4QXJByQkrLIN-SjSGxze305BS7t-gDvYWk9f0-JDwSzL4zIcvt_jmQ1RiQTeuTxtvC'
 });
 
 //listen for token updates (if refreshToken is set) you probably want to store these to a db
