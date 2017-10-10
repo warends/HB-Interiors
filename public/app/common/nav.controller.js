@@ -10,7 +10,7 @@ angular.module('common.nav', []).controller('NavController', ['$scope', '$rootSc
                notifier.notify('Thank you for your message ' + message.data.name);
                $scope.formData = {};
            }, function(message, status, headers, config){
-             notifier.error('There was an error processing your request. Please try again');
+               notifier.error('There was an error processing your request. Please try again');
            });
     }
 
