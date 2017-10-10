@@ -4,8 +4,8 @@ var generator = require('xoauth2').createXOAuth2Generator({
   user: 'willarends@gmail.com',
   clientId: process.env.GMAIL_HB_CLIENT_ID,
   clientSecret: process.env.GMAIL_HB_CLIENT_SECRET,
-  refreshToken: '1/-jF2nJd-aZ7g4_lR8j5s5O73INKpy6dqNliRrdHqzrTRFathmgmaWzFhp1fhh_Jj',
-  accessToken: 'ya29.GlvfBHBBl_CMXWCqBWzqNa250VI9d5eqhjn7aGpwU_V-CZzy1Kmv5apcio4QXJByQkrLIN-SjSGxze305BS7t-gDvYWk9f0-JDwSzL4zIcvt_jmQ1RiQTeuTxtvC'
+  refreshToken: '1/YRsAPIsuhFFBnJYbC7IhC4D_Vq4SfH6bUEw5B8z5KCJtLFk1JPQ_Q-3lP9Xx01Rg',
+  accessToken: 'ya29.GlvfBDQtn0R1NBDTODV_ImHI_QNU93_0qSpNbhb-0KNWTd6fuxKURT8-Eg0gH6rnwFO_6X7ti1z3eXKVgYuUJ2vHm6M-eWBBhINMjtKlKct7wXntRhO9keGcVWI1'
 });
 
 //listen for token updates (if refreshToken is set) you probably want to store these to a db
@@ -36,7 +36,7 @@ exports.sendMail = function(req, res){
     from: data.email,
     to: 'haybagwell@gmail.com',
     subject: 'Message from ' + data.name,
-    html: 'Message:<br>' + data.note + '<br><br><p>Email: ' + data.email + '<br>Name: ' + data.name + '</p>'
+    html: 'Message: ' + data.note + '<br><br><p>Email: ' + data.email + '<br>Name: ' + data.name + '</p>'
   }
   transporter.sendMail(mailOptions, function(err, info){
     if(err){

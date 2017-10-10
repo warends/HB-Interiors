@@ -1,8 +1,7 @@
-angular.module('ed.controller', []).controller('EDesignController', ['$scope', '$http', '$window', 'QFactory', ($scope, $http, $window, QFactory) => {
+angular.module('ed.controller', []).controller('EDesignController', ['$scope', '$rootScope', '$http', '$window', 'QFactory', 'NotifierService', ($scope, $rootScope, $http, $window, QFactory, notifier) => {
     window.scrollTo(0, 0);
 
     $scope.screenW = $window.innerWidth;
-    console.log($scope.screenW);
 
     $scope.colorList = [];
     $scope.colorNoList = [];
@@ -16,7 +15,6 @@ angular.module('ed.controller', []).controller('EDesignController', ['$scope', '
         } else {
             list.push(answer);
         }
-        console.log(list);
     }
     $scope.toggleColor = function(answer, question){
         if(question == 'q2'){
@@ -32,7 +30,6 @@ angular.module('ed.controller', []).controller('EDesignController', ['$scope', '
 
     $scope.select = function(e){
         var box = angular.element(e.target);
-        console.log(box);
     }
 
     var qForm = document.getElementById('qFormTitle');
@@ -68,13 +65,15 @@ angular.module('ed.controller', []).controller('EDesignController', ['$scope', '
             phone: $scope.formData.phone,
             note: $scope.formData.note
         }
-        console.log(data);
 
         $http.post('/questionaire-form', data)
             .then((response) => {
                 console.log(response.data);
                 $scope.currentQuestion = 0;
+                $rootScope.qShow = false;
+                notifier.notify('Thank you for your message ' + response.data.name);
             }, (err) => {
+                notifier.error('There was an error processing your request. Please try again');
                 console.log('There was a problem submitting your form ' + err);
             });
     }

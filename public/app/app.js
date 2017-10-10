@@ -38,7 +38,6 @@ app.run(['$rootScope', '$location', function($rootScope, $location){
 
   $rootScope.toggleContact = function(){
       $rootScope.contactShow = !$rootScope.contactShow;
-      console.log($rootScope.contactShow);
   }
   $rootScope.qShow = false;
   $rootScope.toggleQForm = () => {

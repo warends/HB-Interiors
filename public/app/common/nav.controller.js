@@ -1,4 +1,4 @@
-angular.module('common.nav', []).controller('NavController', ['$scope', '$http', '$window', 'NotifierService', function($scope, $http, $window, notifier){
+angular.module('common.nav', []).controller('NavController', ['$scope', '$rootScope', '$http', '$window', 'NotifierService', function($scope, $rootScope, $http, $window, notifier){
 
     $scope.formData = {};
 
@@ -6,11 +6,11 @@ angular.module('common.nav', []).controller('NavController', ['$scope', '$http',
         console.log($scope.formData);
          $http.post('/contact-form', $scope.formData)
            .then(function(message, status, headers, config){
-             notifier.notify('Thank you for your message ' + message.data.contactName);
-                //$scope.formData.$setPristine();
-                //$scope.formData.$setUntouched();
+               $rootScope.toggleContact();
+               notifier.notify('Thank you for your message ' + message.data.name);
+               $scope.formData = {};
            }, function(message, status, headers, config){
-             notifier.notify('There was an error processing your request. Please try again');
+             notifier.error('There was an error processing your request. Please try again');
            });
     }
 
