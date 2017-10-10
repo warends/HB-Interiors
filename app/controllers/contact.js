@@ -5,7 +5,7 @@ var generator = require('xoauth2').createXOAuth2Generator({
   clientId: process.env.GMAIL_HB_CLIENT_ID,
   clientSecret: process.env.GMAIL_HB_CLIENT_SECRET,
   refreshToken: '1/YRsAPIsuhFFBnJYbC7IhC4D_Vq4SfH6bUEw5B8z5KCJtLFk1JPQ_Q-3lP9Xx01Rg',
-  accessToken: 'ya29.GlvfBDQtn0R1NBDTODV_ImHI_QNU93_0qSpNbhb-0KNWTd6fuxKURT8-Eg0gH6rnwFO_6X7ti1z3eXKVgYuUJ2vHm6M-eWBBhINMjtKlKct7wXntRhO9keGcVWI1'
+  accessToken: 'ya29.GlvgBLZKPwhKXRuP4mgdzKpz2lg59C-qfcPYaWoyTRAaiYRGXqV_vOX66YLFeb4vjmMAYjLm6mohfs5SBxrLBXMbyDrcT5EGwjMe7pQ7zsycOEK3A7WzMK9pwAfB'
 });
 
 //listen for token updates (if refreshToken is set) you probably want to store these to a db

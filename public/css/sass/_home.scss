@@ -2,7 +2,7 @@
 #home-banner{
   position: relative;
   height: 700px;
-  background: url('../../img/bgs/living-room.jpg') no-repeat center center;
+  background: url('../../img/bgs/living-room.png') no-repeat center center;
   background-size: cover;
   .banner-head{
     padding: 10px 0;
@@ -179,7 +179,7 @@
   @include mq($S){
         margin-bottom: 2em;
   }
- 
+
 }
 #services {
   position: relative;

@@ -5,7 +5,7 @@ angular.module('box.height.dir', []).directive('boxHeight', ['$window', '$timeou
         link: (scope, elem, attrs) => {
           $timeout(() => {
             scope.newHeight = elem[0].offsetHeight;
-          }, 500);
+          }, 1000);
           angular.element($window).bind('resize', () => {
             scope.$apply(() => {
               scope.newHeight = elem[0].offsetHeight;
