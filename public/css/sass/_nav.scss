@@ -80,7 +80,7 @@ header{
 
 .logo {
   float: left;
-  padding: 0 5%;
+  padding-left: 8%;
   height: 80px;
   //@include vertical-align;
   @include mq('min-width:450px'){
@@ -104,7 +104,7 @@ header{
 }
 .navbar-menu {
   border-top-left-radius: 40px;
-  width: 100%;
+  width: 98%;
   position: absolute;
   right: 0;
   height: 80px;
@@ -115,7 +115,7 @@ header{
       width: 90%;
   }
   @include mq($L){
-      width: 80%;
+      width: 84%;
   }
   .main-menu {
     height: 80px;
@@ -125,9 +125,15 @@ header{
     right: 0;
     top: 70px;
     @include mq($M){
-        right: 40px;
+        right: 0;
         top: 0;
         display: block;
+    }
+    @include mq($L){
+        right: 5%;
+    }
+    @include mq('min-width:1600px'){
+        right: 10%;
     }
     &.active{
         display: block;
@@ -174,7 +180,7 @@ header{
 	width: 40px;
 	height: 40px;
     top: 25px;
-    right: 40px;
+    right: 30px;
     @include mq($M){
         display: none;
     }

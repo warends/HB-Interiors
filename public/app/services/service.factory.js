@@ -1,11 +1,5 @@
 angular.module('service.factory', []).factory('ServiceFactory', () => {
   var services = [
-    // {
-    //   name: 'e-Design',
-    //   logo: 'img/icons/construction.png'
-    // },
-
-
     {
       name: 'Interior Design',
       slug: 'interior-design',
@@ -22,7 +16,7 @@ angular.module('service.factory', []).factory('ServiceFactory', () => {
       logo: 'img/icons/finger-print.svg',
       banner: 'img/services/branding.jpg',
       subHead: 'Helping your customers get to know you',
-      desc: "It is important to be able to stand out.  By creating branding tools that potential clients or architects can get their hands on, we will help move you to the front of the line. We can develop business tools that reflect your vision and reach your specific audience, such as portfolio booklets and business cards.",
+      desc: "For businesses, it is important to be able to stand out. By creating branding tools that potential clients or architects can get their hands on, we will help move you to the front of the line. We can develop business tools that reflect your vision and reach your specific audience, such as portfolio booklets and business cards.",
       img1: 'img/services/branding1.png',
       img2: 'img/services/branding2.png'
     },
@@ -32,7 +26,7 @@ angular.module('service.factory', []).factory('ServiceFactory', () => {
       logo: 'img/icons/measurement.svg',
       banner: 'img/services/floor-plan.png',
       subHead: 'making your space functional',
-      desc: "What is space planning? Do you feel like your space is not functional? Would you like assistance arranging the layout of your space? We are here to help! We will organize your existing furniture in a way that creates a more natural and functional flow with a customized floor plan that you will love.",
+      desc: "What is space planning? It is creating a highly functional furniture arrangement. Would you like assistance arranging the layout of your space? We are here to help! We will organize your existing or new furniture in a way that creates a more natural and functional flow with a customized floor plan that you will love.",
       img1: 'img/services/bubble1.png',
       img2: 'img/services/floorplan.png'
     },
@@ -42,7 +36,7 @@ angular.module('service.factory', []).factory('ServiceFactory', () => {
       logo: 'img/icons/chair1.svg',
       banner: 'img/services/bench.png',
       subHead: 'creating individualized products',
-      desc: "We love producing industrial, rustic and sustainable pieces here in Seattle. These can be brand new pieces or repurposed furniture. If you have an heirloom piece that you cannot bare to throw away, we may be able to give it a new look.  We would love to be part of the process to create that perfect piece for you.",
+      desc: "We love producing industrial, rustic and sustainable pieces here in Seattle. These can be brand new pieces or repurposed furniture. If you have an heirloom piece that you cannot bear to throw away, we may be able to give it a new look.  We would love to be part of the process to create that perfect piece for you.",
       img1: 'img/services/bench-paint.png',
       img2: 'img/services/table-work.png'
     }

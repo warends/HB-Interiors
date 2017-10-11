@@ -16,13 +16,22 @@
       }
   }
   .floor-plan {
-      padding-top: 2em;
+      img{
+          position: relative;
+          top: -170px;
+      }
       .img-desc{
-        top: 75%;
+        top: 25%;
         }
     }
-  .updated-plan{
-      padding: 2em 0;
+    .updated-plan{
+      img{
+          position: relative;
+          top: -65px;
+      }
+      .img-desc{
+          top: 40%;
+      }
   }
  .img-desc{
      @include mq($S){
@@ -81,6 +90,9 @@
             @include mq($S){
                 padding: 25px;
             }
+            @include mq($L){
+                padding: 55px;
+            }
             img{
                 display: none;
                 @include mq($S){
@@ -100,21 +112,11 @@
         }
         .q-radio{
             &:nth-child(2) p.lead{
-                // @include mq($S){
-                //     left: 55%;
-                //     top: 85%;
-                // }
                 left: 55%;
                 @include mq($L){
                     left: 62%;
                 }
             }
-            // &:nth-child(4) p.lead{
-            //     left: 67%;
-            // }
-            // &:nth-child(6) p.lead{
-            //     left: 170px;
-            // }
         }
     }
     .q3 {
@@ -122,6 +124,9 @@
             padding: 0;
             @include mq($S){
                 padding: 35px;
+            }
+            @include mq($L){
+                padding: 55px;
             }
         }
         .q-image {

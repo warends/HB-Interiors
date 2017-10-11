@@ -3,14 +3,14 @@ angular.module('common.nav', []).controller('NavController', ['$scope', '$rootSc
     $scope.formData = {};
 
     $scope.sendContact = function(){
-        console.log($scope.formData);
          $http.post('/contact-form', $scope.formData)
            .then(function(message, status, headers, config){
                $rootScope.toggleContact();
-               notifier.notify('Thank you for your message ' + message.data.name);
-               $scope.formData = {};
-           }, function(message, status, headers, config){
                console.log(message);
+               notifier.notify('Thank you for your message ' + message.name);
+               $scope.formData = {};
+           }, function(error, status, headers, config){
+               console.log(error);
            });
     }
 

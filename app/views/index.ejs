@@ -17,7 +17,7 @@
         <ul class="main-menu" ng-class="{'active':selected}">
           <li><a ng-click="toggleMenu()" ui-sref="home">Home</a></li>
           <li><a ng-click="toggleMenu()" ui-sref="e-design">E-Design</a></li>
-          <li><a ng-click="toggleMenu()" ui-sref="services.detail({slug: 'interior-design'})">Services</a></li>
+          <li><a ng-click="toggleMenu()" ui-sref="services.detail({slug: 'interior-design'})">Other Services</a></li>
           <li><a ng-click="toggleMenu()" ui-sref="about">About</a></li>
           <li><a ng-click="toggleContact()">Contact</a></li>
           <li class="social"><a target="_blank" href="https://www.instagram.com/hayhaybag/?hl=en"><i class="hb hb-instagram"></i></a></li>
@@ -36,7 +36,7 @@
 
       </div>
   </nav>
-  <global-modal show="contactShow" width="60%" height="75%">
+  <global-modal show="contactShow" height="75%">
       <div class="row">
           <div class="col-sm-10 col-sm-offset-1">
               <h3 class="black text-center padded-bottom">Get it touch with Hayley Bagwell Interior Design</h3>
@@ -53,7 +53,7 @@
                     <label for="note">Leave a Note</label>
                     <textarea name="note" ng-model="formData.note" class="form-control"></textarea>
                   </div>
-                  <p>E-Design from anywhere!<br />...Locally serving the greater Seattle area</p>
+                  <p>E-Design from anywhere!<br />...Locally serving the greater Seattle area.</p>
                   <div class="form-group pull-right">
                     <input type="submit" class="btn btn-lg btn-outline" ng-disabled="contact.$invalid" value="Submit"/>
                   </div>
@@ -78,12 +78,23 @@
                 </div>
             </div>
             <div class="col-sm-6">
-                <ul class="list-unstyled">
-                  <li><a ui-sref="home">Home</a></li>
-                  <li><a ui-sref="e-design">E-Design</a></li>
-                  <li><a ui-sref="services.detail({slug: 'interior-design'})">Services</a></li>
-                  <li><a ui-sref="about">About</a></li>
-                </ul>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <ul class="list-unstyled">
+                          <li><a ui-sref="home">Home</a></li>
+                          <li><a ui-sref="e-design">E-Design</a></li>
+                          <li><a ui-sref="services.detail({slug: 'interior-design'})">Other Services</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-12">
+                        <ul class="list-unstyled">
+                            <li><a ui-sref="about">About</a></li>
+                            <li><a ng-click="toggleContact()">Contact</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
             <div class="col-sm-3">
                 <ul class="social-footer list-unstyled">

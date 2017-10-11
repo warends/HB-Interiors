@@ -21,7 +21,7 @@ angular.module('home.controller', []).controller('HomeController', ['$scope', '$
     //        document.getElementById("gallery").style.visibility = "visible";
     //    },
        sequence: {
-          selector: '.col-sm-5',
+          selector: '.col-md-5',
           interval: 300
         }
     };

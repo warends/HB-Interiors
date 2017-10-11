@@ -23,6 +23,9 @@
   color: $light-black;
   background-color: white;
   box-shadow: 4px 4px 80px #000;
+  @include mq($S){
+      width: 65%;
+  }
 }
 .ng-modal-dialog-content {
   padding:20px;

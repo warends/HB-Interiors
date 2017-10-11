@@ -161,6 +161,12 @@ section.padded-bottom{
 .caps {
     text-transform: uppercase;
 }
+.underline{
+    text-decoration: underline;
+    &:hover{
+        text-decoration: underline;
+    }
+}
 .cta {
   background-color: $light-black;
   color: white;
@@ -198,7 +204,7 @@ footer{
         }
         h2{
             font-size: 55px;
-            padding-right: 0;
+            padding-right: 10px;
             @include mq($M){
                 font-size: 64px;
             }
@@ -213,12 +219,12 @@ footer{
     }
     ul{
         display: inline-block;
-        margin: 0;
+        margin: 0 auto;
         padding: 0;
-        height: 35px;
-        @include mq($S){
-            height: 80px;
-        }
+        height: 40px;
+        // @include mq($S){
+        //     height: 60px;
+        // }
     }
     .col-sm-6, .col-sm-2{
         text-align: center;
@@ -241,7 +247,10 @@ footer{
         }
     }
     .social-footer li{
-        padding: 15px 5px;
+        padding: 15px 5px 15px 60px;
+        @include mq($S){
+            padding: 15px 5px;
+        }
     }
     // .social-footer li:nth-child(3){
     //     top: 53%;

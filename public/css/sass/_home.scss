@@ -67,7 +67,13 @@
       }
   }
   .welcome-text {
-      padding: 20px;
+      padding: 40px;
+      @include mq($S){
+          padding: 20px;
+      }
+      @include mq($L){
+          padding: 40px;
+      }
       .hb-icon{
         width: 50px;
         @include mq($M){
@@ -130,11 +136,11 @@
         }
 
     }
-  .col-sm-5{
+  .col-md-5{
     .box{
       height: 355px;
       @include mq($S){
-        height: 256px;
+        height: 310px;
       }
       @include mq($M){
         height: 347px;

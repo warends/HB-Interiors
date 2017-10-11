@@ -179,7 +179,14 @@
   min-height: 5em;
   padding: 0;
   transition: all .15s ease-in-out;
-  width: 31.25em; }
+  width: 18em;
+  @include mq($S){
+      width: 20em;
+  }
+  @include mq($L){
+      width: 24em;
+  }
+}
   .notific8-notification.family-atomic .notific8-heading,
   .notific8-notification.atomic .notific8-heading {
     padding: .75em; }
