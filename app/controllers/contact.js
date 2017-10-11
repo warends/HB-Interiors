@@ -1,24 +1,15 @@
 var nodemailer = require('nodemailer');
+console.log('sending email as ' + process.env.GMAIL_HB);
 
-var generator = require('xoauth2').createXOAuth2Generator({
-  user: 'willarends@gmail.com',
-  clientId: process.env.GMAIL_HB_CLIENT_ID,
-  clientSecret: process.env.GMAIL_HB_CLIENT_SECRET,
-  refreshToken: '1/YRsAPIsuhFFBnJYbC7IhC4D_Vq4SfH6bUEw5B8z5KCJtLFk1JPQ_Q-3lP9Xx01Rg',
-  accessToken: 'ya29.GlvgBLZKPwhKXRuP4mgdzKpz2lg59C-qfcPYaWoyTRAaiYRGXqV_vOX66YLFeb4vjmMAYjLm6mohfs5SBxrLBXMbyDrcT5EGwjMe7pQ7zsycOEK3A7WzMK9pwAfB'
-});
-
-//listen for token updates (if refreshToken is set) you probably want to store these to a db
-generator.on('token', function(token){
-    console.log('New token for %s: %s', token.user, token.accessToken);
-});
-
-var transporter = nodemailer.createTransport({
-      service: 'gmail',
-      auth: {
-          xoauth2: generator
-      },
-      debug: true
+//create reusable transporter object using the default SMTP transport
+let transporter = nodemailer.createTransport({
+    host: 'smtp.gmail.com',
+    port: 587,
+    secure: false, // true for 465, false for other ports
+    auth: {
+        user: process.env.GMAIL_HB,  // generated ethereal user
+        pass: process.env.GMAIL_HB_PW // generated ethereal password
+    }
 });
 
 transporter.verify(function(error, success) {
@@ -60,7 +51,15 @@ exports.sendQuestionaire = function(req, res) {
       from: data.email,
       to: 'haybagwell@gmail.com',
       subject: 'A customer filled out your questioniare!',
-      html: 'Room to decorate first: ' + data.q1 + '<br>What images are you drawn to?: ' + data.q2 + '<br>Where do you shop for furniture?: ' + data.q3 + '<br>Where do you like?: ' + data.q4 + '<br>Where do you NOT like?: ' + data.q5 + '<br>Name: ' + data.name + '<br>Phone Number: ' + data.phone + '<br>Email: ' + data.email + '<br>Message: ' + data.note
+      html: `Room to decorate first: ${data.q1}
+            <br><br>What images are you drawn to?:  ${data.q2}
+            <br><br>Where do you shop for furniture?: ${data.q3}
+            <br><br>Where do you like?:  ${data.q4}
+            <br><br>Where do you NOT like?: ${data.q5}
+            <br><br>Name: ${data.name}
+            <br>Phone Number: ${data.phone}
+            <br>Email: ${data.email}
+            <br>Message: ${data.note}`
     }
     console.log(mailOptions.html);
     transporter.sendMail(mailOptions, function(err, info){
