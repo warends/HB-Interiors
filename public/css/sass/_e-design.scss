@@ -90,7 +90,7 @@
             @include mq($S){
                 padding: 25px;
             }
-            @include mq($L){
+            @include mq('min-width:1400px'){
                 padding: 55px;
             }
             img{
@@ -125,7 +125,7 @@
             @include mq($S){
                 padding: 35px;
             }
-            @include mq($L){
+            @include mq('min-width:1400px'){
                 padding: 55px;
             }
         }
