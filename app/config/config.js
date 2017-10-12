@@ -14,7 +14,7 @@ module.exports = {
   },
   production: {
       rootPath: rootPath,
-      db: 'mongodb://willadmin:wills817@ds011278.mlab.com:11278/wills-test',
+      db: 'mongodb://willadmin:wills817@ds117485.mlab.com:17485/hb-int-prod',
       port: process.env.PORT || 80
   }
 
