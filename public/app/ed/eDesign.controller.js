@@ -32,7 +32,7 @@ angular.module('ed.controller', []).controller('EDesignController', ['$scope', '
         var box = angular.element(e.target);
     }
 
-    var qForm = document.getElementById('qFormTitle');
+    const qForm = document.getElementById('qFormTitle');
     $scope.questions = QFactory.list();
     $scope.currentQuestion = 0;
 
@@ -42,7 +42,6 @@ angular.module('ed.controller', []).controller('EDesignController', ['$scope', '
 
     $scope.nextQ = () => {
         qForm.scrollIntoView(true);
-        console.log('scrolled');
         $scope.currentQuestion = ($scope.currentQuestion < $scope.questions.length -1) ? ++$scope.currentQuestion : 0;
     }
 
@@ -68,10 +67,15 @@ angular.module('ed.controller', []).controller('EDesignController', ['$scope', '
 
         $http.post('/questionaire-form', data)
             .then((response) => {
-                console.log(response.data);
                 $scope.currentQuestion = 0;
                 $rootScope.qShow = false;
                 notifier.notify('Thank you for your message ' + response.data.name);
+                $scope.qForm.$setPristine();
+                $scope.colorList = [];
+                $scope.colorNoList = [];
+                $scope.drawnToList = [];
+                $scope.furnitureList = [];
+                $scope.formData= {};
             }, (err) => {
                 notifier.error('There was an error processing your request. Please try again');
                 console.log('There was a problem submitting your form ' + err);

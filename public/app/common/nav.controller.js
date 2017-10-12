@@ -7,7 +7,7 @@ angular.module('common.nav', []).controller('NavController', ['$scope', '$rootSc
            .then(function(message, status, headers, config){
                $rootScope.toggleContact();
                console.log(message);
-               notifier.notify('Thank you for your message ' + message.name);
+               notifier.notify('Thank you for your message ' + message.data.name);
                $scope.formData = {};
            }, function(error, status, headers, config){
                console.log(error);
