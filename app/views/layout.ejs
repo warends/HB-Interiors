@@ -7,11 +7,19 @@
         <title ng-bind="Meta.title() + ' | Hayley Bagwell Interior Design'"></title>
         <meta name="description" content="{{ Meta.description() }}">
 
-        <!-- Bootstrap -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
         <link rel="stylesheet" href="/dist/styles/style.css">
         <link rel="icon" type="image/png" href="img/favicon.png" />
         <base href="/">
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-108364705-1"></script>
+        <script>
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'UA-108364705-1');
+        </script>
+
     </head>
     <body>
 

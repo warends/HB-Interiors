@@ -18,7 +18,9 @@
   .floor-plan {
       img{
           position: relative;
-          top: -170px;
+          @include mq($S){
+              top: -170px;
+          }
       }
       .img-desc{
         top: 25%;
@@ -27,7 +29,9 @@
     .updated-plan{
       img{
           position: relative;
-          top: -65px;
+          @include mq($S){
+              top: -65px;
+          }
       }
       .img-desc{
           top: 40%;
