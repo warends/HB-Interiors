@@ -1,6 +1,8 @@
-angular.module('home.controller', []).controller('HomeController', ['$scope', '$window', 'ServiceFactory', function($scope, $window, ServiceFactory){
+angular.module('home.controller', []).controller('HomeController', ['$scope', '$window', 'ServiceFactory', 'Meta', function($scope, $window, ServiceFactory, Meta){
 
-  $scope.screenW = $window.innerWidth;
+    Meta.setTitle('Home');
+
+    $scope.screenW = $window.innerWidth;
 
   $scope.services = ServiceFactory.list();
 

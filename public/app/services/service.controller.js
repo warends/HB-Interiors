@@ -1,4 +1,7 @@
-angular.module('service.controller', []).controller('ServiceController', ['$scope', '$stateParams', 'ServiceFactory', ($scope, $stateParams, ServiceFactory) => {
+angular.module('service.controller', []).controller('ServiceController', ['$scope', '$stateParams', 'ServiceFactory', 'Meta', ($scope, $stateParams, ServiceFactory, Meta) => {
+
+    Meta.setTitle('Services');
+
     $scope.services = ServiceFactory.list();
 }]);
 

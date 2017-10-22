@@ -1,4 +1,7 @@
-angular.module('ed.controller', []).controller('EDesignController', ['$scope', '$rootScope', '$http', '$window', 'QFactory', 'NotifierService', ($scope, $rootScope, $http, $window, QFactory, notifier) => {
+angular.module('ed.controller', []).controller('EDesignController', ['$scope', '$rootScope', '$http', '$window', 'QFactory', 'NotifierService', 'Meta', ($scope, $rootScope, $http, $window, QFactory, notifier, Meta) => {
+
+    Meta.setTitle('E-Design');
+
     window.scrollTo(0, 0);
 
     $scope.screenW = $window.innerWidth;
