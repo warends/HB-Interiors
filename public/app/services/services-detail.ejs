@@ -21,8 +21,9 @@
     </div>
     <div class="row sample-imgs">
       <div class="col-sm-6">
-          <div ng-if="branding">
-              <img ng-src="{{selectedService.img1}}" class="img-responsive" ng-click="toggleBook1"/>
+          <div ng-if="branding" class="brand">
+              <img ng-src="{{selectedService.img1}}" class="img-responsive brand"/>
+              <div class="overlay"><h2 class="white">View</h2></div>
           </div>
           <div ng-if="!branding">
               <img ng-src="{{selectedService.img1}}" class="img-responsive" />
@@ -30,8 +31,9 @@
 
       </div>
       <div class="col-sm-6">
-          <div ng-if="branding">
-              <img ng-src="{{selectedService.img2}}" class="img-responsive" ng-click="toggleBook2"/>
+          <div ng-if="branding" class="brand">
+              <img ng-src="{{selectedService.img2}}" class="img-responsive"/>
+              <div class="overlay" ng-click="toggleBook()"><h2 class="white">View</h2></div>
           </div>
           <div ng-if="!branding">
               <img ng-src="{{selectedService.img2}}" class="img-responsive" />
@@ -40,18 +42,34 @@
     </div>
 </div>
 
-<global-modal show="book1Show" width="60%" height="75%">
+<global-modal show="bookShow" width="90%" height="90%">
     <div class="row">
-        <div class="col-sm-10 col-sm-offset-1">
-            <h3 class="black text-center padded-bottom">BOOK 1</h3>
+        <div class="col-xs-12">
 
-        </div>
-    </div>
-</global-modal>
-<global-modal show="book2Show" width="60%" height="75%">
-    <div class="row">
-        <div class="col-sm-10 col-sm-offset-1">
-            <h3 class="black text-center padded-bottom">BOOK 2</h3>
+            <button ng-click="nextPage()" class="pull-left">Prev</button>
+            <button ng-click="nextPage()" class="pull-right">Next</button>
+
+            <div class='hold'>
+                <div class='shadow'></div>
+                <div id='lower' class='page-holder'>
+                    <div class='page'>
+                      <div class='front' style="background-image: url('https://instagram.fmaa1-1.fna.fbcdn.net/t51.2885-15/e35/14583414_346715432338140_5899818561005682688_n.jpg')">
+                        <div class='back-holder'>
+                          <div class='back' style="background-image: url('https://instagram.fmaa1-1.fna.fbcdn.net/t51.2885-15/e35/14583414_346715432338140_5899818561005682688_n.jpg')"></div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+                <div id='upper' class='page-holder' ng-class="{'rotate': rotate}">
+                    <div class='page'>
+                      <div class='front' style="background-image: url('http://www.zweezle.in/blog/wp-content/uploads/2015/12/Photography.jpeg')">
+                        <div class='back-holder'>
+                          <div class='back' style="background-image: url('https://instagram.fmaa1-1.fna.fbcdn.net/t51.2885-15/e35/14709426_1170464523009535_4829487881636544512_n.jpg')"></div>
+                        </div>
+                      </div>
+                    </div>
+                </div>
+            </div>
 
         </div>
     </div>

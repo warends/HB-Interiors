@@ -2,23 +2,23 @@ var nodemailer = require('nodemailer');
 console.log('sending email as ' + process.env.GMAIL_HB);
 
 //create reusable transporter object using the default SMTP transport
-let transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
-    port: 465,
-    secure: true,
-    auth: {
-        user: process.env.GMAIL_HB,  // generated ethereal user
-        pass: process.env.GMAIL_HB_PW // generated ethereal password
-    }
-});
-
-transporter.verify(function(error, success) {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log('Server is ready to take our messages');
-  }
-});
+// let transporter = nodemailer.createTransport({
+//     host: 'smtp.gmail.com',
+//     port: 465,
+//     secure: true,
+//     auth: {
+//         user: process.env.GMAIL_HB,  // generated ethereal user
+//         pass: process.env.GMAIL_HB_PW // generated ethereal password
+//     }
+// });
+//
+// transporter.verify(function(error, success) {
+//   if (error) {
+//     console.log(error);
+//   } else {
+//     console.log('Server is ready to take our messages');
+//   }
+// });
 
 exports.sendMail = function(req, res){
   var data = req.body;

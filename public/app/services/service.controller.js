@@ -8,11 +8,19 @@ angular.module('service.controller', []).controller('ServiceController', ['$scop
 angular.module('service.detail.controller', []).controller('SelectedServiceController', ['$scope', '$stateParams', 'ServiceFactory', ($scope, $stateParams, ServiceFactory) => {
   $scope.selectedService = ServiceFactory.find($stateParams.slug);
   $scope.branding = false;
-  if($scope.selectedService.name === 'Branding'){
-      $scope.branding = true;
-  } else {
-      $scope.branding = false;
+  $scope.branding = ($scope.selectedService.name === 'Branding') ? true : false;
+
+  $scope.bookShow = false;
+  $scope.rotate = false;
+
+  $scope.toggleBook = function(){
+      console.log('toggle');
+      $scope.bookShow = true;
   }
-  $scope.book1Show = false;
-  // console.log($scope.selectedService.name);
+
+  $scope.nextPage = function(){
+      $scope.rotate = !$scope.rotate;
+  }
+
+
 }]);
