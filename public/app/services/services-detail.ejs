@@ -23,7 +23,7 @@
       <div class="col-sm-6">
           <div ng-if="branding" class="brand">
               <img ng-src="{{selectedService.img1}}" class="img-responsive brand"/>
-              <!-- <div class="overlay"><h2 class="white">View</h2></div> -->
+              <div class="overlay" ng-click="toggleBook1()"><h2 class="white">View</h2></div>
           </div>
           <div ng-if="!branding">
               <img ng-src="{{selectedService.img1}}" class="img-responsive" />
@@ -33,7 +33,7 @@
       <div class="col-sm-6">
           <div ng-if="branding" class="brand">
               <img ng-src="{{selectedService.img2}}" class="img-responsive"/>
-              <div class="overlay" ng-click="toggleBook()"><h2 class="white">View</h2></div>
+              <div class="overlay" ng-click="toggleBook2()"><h2 class="white">View</h2></div>
           </div>
           <div ng-if="!branding">
               <img ng-src="{{selectedService.img2}}" class="img-responsive" />
@@ -42,10 +42,59 @@
     </div>
 </div>
 
-<global-modal show="bookShow" width="90%" height="90%">
+<global-modal show="bookShow1" width="90%" height="90%">
         <img class="prev" ng-click="prevPage()" src="./img/icons/arrow-left-rounded.svg" class="img-responsive" />
         <img class="next" ng-click="nextPage()" src="./img/icons/arrow-right-rounded.svg" class="img-responsive" />
-    
+
+          <div class="scene">
+          <article class="book">
+              <section class="page active">
+                <div class="front">
+                  <img src="./img/booklets/post-booklet2.jpg" class="img-responsive" />
+                </div>
+                <div class="back">
+                  <img src="./img/booklets/post-booklet3.jpg" class="img-responsive" />
+              </section>
+              <section class="page">
+                <div class="front">
+                  <img src="./img/booklets/post-booklet4.jpg" class="img-responsive" />
+                </div>
+                <div class="back">
+                  <img src="./img/booklets/post-booklet5.jpg" class="img-responsive" />
+                </div>
+              </section>
+              <section class="page">
+                <div class="front">
+                  <img src="./img/booklets/post-booklet6.jpg" class="img-responsive" />
+                </div>
+                <div class="back">
+                  <img src="./img/booklets/post-booklet7.jpg" class="img-responsive" />
+                </div>
+              </section>
+              <section class="page">
+                <div class="front">
+                  <img src="./img/booklets/post-booklet8.jpg" class="img-responsive" />
+                </div>
+                <div class="back">
+                  <img src="./img/booklets/post-booklet9.jpg" class="img-responsive" />
+                </div>
+              </section>
+              <section class="page">
+                <div class="front">
+                  <img src="./img/booklets/post-booklet10.jpg" class="img-responsive" />
+                </div>
+                <div class="back">
+                  <img src="./img/booklets/post-booklet11.jpg" class="img-responsive" />
+                </div>
+              </section>
+        </article>
+        </div>
+</global-modal>
+
+<global-modal show="bookShow2" width="90%" height="90%">
+        <img class="prev" ng-click="prevPage()" src="./img/icons/arrow-left-rounded.svg" class="img-responsive" />
+        <img class="next" ng-click="nextPage()" src="./img/icons/arrow-right-rounded.svg" class="img-responsive" />
+
           <div class="scene">
           <article class="book">
               <section class="page active">
@@ -87,8 +136,6 @@
                   <img src="./img/booklets/billy-ceglia-booklet11.jpg" class="img-responsive" />
                 </div>
               </section>
-
         </article>
         </div>
-
 </global-modal>
