@@ -27,7 +27,7 @@ angular.module('service.factory', []).factory('ServiceFactory', () => {
       banner: 'img/services/floor-plan.png',
       subHead: 'making your space functional',
       desc: "What is space planning? It is creating a highly functional furniture arrangement. Would you like assistance arranging the layout of your space? We are here to help! We will organize your existing or new furniture in a way that creates a more natural and functional flow with a customized floor plan that you will love.",
-      img1: 'img/services/bubble1.png',
+      img1: 'img/services/floorplan-spaceplanning.jpg',
       img2: 'img/services/floorplan.png'
     },
     {

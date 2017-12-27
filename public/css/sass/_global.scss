@@ -176,8 +176,10 @@ section.padded-bottom{
 .cta {
   background-color: $light-black;
   color: white;
+  padding-top: 1em;
+  padding-bottom: 1em;
   .col-xs-12{
-    height: 150px;
+    height: 100px;
   }
   h3{
     @include vertical-align;
