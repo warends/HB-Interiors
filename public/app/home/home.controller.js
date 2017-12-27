@@ -1,6 +1,7 @@
 angular.module('home.controller', []).controller('HomeController', ['$scope', '$window', 'ServiceFactory', 'Meta', function($scope, $window, ServiceFactory, Meta){
 
     Meta.setTitle('Home');
+    //Meta.setDesc('This is the desc');
 
     $scope.screenW = $window.innerWidth;
 

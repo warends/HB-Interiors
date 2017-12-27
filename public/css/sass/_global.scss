@@ -15,6 +15,12 @@ h1, h2, h3, h4, h5, h6 {
 h1{
   font-size: 48px;
 }
+h2{
+    font-size: 30px;
+}
+h4{
+    font-size: 28px;
+}
 h3 {
   font-size: 22px;
 }
@@ -193,34 +199,32 @@ footer{
   position: relative;
   .footer-menu{
     position: relative;
-    .logo{
-        float: none;
-        padding: 0;
-        margin: 0 auto;
-        width: 200px;
-        @include mq($S){
-            width: 300px;
-            margin: 0;
-        }
-        h2{
-            font-size: 55px;
-            padding-right: 10px;
-            @include mq($M){
-                font-size: 64px;
-            }
-        }
-      h3{
-          font-size: 16px;
-          color: $black;
-          @include mq($M){
-              font-size: 22px;
-          }
+    .logo {
+      float: left;
+      height: 80px;
+      width: 100%;
+      position: relative;
+      img{
+          height: 65px;
+          float: left;
+          @include vertical-align;
+          position: absolute;
+      }
+      h2, h5{
+          color: black;
+          font-family: 'work-sans';
+          line-height: 1;
+      }
+      .text{
+          @include vertical-align;
+          position: absolute;
+          left: 90px;
       }
     }
     ul{
         display: inline-block;
         margin: 0 auto;
-        padding: 0;
+        padding-top: 40px;
         height: 40px;
         // @include mq($S){
         //     height: 60px;

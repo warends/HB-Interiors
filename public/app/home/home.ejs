@@ -12,7 +12,7 @@
 <section id="welcome">
   <div class="hero-text vertical left">
     <h1>hello</h1>
-    <h3>Our Firm<span class="end-border">  _______</span></h3>
+    <h3>Our Studio<span class="end-border">  _______</span></h3>
   </div>
   <div class="container sm">
     <div class="row">
@@ -24,7 +24,7 @@
             <div class="welcome-text">
                 <img class="img-responsive hb-icon" src="img/house-pen-icon.png"/>
                 <h3 class="forest padded-vertical">Welcome</h3>
-                <p>We are a small firm specializing in e-design, space planning, branding, residential design and custom furniture design.  We assemble spaces that emulate and amplify the identity of our the clients.</p>
+                <p>Our interior design studio specializes in big ideas.  From online design, space planning and branding, to residential and custom furniture design, our innovation is a unique personalization.</p>
                 <a class="btn btn-outline" href="#" ui-sref="e-design">E-Design</a>
                 <a class="btn btn-outline" href="#" ui-sref="services.detail({slug: 'interior-design'})">More Services</a>
             </div>
@@ -51,8 +51,8 @@
       <div class="col-sm-6 col-md-5 right">
         <div class="dark-grey box text-center">
           <div class="text-box">
-            <h3>What is E-Design?</h3>
-            <h5 class="forest padded-vertical">E-design is online design.  It’s having an interior designer at your fingertips.  We collect pertinent information from you online and create a mood board, floor plan and buying list for you to follow to create your own dream space.</h5>
+            <h3>What is e-design?</h3>
+            <h5 class="forest padded-vertical">It is having an interior designer at your fingertips.  It is where DIY meets affordable professional interior design.  We collect relevant information from you.  Then, we create a mood board, floor plan and buying guide for you to assemble your dream space.</h5>
             <a class="underline" ui-sref="e-design">Learn More</a>
           </div>
         </div>
@@ -69,7 +69,7 @@
         </div>
       </div>
       <div class="col-sm-6 col-md-5 right">
-        <img class="img-responsive" src="img/sketch.jpg" />
+        <img class="img-responsive" src="img/syre-dining-room-rendering.png" />
       </div>
     </div>
   </div>
@@ -86,14 +86,15 @@
       <div ng-repeat="service in services">
           <div class="clearfix" ng-if="$index % 2 == 0 && screenW <= 992"></div>
           <div class="col-sm-6 col-md-3 service">
+              <a ui-sref="services.detail({slug: service.slug})">
               <div class="hex-box">
                   <div class="hexagon-grey"></div>
                   <div class="hexagon-black">
-                    <a ui-sref="services.detail({slug: service.slug})">
                         <img class="img-responsive {{service.title}}" ng-src="{{service.logo}}" ng-class="service.slug"/>
-                    </a>
                   </div>
               </div>
+              </a>
+
 
             <h3 class="forest padded-bottom">{{service.name}}</h3>
             <p>{{service.desc}}</p>
@@ -107,7 +108,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-12 text-center">
-        <h3>Design is creating a space that mirrors your life experiences.</h3>
+        <h3>Assembling designs. Emulating your identity. Amplifying your style.</h3>
       </div>
     </div>
   </div>

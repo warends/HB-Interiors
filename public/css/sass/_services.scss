@@ -12,6 +12,18 @@
         font-size: 32px;
     }
   }
+  .ng-modal{
+      .prev, .next{
+          @include vertical-align;
+          position: absolute;
+      }
+      .next{
+          right: 0;
+      }
+      .prev{
+          left: 0;
+      }
+  }
   .service-box{
       background-color: $forest;
       height: 250px;

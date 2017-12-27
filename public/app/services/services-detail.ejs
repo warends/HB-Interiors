@@ -23,7 +23,7 @@
       <div class="col-sm-6">
           <div ng-if="branding" class="brand">
               <img ng-src="{{selectedService.img1}}" class="img-responsive brand"/>
-              <div class="overlay"><h2 class="white">View</h2></div>
+              <!-- <div class="overlay"><h2 class="white">View</h2></div> -->
           </div>
           <div ng-if="!branding">
               <img ng-src="{{selectedService.img1}}" class="img-responsive" />
@@ -33,7 +33,7 @@
       <div class="col-sm-6">
           <div ng-if="branding" class="brand">
               <img ng-src="{{selectedService.img2}}" class="img-responsive"/>
-              <div class="overlay" ng-click="toggleBook()"><h2 class="white">View</h2></div>
+              <!-- <div class="overlay"><h2 class="white">View</h2></div> -->
           </div>
           <div ng-if="!branding">
               <img ng-src="{{selectedService.img2}}" class="img-responsive" />
@@ -46,25 +46,25 @@
     <div class="row">
         <div class="col-xs-12">
 
-            <button ng-click="nextPage()" class="pull-left">Prev</button>
-            <button ng-click="nextPage()" class="pull-right">Next</button>
+            <button ng-click="nextPage()" class="prev">Prev</button>
+            <button ng-click="nextPage()" class="next">Next</button>
 
             <div class='hold'>
                 <div class='shadow'></div>
                 <div id='lower' class='page-holder'>
                     <div class='page'>
-                      <div class='front' style="background-image: url('https://instagram.fmaa1-1.fna.fbcdn.net/t51.2885-15/e35/14583414_346715432338140_5899818561005682688_n.jpg')">
+                      <div class='front' style="background-image: url('/img/booklets/billy-ceglia-booklet2.jpg')">
                         <div class='back-holder'>
-                          <div class='back' style="background-image: url('https://instagram.fmaa1-1.fna.fbcdn.net/t51.2885-15/e35/14583414_346715432338140_5899818561005682688_n.jpg')"></div>
+                          <div class='back' style="background-image: url('/img/booklets/billy-ceglia-booklet3.jpg')"></div>
                         </div>
                       </div>
                     </div>
                 </div>
                 <div id='upper' class='page-holder' ng-class="{'rotate': rotate}">
                     <div class='page'>
-                      <div class='front' style="background-image: url('http://www.zweezle.in/blog/wp-content/uploads/2015/12/Photography.jpeg')">
+                      <div class='front' style="background-image: url('/img/booklets/billy-ceglia-booklet4.jpg')">
                         <div class='back-holder'>
-                          <div class='back' style="background-image: url('https://instagram.fmaa1-1.fna.fbcdn.net/t51.2885-15/e35/14709426_1170464523009535_4829487881636544512_n.jpg')"></div>
+                          <div class='back' style="background-image: url('/img/booklets/billy-ceglia-booklet5.jpg')"></div>
                         </div>
                       </div>
                     </div>

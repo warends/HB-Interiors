@@ -1,6 +1,6 @@
 angular.module('common.meta', []).factory('Meta', function(){
-  var title = 'Hayley Bagwell Interior Design, Seattle, WA';
-  var desc = 'Super DERRR';
+  var title = 'Cedar + Sage Affordable Online Interior Design and Styling Studio';
+  var desc = 'Where DIY meets professional interior design. We offer online interior design, space planning, branding, residential and furniture design.';
   return {
     title: function() {return title;},
     setTitle: function(newTitle) { title = newTitle },
