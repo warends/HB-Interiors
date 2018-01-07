@@ -5,15 +5,6 @@ header{
     z-index: 9;
   }
 }
-  // &:after{
-  //   content: ' _________';
-  //   color: $forest;
-  //   float: right;
-  //   font-weight: bold;
-  //   position: relative;
-  //   bottom: 8px;
-  // }
-
 #navbar-contact{
     visibility: hidden;
     opacity: 0;
@@ -27,18 +18,9 @@ header{
         opacity: 1;
         visibility: visible;
     }
-  // @include mq($S){
-  //     left: 15px;
-  //     top: 0;
-  //     padding: 15px 0;
-  //     right: auto;
-  // }
   h6 {
     color: white;
     display: none;
-    // @include mq($S){
-    //     display: inline-block;
-    // }
   }
   .icon {
     margin: 5px;
@@ -141,7 +123,7 @@ header{
         top: 0;
         display: block;
     }
-    @include mq($L){
+    @include mq('min-width:1275px'){
         right: 5%;
     }
     @include mq('min-width:1600px'){
@@ -162,6 +144,9 @@ header{
           width: auto;
           @include vertical-align;
           display: inline-block;
+          padding: 15px 5px;
+      }
+      @include mq('min-width:1050px'){
           padding: 15px 10px;
       }
       @include mq($L){
@@ -176,12 +161,15 @@ header{
     .social{
         display: none;
         @include mq($M){
-            padding: 0 10px;
+            padding: 0 5px;
             display: inline-block;
             top: 60%;
             &:nth-child(8){
                 top: 65%;
             }
+        }
+        @include mq('min-width:1050px'){
+            padding: 0 10px;
         }
     }
   }

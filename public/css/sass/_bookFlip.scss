@@ -28,7 +28,10 @@
   transform-style: preserve-3d;
   transform-origin: left center;
   img{
-      height: 100%;
+      height: auto;
+      @include mq($M){
+        height: 100%;  
+      }
   }
 }
 .front,

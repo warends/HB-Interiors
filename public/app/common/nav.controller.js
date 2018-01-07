@@ -25,7 +25,6 @@ angular.module('common.nav', []).controller('NavController', ['$scope', '$rootSc
     if($window.innerWidth < 992){
         angular.element($window).bind('scroll', () => {
             if($window.scrollY > 140){
-                console.log($scope.socialShow);
                 $scope.socialShow = true;
             } else {
                 $scope.socialShow = false;
