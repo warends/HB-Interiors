@@ -1,6 +1,7 @@
 angular.module('ed.controller', []).controller('EDesignController', ['$scope', '$rootScope', '$http', '$window', 'QFactory', 'NotifierService', 'Meta', ($scope, $rootScope, $http, $window, QFactory, notifier, Meta) => {
 
     Meta.setTitle('E-Design');
+    Meta.setDesc("Professional online interior deisgn program guiding the DIY'er.");
 
     window.scrollTo(0, 0);
 

@@ -1,30 +1,31 @@
 angular.module('service.controller', []).controller('ServiceController', ['$scope', '$stateParams', 'ServiceFactory', 'Meta', ($scope, $stateParams, ServiceFactory, Meta) => {
 
-    Meta.setTitle('Services');
     $scope.services = ServiceFactory.list();
 
 }]);
 
-angular.module('service.detail.controller', []).controller('SelectedServiceController', ['$scope', '$stateParams', 'ServiceFactory', ($scope, $stateParams, ServiceFactory) => {
-
-    // if (!Element.prototype.matches) {
-    //     Element.prototype.matches =
-    //         Element.prototype.matchesSelector ||
-    //         Element.prototype.mozMatchesSelector ||
-    //         Element.prototype.msMatchesSelector ||
-    //         Element.prototype.oMatchesSelector ||
-    //         Element.prototype.webkitMatchesSelector ||
-    //         function(s) {
-    //             var matches = (this.document || this.ownerDocument).querySelectorAll(s),
-    //                 i = matches.length;
-    //             while (--i >= 0 && matches.item(i) !== this) {}
-    //             return i > -1;
-    //         };
-    //     }
+angular.module('service.detail.controller', []).controller('SelectedServiceController', ['$scope', '$stateParams', 'ServiceFactory', 'Meta', ($scope, $stateParams, ServiceFactory, Meta) => {
 
     $scope.selectedService = ServiceFactory.find($stateParams.slug);
     $scope.branding = false;
     $scope.branding = ($scope.selectedService.name === 'Branding') ? true : false;
+
+    Meta.setTitle($scope.selectedService.name);
+
+    if (!Element.prototype.matches) {
+        Element.prototype.matches =
+            Element.prototype.matchesSelector ||
+            Element.prototype.mozMatchesSelector ||
+            Element.prototype.msMatchesSelector ||
+            Element.prototype.oMatchesSelector ||
+            Element.prototype.webkitMatchesSelector ||
+            function(s) {
+                var matches = (this.document || this.ownerDocument).querySelectorAll(s),
+                    i = matches.length;
+                while (--i >= 0 && matches.item(i) !== this) {}
+                return i > -1;
+            };
+        }
 
     $scope.bookShow1 = false;
     $scope.bookShow2 = false;
@@ -73,6 +74,5 @@ angular.module('service.detail.controller', []).controller('SelectedServiceContr
     }
 
     $scope.currentPage = 0;
-
 
 }]);

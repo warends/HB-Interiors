@@ -22,21 +22,21 @@
     <div class="row sample-imgs">
       <div class="col-sm-6">
           <div ng-if="branding" class="brand">
-              <img ng-src="{{selectedService.img1}}" class="img-responsive brand"/>
+              <img ng-src="{{selectedService.img1}}" class="img-responsive brand" alt="{{selectedService.img1Alt}}"/>
               <div class="overlay" ng-click="toggleBook1()"><h2 class="white">View</h2></div>
           </div>
           <div ng-if="!branding">
-              <img ng-src="{{selectedService.img1}}" class="img-responsive" />
+              <img ng-src="{{selectedService.img1}}" class="img-responsive" alt="{{selectedService.img1Alt}}"/>
           </div>
 
       </div>
       <div class="col-sm-6">
           <div ng-if="branding" class="brand">
-              <img ng-src="{{selectedService.img2}}" class="img-responsive"/>
+              <img ng-src="{{selectedService.img2}}" class="img-responsive" alt="{{selectedService.img2Alt}}"/>
               <div class="overlay" ng-click="toggleBook2()"><h2 class="white">View</h2></div>
           </div>
           <div ng-if="!branding">
-              <img ng-src="{{selectedService.img2}}" class="img-responsive" />
+              <img ng-src="{{selectedService.img2}}" class="img-responsive" alt="{{selectedService.img2Alt}}"/>
           </div>
       </div>
     </div>
