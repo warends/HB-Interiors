@@ -3,12 +3,12 @@ console.log('sending email as ' + process.env.GMAIL_HB);
 
 //create reusable transporter object using the default SMTP transport
 let transporter = nodemailer.createTransport({
-    host: 'smtp.gmail.com',
+    host: 'smtpout.secureserver.net',
     port: 465,
     secure: true,
     auth: {
-        user: process.env.GMAIL_HB,  // generated ethereal user
-        pass: process.env.GMAIL_HB_PW // generated ethereal password
+        user: process.env.GMAIL_HB,
+        pass: process.env.GMAIL_HB_PW
     }
 });
 
